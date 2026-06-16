@@ -3,6 +3,11 @@
 	--header-bg: #222;
 	--header-height: 60px;
     --box-color: rgba(30, 34, 43, 0.6);
+
+    --text-highlight: #f08c3a;
+    --text-header: rgba(0,0,0,0);
+    --text-main: white;
+    --text-subtext: #e0e0e0;
 }
 
 /* Lock the main browser window from scrolling */

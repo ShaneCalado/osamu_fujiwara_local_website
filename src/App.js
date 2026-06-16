@@ -7,7 +7,7 @@ import './App.css';
 
 function App() {
   const [language, setLanguage] = useState(() => {
-    return localStorage.getItem('siteLanguage') || 'en';
+    return localStorage.getItem('siteLanguage') || 'ja';
   });
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
