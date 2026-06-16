@@ -4,18 +4,16 @@ import { AnimatePresence } from 'framer-motion';
 
 import PageTransition from './PageTransition';
 import Home from '../../pages/home/Home';
-// import Services from '../../pages/services/Services'; 
+import About from '../../pages/about/About'; 
+import Testimonials from '../../pages/testimonials/Testimonials'; 
 
 function AnimatedRoutes({ language }) {
   const location = useLocation();
 
   return (
-    // mode="wait" forces the old page to completely fade out BEFORE the new page fades in
     <AnimatePresence mode="wait">
-      {/* The key prop tells Framer Motion when a route actually changes */}
       <Routes location={location} key={location.pathname}>
         
-        {/* Wrap your pages in the PageTransition component */}
         <Route 
           path="/" 
           element={
@@ -25,16 +23,23 @@ function AnimatedRoutes({ language }) {
           } 
         />
 
-        {/* Example of adding a second page later:
         <Route 
-          path="/services" 
+          path="/about" 
           element={
             <PageTransition>
-              <Services language={language} />
+              <About language={language} />
             </PageTransition>
           } 
-        /> 
-        */}
+        />
+
+        <Route 
+          path="/testimonials" 
+          element={
+            <PageTransition>
+              <Testimonials language={language} />
+            </PageTransition>
+          } 
+        />
 
       </Routes>
     </AnimatePresence>

@@ -1,0 +1,117 @@
+/* =========================================
+   ABOUT PAGE WRAPPER 
+   ========================================= */
+.about-page-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+/* Make every section take up exactly one full screen */
+.about-section {
+    width: 100%;
+    min-height: calc(100dvh - var(--header-height));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+.about-content-container {
+    width: 100%;
+    max-width: 1200px; /* Keeps the text lines at a readable width */
+    margin: 0 auto;
+}
+
+/* =========================================
+   SECTION 1: HEADER & INTRO
+   ========================================= */
+.about-header-row {
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    align-items: center; 
+    gap: 60px;
+    
+    background: var(--box-color);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 80px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.about-text-content {
+    flex: 1; 
+    text-align: left;
+}
+
+.about-text-content h2 {
+    font-size: clamp(2rem, 3vw, 3.5rem);
+    color: #f08c3a;
+    margin: 0 0 20px 0;
+}
+
+.intro-text-about {
+    font-size: clamp(1.1rem, 1.5vw, 1.5rem);
+    line-height: 1.6;
+    margin: 0;
+    color: white;
+}
+
+.about-headshot {
+    width: clamp(150px, 20vw, 250px);  
+    height: clamp(150px, 20vw, 250px); 
+    object-fit: cover; 
+    border-radius: 50%; 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    border: 4px solid rgba(255, 255, 255, 0.2);
+    flex-shrink: 0; 
+}
+
+/* =========================================
+   SECTION 2: MAIN CONTENT CARD
+   ========================================= */
+.about-text-card {
+    background: var(--box-color);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 80px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.about-paragraph {
+    margin: 0;
+    line-height: 1.8;
+    font-size: clamp(1.1rem, 1.3vw, 1.4rem);
+    color: #e0e0e0;
+    white-space: pre-line;
+    text-align: left; 
+}
+
+/* =========================================
+   MOBILE RESPONSIVE OVERRIDES
+   ========================================= */
+@media (max-width: 768px) {
+    
+    /* Disable full-screen heights so tall text boxes don't overflow */
+    .about-section {
+        min-height: auto;
+        padding: 40px 20px;
+    }
+
+    .about-header-row {
+        flex-direction: column-reverse; /* Stacks image on top of text */
+        padding: 40px 25px;
+        gap: 30px;
+    }
+
+    .about-text-card {
+        padding: 40px 25px;
+    }
+}

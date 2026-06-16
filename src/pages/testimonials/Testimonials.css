@@ -1,0 +1,226 @@
+/* --- 1. FULL SCREEN PAGE LOCK & BACKGROUND --- */ 
+.testimonials-page-container { 
+    position: relative; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;  
+    height: 100dvh;          
+    max-height: 100dvh; 
+    overflow: hidden;        
+    width: 100vw;         
+    max-width: 100%;      
+    margin: 0; 
+    box-sizing: border-box; 
+    padding: 100px 20px 20px 90px;  
+    overscroll-behavior-y: none;  
+} 
+
+.testimonials-base-bg {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -2;
+}
+
+.testimonials-dynamic-bg {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+@media (max-width: 768px) { 
+    .testimonials-page-container { 
+        padding: 90px 15px 15px 15px;  
+    } 
+} 
+
+/* --- 2. HEADER AREA --- */ 
+.header-wrapper {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 1100px;
+    flex-shrink: 0;
+}
+
+.testimonials-main-title { 
+    margin: 0;  
+    padding-top: 5px; 
+    padding-bottom: 15px; 
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); 
+    font-size: clamp(1.2rem, 7vw, 2rem); 
+    white-space: nowrap;
+    line-height: 1.2;
+    color: white; 
+    text-align: left; 
+    width: 100%; 
+    box-sizing: border-box; 
+}
+
+/* --- 3. THE MAGIC SCROLL BOX (Invisible Scrollbar) --- */ 
+.testimonials-accordion-scroll-box { 
+    position: relative;
+    z-index: 1; 
+    flex-grow: 1;  
+    overflow-y: auto;  
+    display: flex; 
+    flex-direction: column; 
+    gap: 12px; 
+    padding-bottom: 40px;  
+    width: 100%; 
+    max-width: 1100px; 
+    -webkit-overflow-scrolling: touch; 
+    overscroll-behavior: contain;  
+    scrollbar-width: none;  
+    -ms-overflow-style: none;  
+} 
+
+.testimonials-accordion-scroll-box::-webkit-scrollbar { display: none; } 
+
+/* --- 4. ACCORDIONS --- */ 
+.testimonial-accordion { 
+    background: var(--bg-surface-dark, #1a1c23); 
+    border: 1px solid var(--border-light, rgba(255,255,255,0.2)); 
+    border-radius: 8px; 
+    display: flex; 
+    flex-direction: column; 
+    flex-shrink: 0;  
+    overflow: hidden; 
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; 
+} 
+
+.testimonial-accordion.is-open { 
+    border-color: var(--accent-primary, #f08c3a); 
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4); 
+} 
+
+.accordion-header { 
+    padding: 18px 25px; 
+    cursor: pointer; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: flex-start; 
+    gap: 20px; 
+    user-select: none; 
+    background: var(--bg-surface-dark, #1a1c23); 
+} 
+
+.accordion-header:hover { 
+    background: rgba(255, 255, 255, 0.02); 
+} 
+
+.header-left-group {
+    display: flex;
+    align-items: flex-start;
+    flex: 1;
+}
+
+.header-right-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    flex-shrink: 0;
+    margin-top: 2px; 
+}
+
+.image-reveal-wrapper {
+    overflow: hidden;
+    flex-shrink: 0;
+    border-radius: 12px; 
+}
+
+.testimonial-avatar {
+    width: 100px; 
+    height: 135px; 
+    border-radius: 12px; 
+    object-fit: cover;
+    display: block; 
+}
+
+.testimonial-quote { 
+    font-weight: 600; 
+    color: white; 
+    font-size: 1.1rem; 
+    line-height: 1.5; 
+    font-style: italic; 
+    transition: font-size 0.3s ease, color 0.3s ease;
+    margin-top: 0;
+} 
+
+.testimonial-quote.quote-open {
+    font-size: 1.3rem;
+    color: var(--accent-primary, #f08c3a);
+    margin-top: -3px; 
+}
+
+.dropdown-icon { 
+    transition: transform 0.3s ease; 
+    font-size: 1.2rem; 
+    color: var(--accent-primary, #f08c3a); 
+} 
+
+.dropdown-icon.rotated { 
+    transform: rotate(180deg); 
+} 
+
+/* --- 5. INNER CONTENT STYLES --- */ 
+.accordion-content-inner { 
+    padding: 10px 25px 25px 25px; 
+    border-top: 1px solid rgba(255, 255, 255, 0.05); 
+} 
+
+.testimonial-badge { 
+    display: inline-block; 
+    padding: 4px 10px; 
+    border-radius: 4px; 
+    font-size: 0.75rem; 
+    font-weight: bold; 
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+} 
+
+.badge-client { 
+    background-color: rgba(240, 140, 58, 0.15); 
+    color: var(--accent-primary, #f08c3a); 
+    border: 1px solid rgba(240, 140, 58, 0.3); 
+} 
+
+.badge-partner { 
+    background-color: rgba(160, 170, 191, 0.15); 
+    color: #a0aabf; 
+    border: 1px solid rgba(160, 170, 191, 0.3); 
+} 
+
+.testimonial-full-text { 
+    font-size: 1rem; 
+    line-height: 1.6; 
+    color: #d1d5db; 
+    margin: 0; 
+    text-align: left; 
+} 
+
+/* --- MOBILE OVERRIDES --- */
+@media (max-width: 768px) {
+    .accordion-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .header-right-group {
+        width: 100%;
+        justify-content: space-between;
+        flex-direction: row-reverse; 
+    }
+    
+    .testimonial-quote.quote-open {
+        font-size: 1.15rem; 
+        margin-top: 0;
+    }
+}
