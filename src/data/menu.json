@@ -26,8 +26,12 @@
         "link" : "/services",
         "external" : false,
         "subItems": [
-            { "name": { "en": "Corporate", "jp": "法人設立" }, "link": "/services/corporate", "external": false },
-            { "name": { "en": "Visas", "jp": "ビザ申請" }, "link": "/services/visas", "external": false }
+            { "name": { "en": "Construction Business Licence", "jp": "建設業許可証" }, "link": "/services/constBusinessLicence", "external": false },
+            { "name": { "en": "Foreign Visa/Residence Status", "jp": "外国のビザ／居住資格" }, "link": "/services/foreignVisa", "external": false },
+            { "name": { "en": "Japanese Spouse Visa", "jp": "日本人配偶者ビザ" }, "link": "/services/spouceVisa", "external": false },
+            { "name": { "en": "Specific Skills", "jp": "特定のスキル" }, "link": "/services/specificSkills", "external": false },
+            { "name": { "en": "Making a Will", "jp": "遺言書の作成" }, "link": "/services/makingWill", "external": false },
+            { "name": { "en": "Inheritance Procedures", "jp": "継承手続き" }, "link": "/services/inheritance", "external": false }
         ]
     },
     {

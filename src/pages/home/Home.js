@@ -1,22 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react'; // Removed useEffect
 import { Link } from 'react-router-dom'; 
 import homeData from '../../data/home.json'; 
 import servicesData from '../../data/services.json'; 
 import './Home.css';
 
 const Home = ({ language }) => {
-    const [gifSrc, setGifSrc] = useState("/images/bow_static.png"); 
+    // Removed gifSrc state
     const [isVideoPlaying, setIsVideoPlaying] = useState(false); 
 
     const validCategories = servicesData.filter(cat => cat.items && cat.items.length > 0);
 
-    // Keep the timing effect for your GIF
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            setGifSrc(`/images/bow_anim.gif?t=${Date.now()}`);
-        }, 3200);
-        return () => clearTimeout(timer);
-    }, []);
+    // Removed the useEffect timer that swapped the image
 
     const getImgSrc = (cat) => {
         const imgSrc = cat.image || cat.bgImage || cat.defaultServiceImage || 'headshot.jpg';
@@ -28,20 +22,22 @@ const Home = ({ language }) => {
             
             {/* SECTION 0: WELCOME */}
             <section className="home-section welcome-section">
-                <div className="content-wrapper locked-home-content">
-                    <div className="welcome-grid-container">
-                        <div className="grid-header">
+                <div className="intro-dashboard-container">
+                    <div className="intro-row">
+                        
+                        {/* LEFT: The Large Text Box */}
+                        <div className="intro-text-col">
                             <h2 className="welcome-header">{homeData?.welcomeHeader?.[language] || ""}</h2>
-                        </div>
-                        <div className="grid-text">
                             <h2 className="welcome-text" dangerouslySetInnerHTML={{ __html: homeData?.welcomeText?.[language] || "" }} />
-                        </div>
-                        <div className="grid-image">
-                            <img src={gifSrc} alt="Office Representative" />
-                        </div>
-                        <div className="grid-subtext">
                             <p className="welcome-subtext">{homeData?.welcomeSubText?.[language] || ""}</p>
                         </div>
+
+                        {/* RIGHT: The Smaller Overlaid Image */}
+                        <div className="intro-image-col">
+                            {/* Hardcoded the static image right here */}
+                            <img src="/images/bow_static.png" alt="Office Representative" />
+                        </div>
+
                     </div>
                 </div>
             </section>

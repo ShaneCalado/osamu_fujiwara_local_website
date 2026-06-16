@@ -2,6 +2,7 @@
 	--bg-color: #1a1a1a; /* Assuming a dark theme based on your previous CSS */
 	--header-bg: #222;
 	--header-height: 60px;
+    --box-color: rgba(30, 34, 43, 0.6);
 }
 
 /* Lock the main browser window from scrolling */
@@ -25,12 +26,19 @@ body, html {
    THE GLOBAL SCROLLING BOX
    ========================================= */
 .page-container {
-	flex: 1; /* Fills remaining space below header */
-	overflow-y: auto; /* Enables vertical scrolling for whatever page is inside */
-	overflow-x: hidden;
-	scroll-behavior: smooth;
-	background-color: var(--bg-color);
-	position: relative;
-	display: flex;
-	flex-direction: column;
+    flex: 1; 
+    overflow-y: auto; 
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    
+    /* --- THE GLOBAL BACKGROUND --- */
+    background-color: var(--bg-color);
+    background-image: url('../public/images/takarazuka.jpg');
+    background-size: cover; /* Ensures the image covers the whole screen */
+    background-position: center; 
+    background-attachment: fixed;
+    
+    position: relative;
+    display: flex;
+    flex-direction: column;
 }
