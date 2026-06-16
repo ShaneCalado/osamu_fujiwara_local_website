@@ -1,24 +1,54 @@
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router } from 'react-router-dom'; // Removed Routes and Route
+import Header from './components/header/Header'; 
+import Sidebar from './components/sidebar/Sidebar';
+import AnimatedRoutes from './components/transition/AnimatedRoutes'; // Imported our new component
 import './App.css';
 
 function App() {
+  const [language, setLanguage] = useState(() => {
+    return localStorage.getItem('siteLanguage') || 'en';
+  });
+
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    localStorage.setItem('siteLanguage', language);
+  }, [language]);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="app-layout">
+        
+        <Sidebar 
+          isMobileMenuOpen={isMobileMenuOpen}
+          closeMenu={closeMenu}
+          language={language}
+          changeLanguage={setLanguage}
+        />
+
+        {/* The Header stays static and doesn't animate */}
+        <Header 
+          language={language} 
+          changeLanguage={setLanguage} 
+          toggleMobileMenu={toggleMobileMenu}
+        />
+
+        <main className="page-container">
+          {/* All routing and page animations are now handled in here */}
+          <AnimatedRoutes language={language} />
+        </main>
+
+      </div>
+    </Router>
   );
 }
 

@@ -1,0 +1,62 @@
+[
+  {
+    "position": 1,
+    "image": "",
+    "title": {
+      "en": "I will listen carefully and explain in an easy-to-understand manner.",
+      "ja": "丁寧に話を聞き、わかりやすく説明します"
+    },
+    "content": {
+      "en": "Administrative procedures often involve complex requirements and documentation, leaving many people feeling anxious and unsure of where to begin.\n\nWe avoid technical jargon as much as possible, providing clear, easy-to-understand guidance on the necessary procedures and the steps to move forward.",
+      "ja": "行政手続きは、必要書類や要件がわかりにくく、「何から始めればよいのかわからない」\nと不安になる方も少なくありません。\n\n専門用語をできるだけ使わず、必要な手続きと進め方をわかりやすくご案内します。"
+    }
+  },
+  {
+    "position": 2,
+    "image": "",
+    "title": {
+      "en": "Ongoing support, primarily focused on construction business licenses.",
+      "ja": "建設業許可を中心に継続サポート"
+    },
+    "content": {
+      "en": "The process doesn't end once you obtain a construction business license.\n\nWe provide ongoing support for all essential procedures required for construction contractors, including initial license applications, annual financial updates, renewals, and various change notifications.\n\nFocusing primarily on construction business licenses, our office provides comprehensive support that looks ahead to post-acquisition requirements. This ensures that construction companies and independent contractors can concentrate entirely on their core business.",
+      "ja": "建設業許可は、許可を取得して終わりではありません。\n建設業許可、決算変更届、更新申請、各種変更届など、建設業者様に必要な手続きを継続サポートします。\n当事務所では、建設業許可を中心に、建設会社様や一人親方の方が本業に集中できるよう、\n許可取得後の手続きまで見据えてサポートします。"
+    }
+  },
+  {
+    "position": 3,
+    "image": "",
+    "title": {
+      "en": "As a certified administrative scrivener handling visa applications, I can assist with visa procedures.",
+      "ja": "申請取次行政書士としてVISA手続きに対応"
+    },
+    "content": {
+      "en": "I am a certified Application Intermediary Administrative Scrivener, authorized to submit applications to the Immigration Services Agency on your behalf.\n\nWe provide consultations regarding residency status not only for foreign nationals themselves, but also for companies seeking to hire foreign employees.",
+      "ja": "当事務所の行政書士は、出入国在留管理局への申請取次ができる申請取次行政書士です。\n外国人ご本人だけでなく、外国人を雇用する企業様からの在留資格相談にも対応します。"
+    }
+  },
+  {
+    "position": 4,
+    "image": "",
+    "title": {
+      "en": "We also handle wills and inheritances, including those involving real estate.",
+      "ja": "不動産を含む遺言・相続にも対応"
+    },
+    "content": {
+      "en": "Inheritance procedures often involve more than just collecting family registers and identifying heirs; they frequently include real estate, such as land and buildings.\n\nAs a certified Real Estate Transaction Agent and an Inheritance Legal Affairs Advisor, I carefully manage and streamline inheritance procedures involving property.",
+      "ja": "相続手続きでは、戸籍収集や相続人調査だけでなく、土地・建物などの不動産が関係することも多くあります。\n宅地建物取引士・相続法務指導員として、土地建物が関係する相続手続きも丁寧に整理します。"
+    }
+  },
+  {
+    "position": 5,
+    "image": "",
+    "title": {
+      "en": "Local consultation services in Takarazuka City and the surrounding Hanshin area",
+      "ja": "宝塚市・阪神間の身近な相談窓口"
+    },
+    "content": {
+      "en": "Based in Takarazuka City, our office provides consultation services throughout the Hanshin area, including the cities of Nishinomiya, Kawanishi, Itami, Amagasaki, Ashiya, Sanda, Kobe, and the Hokusetsu region of Osaka.\n\nWe aim to be the first office people in Takarazuka City and the greater Hanshin area think of when they say, \"I'll consult them first.\"",
+      "ja": "当事務所は、宝塚市を中心に、西宮市、川西市、伊丹市、尼崎市、芦屋市、三田市、神戸市、\n大阪北摂地域など、阪神間のご相談に対応しています。\n\n宝塚市を中心に、阪神間で「まず相談してみたい」と思っていただける事務所を目指しています。"
+    }
+  }
+]

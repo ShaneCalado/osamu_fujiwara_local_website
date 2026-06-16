@@ -1,0 +1,69 @@
+[
+    {
+        "position" : 1,
+        "name" : {
+            "en" : "Home",
+            "jp" : "ホーム"
+        },
+        "link" : "/",
+        "external" : false
+    },
+    {
+        "position" : 2,
+        "name" : {
+            "en" : "About Us",
+            "jp" : "事務所概要"
+        },
+        "link" : "/about",
+        "external" : false
+    },
+    {
+        "position" : 3,
+        "name" : {
+            "en" : "Services",
+            "jp" : "取扱業務"
+        },
+        "link" : "/services",
+        "external" : false,
+        "subItems": [
+            { "name": { "en": "Corporate", "jp": "法人設立" }, "link": "/services/corporate", "external": false },
+            { "name": { "en": "Visas", "jp": "ビザ申請" }, "link": "/services/visas", "external": false }
+        ]
+    },
+    {
+        "position" : 4,
+        "name" : {
+            "en" : "Prices",
+            "jp" : "報酬額表"
+        },
+        "link" : "/prices",
+        "external" : false
+    },
+    {
+        "position" : 5,
+        "name" : {
+            "en" : "Testimonials",
+            "jp" : "お客様の声"
+        },
+        "link" : "/testimonials",
+        "external" : false
+    },
+    {
+        "position" : 6,
+        "name" : {
+            "en" : "Blog",
+            "jp" : "ブログ"
+        },
+        "link" : "https://fujiwaraosamu.com/",
+        "external" : true
+    },
+    {
+        "position" : 7,
+        "name" : {
+            "en" : "Contact Us",
+            "jp" : "お問い合わせ"
+        },
+        "link" : "/contact",
+        "external" : false
+    }
+]

@@ -1,0 +1,292 @@
+/* --- HEADER CONTAINER --- */
+.global-header {
+  background: linear-gradient(to bottom, rgba(30, 34, 43, 0.8) 0%, rgba(30, 34, 43, 1) 100%);
+  backdrop-filter: blur(8px); 
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  
+  /* Flexbox automatically keeps this at the top, flex-shrink: 0 prevents it from squishing */
+  flex-shrink: 0; 
+  min-height: var(--header-height); 
+  width: 100%;
+  z-index: 1000; 
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  padding: 15px 40px; 
+  box-sizing: border-box; 
+  transition: background 0.3s ease;
+}
+
+/* --- BRAND GROUP (Logo + Title) --- */
+.brand-group {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  text-decoration: none;
+  color: white;
+  flex: 1;
+  min-width: 0;
+  margin-right: 20px;
+}
+
+.brand-logo {
+  height: 55px;
+  flex-shrink: 0; 
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  min-width: 0;
+}
+
+.site-name {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.2; 
+  letter-spacing: 1px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.site-title {
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #cccccc; 
+  letter-spacing: 1.5px;
+  text-transform: uppercase; 
+  white-space: normal;
+  overflow-wrap: break-word;
+  line-height: 1.4;
+}
+
+/* --- DESKTOP NAVIGATION --- */
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+.desktop-nav a {
+  color: #e0e0e0;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 0 20px;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  transition: color 0.2s;
+}
+
+.desktop-nav a:hover {
+  color: white;
+}
+
+.desktop-nav a:nth-last-child(2) {
+  border-right: none;
+}
+
+.desktop-nav a.contact-btn {
+  background-color: #f08c3a; 
+  color: white;
+  font-weight: bold;
+  padding: 12px 30px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 2px;
+  transition: background-color 0.2s;
+}
+
+.desktop-nav a.contact-btn:hover {
+  background-color: #d9782b;
+}
+
+/* --- HEADER CONTROLS (Right Side) --- */
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.language-selector-wrapper {
+  position: relative;
+  height: 38px;
+  width: 70px;
+  z-index: 4005;
+}
+
+.language-pill {
+  position: absolute;
+  top: 0; right: 0; width: 100%;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px; 
+  overflow: hidden; 
+  transition: all 0.3s ease;
+}
+
+.language-selector-wrapper:hover .language-pill {
+  background: rgba(30, 34, 43, 0.95); 
+  border-color: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.lang-current {
+  padding: 8px 12px; height: 38px; box-sizing: border-box;
+  display: flex; align-items: center; justify-content: center;
+  cursor: default; font-size: 0.9rem; font-weight: bold; color: white;
+}
+
+.lang-options {
+  display: flex; flex-direction: column;
+  max-height: 0; opacity: 0; transition: all 0.3s ease;
+}
+
+.language-selector-wrapper:hover .lang-options { max-height: 100px; opacity: 1; }
+
+.lang-option {
+  background: transparent; border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.1); 
+  color: #a0aabf; padding: 12px 16px; text-align: center;
+  cursor: pointer; font-size: 0.9rem;
+}
+.lang-option:hover { background: rgba(255, 255, 255, 0.1); color: white; }
+
+.mobile-menu-btn {
+  display: none; background: none; border: none; color: white;
+  font-size: 2rem; cursor: pointer; padding: 0;
+}
+
+.mobile-lang-toggle { display: none; }
+
+/* --- MOBILE RESPONSIVE --- */
+@media (max-width: 768px) {
+  .global-header {
+    padding: 15px 20px;
+  }
+  
+  .site-name { font-size: 1.3rem; }
+  .site-title { font-size: 0.6rem; }
+  .desktop-nav { display: none !important; }
+  .desktop-lang-toggle { display: none !important; }
+  
+  .mobile-menu-btn {
+    display: block !important;
+    z-index: 5000; 
+  }
+
+  .mobile-lang-toggle {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto; 
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1); 
+  }
+}
+
+/* --- DESKTOP NAVIGATION --- */
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+.nav-item-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: var(--header-height); /* Makes the hover area span the full header height */
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.nav-item-wrapper:nth-last-child(2) {
+  border-right: none;
+}
+
+.nav-main-link {
+  color: #e0e0e0;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: color 0.2s;
+}
+
+.nav-main-link:hover {
+  color: white;
+}
+
+.dropdown-arrow {
+  font-size: 0.6rem;
+  opacity: 0.7;
+}
+
+/* Dropdown Menu Box */
+.dropdown-menu {
+  position: absolute;
+  top: 100%; /* Directly below the header */
+  left: 50%;
+  transform: translateX(-50%) translateY(10px); /* Centers it and pushes it down slightly */
+  background: rgba(30, 34, 43, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  min-width: 180px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+  
+  /* Hidden by default */
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+/* Reveal on hover */
+.nav-item-wrapper:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
+.dropdown-menu a {
+  color: #e0e0e0;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-size: 0.95rem;
+  transition: background 0.2s, color 0.2s;
+  text-align: center;
+}
+
+.dropdown-menu a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+/* Contact Button Overrides */
+.nav-main-link.contact-btn {
+  background-color: #f08c3a; 
+  color: white;
+  font-weight: bold;
+  padding: 12px 30px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 2px;
+  transition: background-color 0.2s;
+}
+
+.nav-main-link.contact-btn:hover {
+  background-color: #d9782b;
+}

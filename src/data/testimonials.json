@@ -1,0 +1,114 @@
+[
+    {
+        "review_id": "rev-001",
+        "service_ids": ["construction-license-new-governor-ordinary"],
+        "review_text": {
+            "en": "Fujiwara-sensei made the process of setting up my business in Japan incredibly smooth. Navigating the legal requirements was daunting, but his clear explanations and prompt actions saved me months of stress.",
+            "ja": "藤原先生のおかげで、日本での起業手続きが驚くほどスムーズに進みました。法的な要件を理解するのは大変でしたが、明確な説明と迅速な対応により、何ヶ月分ものストレスから解放されました。"
+        },
+        "review_quote": {
+            "en": "Incredibly smooth and saved me months of stress.",
+            "ja": "驚くほどスムーズで、ストレスから解放されました。"
+        },
+        "image": "client_1.jpg",
+        "from_customer": true
+    },
+    {
+        "review_id": "rev-002",
+        "service_ids": ["construction-license-new-governor-ordinary"],
+        "review_text": {
+            "en": "We were very worried about our spouse visa application, but the office handled everything professionally. They listened to our specific situation and guided us through the necessary documents. Highly recommended.",
+            "ja": "配偶者ビザの申請についてとても不安でしたが、事務所がすべてプロフェッショナルに対応してくれました。私たちの具体的な状況を聞き、必要な書類を案内してくれました。強くお勧めします。"
+        },
+        "review_quote": {
+            "en": "Handled everything professionally. Highly recommended.",
+            "ja": "すべてプロフェッショナルに対応してくれました。"
+        },
+        "image": "client_1.jpg",
+        "from_customer": true
+    },
+    {
+        "review_id": "rev-003",
+        "service_ids": ["construction-license-new-governor-ordinary"],
+        "review_text": {
+            "en": "Obtaining the restaurant operating license was fast and hassle-free. They communicated with the health center directly, so I could focus on preparing my restaurant for opening.",
+            "ja": "飲食店の営業許可の取得が早く、手間がかかりませんでした。保健所と直接やり取りしてくれたので、私は開店準備に専念することができました。"
+        },
+        "review_quote": {
+            "en": "Fast, hassle-free, and let me focus on my business.",
+            "ja": "早く手間がかからず、ビジネスに専念できました。"
+        },
+        "image": "client_1.jpg",
+        "from_customer": true
+    },
+    {
+        "review_id": "rev-004",
+        "service_ids": ["construction-license-new-governor-ordinary"],
+        "review_text": {
+            "en": "As a tax accountant, I frequently collaborate with this office on client corporate setups. The administrative paperwork is always flawless, making the transition to tax registration seamless.",
+            "ja": "税理士として、クライアントの法人設立で頻繁にこちらの事務所と協力しています。行政手続きの書類は常に完璧で、税務登録への移行がシームレスに行えます。"
+        },
+        "review_quote": {
+            "en": "Flawless paperwork and seamless collaboration.",
+            "ja": "書類は常に完璧で、シームレスな連携が可能です。"
+        },
+        "image": "client_1.jpg",
+        "from_customer": false
+    },
+    {
+        "review_id": "rev-005",
+        "service_ids": [],
+        "review_text": {
+            "en": "Applying for Permanent Residency is a huge milestone, and I couldn't have done it without their expert advice. They reviewed my documents thoroughly and ensured my application was perfect before submission.",
+            "ja": "永住権の申請は大きな節目であり、専門的なアドバイスなしでは達成できませんでした。提出前に書類を徹底的に確認し、完璧な状態にしてくれました。"
+        },
+        "review_quote": {
+            "en": "Expert advice that ensured my application was perfect.",
+            "ja": "完璧な状態にしてくれる専門的なアドバイス。"
+        },
+        "image": "client_1.jpg",
+        "from_customer": true
+    },
+    {
+        "review_id": "rev-006",
+        "service_ids": [],
+        "review_text": {
+            "en": "Renewing our construction industry license was always a headache until we hired this office. They manage our deadlines proactively and handle all the complex bureaucratic steps.",
+            "ja": "こちらの事務所に依頼するまで、建設業許可の更新は常に頭痛の種でした。期限を先回りして管理し、複雑な行政手続きをすべて処理してくれます。"
+        },
+        "review_quote": {
+            "en": "They manage deadlines proactively and handle the bureaucracy.",
+            "ja": "期限を先回りして管理し、行政手続きをすべて処理してくれます。"
+        },
+        "image": "client_1.jpg",
+        "from_customer": true
+    },
+    {
+        "review_id": "rev-007",
+        "service_ids": [],
+        "review_text": {
+            "en": "We refer all our foreign clients needing property-related visas to the Fujiwara Administrative Office. They are reliable, communicative, and truly care about finding the best solutions.",
+            "ja": "不動産関連のビザが必要な外国人クライアントはすべて藤原行政書士事務所に紹介しています。信頼性が高く、コミュニケーションが取りやすく、最善の解決策を真剣に見つけてくれます。"
+        },
+        "review_quote": {
+            "en": "Reliable, communicative, and truly care about the best solutions.",
+            "ja": "信頼性が高く、最善の解決策を真剣に見つけてくれます。"
+        },
+        "image": "client_1.jpg",
+        "from_customer": false
+    },
+    {
+        "review_id": "rev-008",
+        "service_ids": [],
+        "review_text": {
+            "en": "Thanks to their meticulous support, our small business successfully secured a crucial government grant. They explained the complex requirements in simple terms we could understand.",
+            "ja": "きめ細やかなサポートのおかげで、私たちの小さな会社は重要な政府の補助金を無事に確保することができました。複雑な要件を私たちが理解できる簡単な言葉で説明してくれました。"
+        },
+        "review_quote": {
+            "en": "Secured a crucial grant with their meticulous support.",
+            "ja": "きめ細やかなサポートで重要な補助金を確保できました。"
+        },
+        "image": "client_1.jpg",
+        "from_customer": true
+    }
+]
