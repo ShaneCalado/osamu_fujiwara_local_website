@@ -18,10 +18,10 @@ const Home = ({ language }) => {
     };
 
     return (
-        <div className="home-scroll-container">
+        <div className="page-container">
             
             {/* SECTION 0: WELCOME */}
-            <section className="home-section welcome-section">
+            <section className="screen-section welcome-section">
                 <div className="intro-dashboard-container">
                     <div className="intro-row">
                         
@@ -43,7 +43,7 @@ const Home = ({ language }) => {
             </section>
 
             {/* SECTION 1: VIDEO */}
-            <section className="home-section video-section">
+            <section className="screen-section video-section">
                 <div className="video-wrapper">
                     {!isVideoPlaying ? (
                         <div className="custom-play-overlay" onClick={() => setIsVideoPlaying(true)}>
@@ -63,7 +63,7 @@ const Home = ({ language }) => {
             </section>
 
             {/* SECTION 2: CATEGORIES DASHBOARD */}
-            <section className="home-section categories-section">
+            <section className="screen-section categories-section">
                 <div className="categories-dashboard-container">
                     {validCategories.length > 0 && (
                         <div className="category-row top-category-row">

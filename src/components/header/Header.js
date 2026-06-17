@@ -1,10 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import menuData from '../../data/menu.json'; 
 import homeData from '../../data/home.json'; 
 import './Header.css';
 
 const Header = ({ language = 'en', changeLanguage, toggleMobileMenu }) => {
+  const location = useLocation(); // Hook to track the current URL
+
   return (
     <header className="global-header">
       
@@ -27,6 +29,9 @@ const Header = ({ language = 'en', changeLanguage, toggleMobileMenu }) => {
             const isContact = item.link === '/contact';
             const itemName = item.name[language] || item.name.jp; 
             const hasDropdown = item.subItems && item.subItems.length > 0;
+            
+            // Check if the current URL matches this nav link
+            const isActive = location.pathname === item.link;
 
             return (
               <div key={item.position} className="nav-item-wrapper">
@@ -35,7 +40,7 @@ const Header = ({ language = 'en', changeLanguage, toggleMobileMenu }) => {
                     href={item.link} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className={`nav-main-link ${isContact ? "contact-btn" : ""}`}
+                    className={`nav-main-link ${isContact ? "contact-btn" : ""} ${isActive && !isContact ? "active" : ""}`}
                   >
                     <span className="translatable-text">{itemName}</span>
                     {hasDropdown && <span className="dropdown-arrow">▼</span>}
@@ -43,7 +48,7 @@ const Header = ({ language = 'en', changeLanguage, toggleMobileMenu }) => {
                 ) : (
                   <Link 
                     to={item.link} 
-                    className={`nav-main-link ${isContact ? "contact-btn" : ""}`}
+                    className={`nav-main-link ${isContact ? "contact-btn" : ""} ${isActive && !isContact ? "active" : ""}`}
                   >
                     <span className="translatable-text">{itemName}</span>
                     {hasDropdown && <span className="dropdown-arrow">▼</span>}

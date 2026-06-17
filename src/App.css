@@ -1,8 +1,10 @@
 :root {
-	--bg-color: #1a1a1a; /* Assuming a dark theme based on your previous CSS */
+    --main-color: 30, 34, 43;
+
+	--bg-color: #1a1a1a;
 	--header-bg: #222;
 	--header-height: 60px;
-    --box-color: rgba(30, 34, 43, 0.3);
+    --box-color: rgba(var(--main-color), 0.3);
 
     --text-highlight: #f08c3a;
     --text-header: rgba(0,0,0,0);
@@ -10,7 +12,6 @@
     --text-subtext: #e0e0e0;
 }
 
-/* Lock the main browser window from scrolling */
 body, html {
 	margin: 0;
 	padding: 0;
@@ -19,31 +20,57 @@ body, html {
 	overflow: hidden; 
 }
 
-/* The main flex column */
+/* =========================================
+   Style
+   ========================================= */
+.box-style-a {
+
+}
+
+.box-style-b {
+    
+}
+
+/* =========================================
+   App Layout
+   ========================================= */
 .app-layout {
 	display: flex;
 	flex-direction: column;
 	height: 100vh;
-	height: 100dvh; /* Accounts for mobile browser address bars */
+	height: 100dvh;
+    background-color: var(--bg-color);
+    background-image: 
+        linear-gradient(rgba(26, 26, 26, 0.1), rgba(26, 26, 26, 0.6)), 
+        url('../public/images/takarazuka.jpg');
+    background-size: cover;
+    background-position: center; 
+    background-attachment: fixed;
 }
 
 /* =========================================
-   THE GLOBAL SCROLLING BOX
+   Global Scrolling Box
    ========================================= */
 .page-container {
     flex: 1; 
     overflow-y: auto; 
     overflow-x: hidden;
     scroll-behavior: smooth;
-    
-    /* --- THE GLOBAL BACKGROUND --- */
-    background-color: var(--bg-color);
-    background-image: url('../public/images/takarazuka.jpg');
-    background-size: cover; /* Ensures the image covers the whole screen */
-    background-position: center; 
-    background-attachment: fixed;
-    
     position: relative;
     display: flex;
     flex-direction: column;
 }
+
+/* =========================================
+   Screen Sized Section
+   ========================================= */
+.screen-section {
+    width: 100%;
+    min-height: calc(100dvh - var(--header-height)); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1vh 1vw 1vh 1vw;
+    box-sizing: border-box;
+}
+
