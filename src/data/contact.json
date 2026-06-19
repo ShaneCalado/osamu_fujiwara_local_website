@@ -8,31 +8,31 @@
     "ja": "所在地"
   },
   "addressValue": {
-    "en": "1234 Legal Avenue, Suite 100\nTokyo, Japan 100-0001",
-    "ja": "〒100-0001\n東京都架空区法務通り1234 100号室"
+    "en": "1-7-1-509 Sumiregaoka, Takarazuka City\nHyogo Prefecture, 665-0847, Japan",
+    "ja": "〒665-0847\n兵庫県宝塚市すみれガ丘1丁目7-1-509"
   },
   "phoneLabel": {
     "en": "Phone",
     "ja": "電話番号"
   },
   "phoneValue": {
-    "en": "+81 3-1234-5678",
-    "ja": "03-1234-5678"
+    "en": "0797-90-2776",
+    "ja": "0797-90-2776"
   },
   "emailLabel": {
     "en": "Email",
     "ja": "メールアドレス"
   },
   "emailValue": {
-    "en": "contact@fujiwara-office.example.com",
-    "ja": "contact@fujiwara-office.example.com"
+    "en": "office@fujiwaraosamu.com",
+    "ja": "office@fujiwaraosamu.com"
   },
   "hoursLabel": {
     "en": "Business Hours",
     "ja": "営業時間"
   },
   "hoursValue": {
-    "en": "Mon - Fri: 9:00 AM - 6:00 PM",
-    "ja": "平日: 9:00 - 18:00"
+    "en": "Mon - Fri: 9:00 AM - 6:00 PM\nSat-Sun: Closed",
+    "ja": "平日: 9:00 - 18:00\n週末: 閉店"
   }
 }

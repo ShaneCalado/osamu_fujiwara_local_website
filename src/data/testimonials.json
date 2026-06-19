@@ -1,114 +1,70 @@
 [
-    {
-        "review_id": "rev-001",
-        "service_ids": ["construction-license-new-governor-ordinary"],
-        "review_text": {
-            "en": "Fujiwara-sensei made the process of setting up my business in Japan incredibly smooth. Navigating the legal requirements was daunting, but his clear explanations and prompt actions saved me months of stress.",
-            "ja": "藤原先生のおかげで、日本での起業手続きが驚くほどスムーズに進みました。法的な要件を理解するのは大変でしたが、明確な説明と迅速な対応により、何ヶ月分ものストレスから解放されました。"
-        },
-        "review_quote": {
-            "en": "Incredibly smooth and saved me months of stress.",
-            "ja": "驚くほどスムーズで、ストレスから解放されました。"
-        },
-        "image": "client_1.jpg",
-        "from_customer": true
+  {
+    "review_id": "ic3-r-0",
+    "service_ids": [
+      "initial-consultation-30"
+    ],
+    "review_text": {
+      "en": "Although I was a little concerned because the application involved multiple farmland properties, Mr. Fujiwara handled everything carefully and accurately, including preparing the location map, obtaining the land registry and official maps, checking public roads and waterways, and investigating neighboring landowners.He also prepared the draft lease agreement and supporting documents in a short period of time, which was very helpful.Mr. Fujiwara is also a licensed real estate transaction specialist, so I felt reassured by his knowledge of land and buildings. He listens carefully and is a reliable professional.I am now also consulting him about preparing a notarized will.",
+      "ja": "複数の農地に関する申請だったため不安もありましたが、位置図の作成、登記簿・公図の取得、里道や水路の確認、周辺所有者の調査まで、丁寧かつ正確に進めていただきました。契約書案や添付資料も短期間で作成していただき、大変助かりました。藤原先生は宅地建物取引士の資格もお持ちで、土地建物に関する知識があり、安心してお願いできました。こちらの話もよく聞いてくださる、頼りになる先生です。現在は、公正証書遺言についても相談しています。"
     },
-    {
-        "review_id": "rev-002",
-        "service_ids": ["construction-license-new-governor-ordinary"],
-        "review_text": {
-            "en": "We were very worried about our spouse visa application, but the office handled everything professionally. They listened to our specific situation and guided us through the necessary documents. Highly recommended.",
-            "ja": "配偶者ビザの申請についてとても不安でしたが、事務所がすべてプロフェッショナルに対応してくれました。私たちの具体的な状況を聞き、必要な書類を案内してくれました。強くお勧めします。"
-        },
-        "review_quote": {
-            "en": "Handled everything professionally. Highly recommended.",
-            "ja": "すべてプロフェッショナルに対応してくれました。"
-        },
-        "image": "client_1.jpg",
-        "from_customer": true
+    "review_quote": {
+      "en": "We asked for support with a farmland lease agreement and the application to the Agricultural Committee.",
+      "ja": "農地の賃貸借契約・農業委員会への申請をお願いしました"
     },
-    {
-        "review_id": "rev-003",
-        "service_ids": ["construction-license-new-governor-ordinary"],
-        "review_text": {
-            "en": "Obtaining the restaurant operating license was fast and hassle-free. They communicated with the health center directly, so I could focus on preparing my restaurant for opening.",
-            "ja": "飲食店の営業許可の取得が早く、手間がかかりませんでした。保健所と直接やり取りしてくれたので、私は開店準備に専念することができました。"
-        },
-        "review_quote": {
-            "en": "Fast, hassle-free, and let me focus on my business.",
-            "ja": "早く手間がかからず、ビジネスに専念できました。"
-        },
-        "image": "client_1.jpg",
-        "from_customer": true
+    "image": "../../images/client_photos/client_1.jpg",
+    "from_customer": true,
+    "date": "31/05/2026"
+  },
+  {
+    "review_id": "nwd-r-1",
+    "service_ids": [
+      "notarized-will-drafting"
+    ],
+    "review_text": {
+      "en": "We received a consultation from a client who wanted to prepare for future inheritance matters. We supported the process from confirming the client’s wishes and organizing the contents of the will to preparing the necessary documents and coordinating with the notary office.The client told us, “I feel relieved now.”",
+      "ja": "将来の相続に備えたいというご相談を受け、ご本人の意思確認、遺言内容の整理、必要書類の準備、公証役場との調整、公証役場までの同行のサポートしました。お客様からは、「これで安心しました」とのお声をいただきました。"
     },
-    {
-        "review_id": "rev-004",
-        "service_ids": ["construction-license-new-governor-ordinary"],
-        "review_text": {
-            "en": "As a tax accountant, I frequently collaborate with this office on client corporate setups. The administrative paperwork is always flawless, making the transition to tax registration seamless.",
-            "ja": "税理士として、クライアントの法人設立で頻繁にこちらの事務所と協力しています。行政手続きの書類は常に完璧で、税務登録への移行がシームレスに行えます。"
-        },
-        "review_quote": {
-            "en": "Flawless paperwork and seamless collaboration.",
-            "ja": "書類は常に完璧で、シームレスな連携が可能です。"
-        },
-        "image": "client_1.jpg",
-        "from_customer": false
+    "review_quote": {
+      "en": "We supported the preparation of a notarized will.",
+      "ja": "公正証書遺言の作成をサポートしました"
     },
-    {
-        "review_id": "rev-005",
-        "service_ids": [],
-        "review_text": {
-            "en": "Applying for Permanent Residency is a huge milestone, and I couldn't have done it without their expert advice. They reviewed my documents thoroughly and ensured my application was perfect before submission.",
-            "ja": "永住権の申請は大きな節目であり、専門的なアドバイスなしでは達成できませんでした。提出前に書類を徹底的に確認し、完璧な状態にしてくれました。"
-        },
-        "review_quote": {
-            "en": "Expert advice that ensured my application was perfect.",
-            "ja": "完璧な状態にしてくれる専門的なアドバイス。"
-        },
-        "image": "client_1.jpg",
-        "from_customer": true
+    "image": "",
+    "from_customer": true,
+    "date": "01/06/2026"
+  },
+  {
+    "review_id": "clngo-r-2",
+    "service_ids": [
+      "construction-license-new-governor-ordinary"
+    ],
+    "review_text": {
+      "en": "We supported a construction company that needed to file a change notification for its demolition work registration with both Hyogo Prefecture and Osaka Prefecture due to the retirement of its registered technical supervisor.We organized the required documents and reviewed the qualifications of the new technical supervisor candidates, helping the company prepare the change notification in order to maintain its registration.In addition, we also organized the key points to be confirmed for the company’s future construction business license application, including the full-time engineer’s practical experience, the business management manager requirement, financial foundation, and construction work records.The client told us, “I felt reassured because I could consult not only about the change notification, but also about the future construction business license application.”",
+      "ja": "登録技術者の退職に伴い、30日以内に兵庫県・大阪府への解体工事業登録事項変更届が必要となった建設会社様をサポートしました。必要書類や新たな技術者候補の要件を整理し、登録維持に向けた変更届の準備を進めました。あわせて、今後の建設業許可取得に向けて、専任技術者の実務経験、経営業務管理責任者、財産的基礎、工事実績資料などの確認事項を整理しました。お客様からは、「変更届が期限内に早く完了させてもらい安心しました。又、今後の建設業許可取得まで相談できたのでよかったです」とのお声をいただきました。"
     },
-    {
-        "review_id": "rev-006",
-        "service_ids": [],
-        "review_text": {
-            "en": "Renewing our construction industry license was always a headache until we hired this office. They manage our deadlines proactively and handle all the complex bureaucratic steps.",
-            "ja": "こちらの事務所に依頼するまで、建設業許可の更新は常に頭痛の種でした。期限を先回りして管理し、複雑な行政手続きをすべて処理してくれます。"
-        },
-        "review_quote": {
-            "en": "They manage deadlines proactively and handle the bureaucracy.",
-            "ja": "期限を先回りして管理し、行政手続きをすべて処理してくれます。"
-        },
-        "image": "client_1.jpg",
-        "from_customer": true
+    "review_quote": {
+      "en": "We supported the filing of a change notification for demolition work registration.",
+      "ja": "解体工事業登録の変更届をサポートしました"
     },
-    {
-        "review_id": "rev-007",
-        "service_ids": [],
-        "review_text": {
-            "en": "We refer all our foreign clients needing property-related visas to the Fujiwara Administrative Office. They are reliable, communicative, and truly care about finding the best solutions.",
-            "ja": "不動産関連のビザが必要な外国人クライアントはすべて藤原行政書士事務所に紹介しています。信頼性が高く、コミュニケーションが取りやすく、最善の解決策を真剣に見つけてくれます。"
-        },
-        "review_quote": {
-            "en": "Reliable, communicative, and truly care about the best solutions.",
-            "ja": "信頼性が高く、最善の解決策を真剣に見つけてくれます。"
-        },
-        "image": "client_1.jpg",
-        "from_customer": false
+    "image": "",
+    "from_customer": true,
+    "date": "02/06/2026"
+  },
+  {
+    "review_id": "ca-r-3",
+    "service_ids": [
+      "coe-application"
+    ],
+    "review_text": {
+      "en": "The client had completed their marriage procedures overseas and wished to obtain a status of residence so that they could live together in Japan.In international marriage cases, it is important to clearly organize and explain matters such as the marriage procedures in Japan, the status of the marriage overseas, income and living stability, and the history of the relationship.At our office, we supported the client by checking the required documents, preparing the questionnaire and statement of reasons, and organizing the letter of guarantee, income documents, and materials explaining the marital relationship.In particular, because the case involved overseas marriage procedures and foreign-language documents, we carefully organized the application so that the Immigration Services Agency could easily understand the circumstances.As a result, the client was successfully granted the status of residence of “Spouse or Child of Japanese National.”Client’s VoiceThis was a visa application for living in Japan, and we were initially worried because we did not know what documents we needed to prepare.However, the required documents and the flow of the procedure were explained to us clearly, so we were able to proceed with peace of mind.The overseas marriage documents, proof of income, and other parts that would have been difficult for us to handle on our own were carefully organized, which was very helpful.Thanks to the support, we were successfully granted a three-year status of residence, and we are now able to start our life together in Japan.Thank you very much.",
+      "ja": "お客様は、海外で婚姻手続きを済ませた後、日本で一緒に生活するための在留資格を取得したいというご相談でした。国際結婚の場合、日本での婚姻手続き、海外での婚姻成立状況、収入・生活基盤、交際経緯などを整理して説明する必要があります。当事務所では、必要書類の確認、質問書・理由書の作成、身元保証書、収入資料、婚姻関係を説明する資料の整理などをサポートしました。特に、海外での婚姻手続きや外国語書類が関係するため、入管に伝わりやすいよう、申請内容を丁寧に整理しました。その結果、無事に「日本人の配偶者等」の在留資格が許可されました。お客様からの声：日本での生活を予定したビザ申請でしたが、何を準備すればよいのか分からず不安でしたが、必要書類や手続きの流れを分かりやすく説明していただき、安心して進めることができました。海外での婚姻届や収入の証明など、自分たちでは難しい部分も丁寧に整理していただき、とても助かりました。無事に3年間の在留資格が許可され、日本で一緒に生活を始めることができました。ありがとうございました。"
     },
-    {
-        "review_id": "rev-008",
-        "service_ids": [],
-        "review_text": {
-            "en": "Thanks to their meticulous support, our small business successfully secured a crucial government grant. They explained the complex requirements in simple terms we could understand.",
-            "ja": "きめ細やかなサポートのおかげで、私たちの小さな会社は重要な政府の補助金を無事に確保することができました。複雑な要件を私たちが理解できる簡単な言葉で説明してくれました。"
-        },
-        "review_quote": {
-            "en": "Secured a crucial grant with their meticulous support.",
-            "ja": "きめ細やかなサポートで重要な補助金を確保できました。"
-        },
-        "image": "client_1.jpg",
-        "from_customer": true
-    }
+    "review_quote": {
+      "en": "We supported the application for a Spouse of Japanese National visa.",
+      "ja": "日本人配偶者ビザの申請をサポートしました"
+    },
+    "image": "",
+    "from_customer": true,
+    "date": "03/06/2026"
+  }
 ]

@@ -6,7 +6,6 @@ import './Sidebar.css';
 const Sidebar = ({ isMobileMenuOpen, closeMenu, language, changeLanguage }) => {
   const [activeSubmenu, setActiveSubmenu] = useState(null);
 
-  // Helper to ensure state resets when the menu is fully closed
   const handleFullClose = () => {
     setActiveSubmenu(null);
     closeMenu();
@@ -65,19 +64,31 @@ const Sidebar = ({ isMobileMenuOpen, closeMenu, language, changeLanguage }) => {
                   const itemName = item.name[language] || item.name.jp; 
                   const hasDropdown = item.subItems && item.subItems.length > 0;
 
-                  // If it has sub-items, act as a toggle button instead of a link
-                  if (hasDropdown) {
-                    return (
-                      <li key={item.position}>
-                        <button className="submenu-trigger-btn" onClick={() => setActiveSubmenu(item)}>
-                          <span className="link-text translatable-text">{itemName}</span>
-                          <span className="arrow">▶</span>
-                        </button>
-                      </li>
-                    );
+                  // 1. If NOT clickable:
+                  if (!item.clickable) {
+                    if (hasDropdown) {
+                      // Act as a toggle button to open the submenu
+                      return (
+                        <li key={item.position}>
+                          <button className="submenu-trigger-btn" onClick={() => setActiveSubmenu(item)}>
+                            <span className="link-text translatable-text">{itemName}</span>
+                            <span className="arrow">▶</span>
+                          </button>
+                        </li>
+                      );
+                    } else {
+                      // Fallback: Just plain text if a non-clickable item has no dropdown
+                      return (
+                        <li key={item.position}>
+                          <div style={{ padding: '18px 25px', display: 'flex', justifyContent: 'flex-end', color: '#a0aabf' }}>
+                            <span className="link-text translatable-text">{itemName}</span>
+                          </div>
+                        </li>
+                      );
+                    }
                   }
 
-                  // External Link
+                  // 2. If CLICKABLE:
                   if (item.external) {
                     return (
                       <li key={item.position}>
@@ -88,7 +99,6 @@ const Sidebar = ({ isMobileMenuOpen, closeMenu, language, changeLanguage }) => {
                     );
                   }
 
-                  // Standard Link
                   return (
                     <li key={item.position}>
                       <Link to={item.link} onClick={handleFullClose}>

@@ -6,7 +6,8 @@
             "jp" : "ホーム"
         },
         "link" : "/",
-        "external" : false
+        "external" : false,
+        "clickable" : true
     },
     {
         "position" : 2,
@@ -15,7 +16,8 @@
             "jp" : "事務所概要"
         },
         "link" : "/about",
-        "external" : false
+        "external" : false,
+        "clickable" : true
     },
     {
         "position" : 3,
@@ -25,13 +27,12 @@
         },
         "link" : "/services",
         "external" : false,
+        "clickable" : false,
         "subItems": [
-            { "name": { "en": "Construction Business Licence", "jp": "建設業許可証" }, "link": "/services/constBusinessLicence", "external": false },
-            { "name": { "en": "Foreign Visa/Residence Status", "jp": "外国のビザ／居住資格" }, "link": "/services/foreignVisa", "external": false },
-            { "name": { "en": "Japanese Spouse Visa", "jp": "日本人配偶者ビザ" }, "link": "/services/spouceVisa", "external": false },
-            { "name": { "en": "Specific Skills", "jp": "特定のスキル" }, "link": "/services/specificSkills", "external": false },
-            { "name": { "en": "Making a Will", "jp": "遺言書の作成" }, "link": "/services/makingWill", "external": false },
-            { "name": { "en": "Inheritance Procedures", "jp": "継承手続き" }, "link": "/services/inheritance", "external": false }
+            { "name": { "en": "Consultation", "jp": "初回相談料" }, "link": "/services/consultation", "external": false },
+            { "name": { "en": "Construction", "jp": "建設業許可" }, "link": "/services/construction-industry-license-and-various-notifications", "external": false },
+            { "name": { "en": "Foreign Visa", "jp": "外国人VISA" }, "link": "/services/foreign-visa-support", "external": false },
+            { "name": { "en": "Will Drafting", "jp": "遺言.相続" }, "link": "/services/will-drafting-support", "external": false }
         ]
     },
     {
@@ -41,7 +42,14 @@
             "jp" : "報酬額表"
         },
         "link" : "/prices",
-        "external" : false
+        "external" : false,
+        "clickable" : false,
+        "subItems": [
+            { "name": { "en": "Consultation", "jp": "初回相談料" }, "link": "/prices/consultation", "external": false },
+            { "name": { "en": "Construction", "jp": "建設業許可" }, "link": "/prices/construction-industry-license-and-various-notifications", "external": false },
+            { "name": { "en": "Foreign Visa", "jp": "外国人VISA" }, "link": "/prices/foreign-visa-support", "external": false },
+            { "name": { "en": "Will Drafting", "jp": "遺言.相続" }, "link": "/prices/will-drafting-support", "external": false }
+        ]
     },
     {
         "position" : 5,
@@ -50,7 +58,8 @@
             "jp" : "お客様の声"
         },
         "link" : "/testimonials",
-        "external" : false
+        "external" : false,
+        "clickable" : true
     },
     {
         "position" : 6,
@@ -59,7 +68,8 @@
             "jp" : "ブログ"
         },
         "link" : "https://fujiwaraosamu.com/",
-        "external" : true
+        "external" : true,
+        "clickable" : true
     },
     {
         "position" : 7,
@@ -68,6 +78,7 @@
             "jp" : "お問い合わせ"
         },
         "link" : "/contact",
-        "external" : false
+        "external" : false,
+        "clickable" : true
     }
 ]

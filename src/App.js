@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router } from 'react-router-dom'; // Removed Routes and Route
+import { BrowserRouter as Router } from 'react-router-dom'; 
+// Removed ScrollToTop import!
 import Header from './components/header/Header'; 
 import Sidebar from './components/sidebar/Sidebar';
-import AnimatedRoutes from './components/transition/AnimatedRoutes'; // Imported our new component
+import AnimatedRoutes from './components/transition/AnimatedRoutes'; 
 import './App.css';
 
 function App() {
@@ -16,13 +17,8 @@ function App() {
     localStorage.setItem('siteLanguage', language);
   }, [language]);
 
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
-
-  const closeMenu = () => {
-    setIsMobileMenuOpen(false);
-  };
+  const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
+  const closeMenu = () => setIsMobileMenuOpen(false);
 
   return (
     <Router>
@@ -35,7 +31,6 @@ function App() {
           changeLanguage={setLanguage}
         />
 
-        {/* The Header stays static and doesn't animate */}
         <Header 
           language={language} 
           changeLanguage={setLanguage} 
@@ -43,7 +38,6 @@ function App() {
         />
 
         <main className="page-container">
-          {/* All routing and page animations are now handled in here */}
           <AnimatedRoutes language={language} />
         </main>
 

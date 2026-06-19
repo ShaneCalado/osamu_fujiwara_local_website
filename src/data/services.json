@@ -7,6 +7,7 @@
     "image": "",
     "bgImage": "",
     "defaultServiceImage": "",
+    "includeInContactForm": false,
     "description": {
       "en": "An initial consultation regarding our administrative and legal services. We will listen to your specific needs and outline the best approach and processes to assist you.",
       "ja": "弊所のサービスに関する初回のご相談です。お客様の具体的なご要望や現状をお伺いし、最適なサポート内容や今後の流れをご提案いたします。"
@@ -15,13 +16,14 @@
       {
         "id": "initial-consultation-30",
         "name": {
-          "en": "Initial Consultation - 30 minutes",
-          "ja": "初回相談 30分"
+          "en": "Initial Consultation",
+          "ja": "初回相談　１時間"
         },
-        "price": "Free",
+        "price": "無料",
+        "includeInPricePage": true,
         "description": {
           "en": "A 30-minute introductory meeting to discuss your situation, assess your needs, and outline potential administrative solutions.",
-          "ja": "お客様の状況やニーズを把握し、今後の手続きの流れについてご説明するための30分の初回相談です。"
+          "ja": "お客様の状況やニーズを把握し、今後の手続きの流れについてご説明するための１時間の初回相談です。"
         }
       },
       {
@@ -31,9 +33,10 @@
           "ja": "以後 30分ごと"
         },
         "price": "¥5,500 ~",
+        "includeInPricePage": true,
         "description": {
           "en": "Extended consultation time billed in 30-minute increments.",
-          "ja": "30分以降の延長料金となります。"
+          "ja": "１時間以降の延長料金となります。"
         }
       },
       {
@@ -43,6 +46,7 @@
           "ja": "出張相談"
         },
         "price": "¥11,000 ~",
+        "includeInPricePage": true,
         "description": {
           "en": "We will visit your designated location (office, home, etc.) for a consultation. Travel expenses may apply depending on the distance.",
           "ja": "ご指定の場所（オフィス、ご自宅など）へお伺いしてご相談を承ります。距離に応じて別途交通費が発生する場合があります。"
@@ -52,12 +56,13 @@
   },
   {
     "category": {
-      "en": "Construction Industry License & Various Notifications",
+      "en": "Construction Industry License And Various Notifications",
       "ja": "建設業許可"
     },
     "image": "categories/const_main.jpg",
     "bgImage": "categories/const_back.jpg",
     "defaultServiceImage": "categories/const_service.jpg",
+    "includeInContactForm": true,
     "description": {
       "en": "Comprehensive support for acquiring and renewing construction business licenses, as well as handling mandatory annual reports and ongoing notifications.",
       "ja": "建設業許可の新規取得や更新手続きをはじめ、毎年の決算変更届など、建設業を営む上で必要となる各種届出を総合的にサポートいたします。"
@@ -70,11 +75,11 @@
           "ja": "建設業許可 新規申請・知事一般"
         },
         "price": "¥143,000 ~",
+        "includeInPricePage": true,
         "description": {
           "en": "We provide comprehensive support for obtaining a new General Construction Business License from the prefectural governor, which is required for operating a business within a single prefecture.",
           "ja": "1つの都道府県内にのみ営業所を設けて事業を行う場合に必要な、知事許可（一般）の新規取得を全面的にサポートします。"
-        },
-        "mainImage": ""
+        }
       },
       {
         "id": "construction-license-new-governor-specific",
@@ -83,11 +88,11 @@
           "ja": "建設業許可 新規申請・知事特定"
         },
         "price": "¥198,000 ~",
+        "includeInPricePage": true,
         "description": {
           "en": "We provide support for obtaining a new Specific Construction Business License from the prefectural governor, which is required for prime contractors who subcontract work exceeding a specific monetary threshold.",
           "ja": "元請として一定金額以上の工事を下請に出す場合に必要な、知事許可（特定）の新規取得をサポートします。"
-        },
-        "mainImage": ""
+        }
       },
       {
         "id": "construction-license-new-minister",
@@ -96,11 +101,11 @@
           "ja": "建設業許可 新規申請・大臣許可"
         },
         "price": "¥242,000 ~",
+        "includeInPricePage": true,
         "description": {
           "en": "We provide proxy services for obtaining a new Minister of Land, Infrastructure, Transport and Tourism (MLIT) license, required when establishing business offices in two or more prefectures.",
           "ja": "2つ以上の都道府県に営業所を設けて事業を行う場合に必要な、国土交通大臣許可の新規取得手続きを代行します。"
-        },
-        "mainImage": ""
+        }
       },
       {
         "id": "construction-license-renewal",
@@ -109,11 +114,11 @@
           "ja": "建設業許可 更新申請"
         },
         "price": "¥77,000 ~",
+        "includeInPricePage": true,
         "description": {
           "en": "We provide end-to-end management and submission for your mandatory construction license renewal, which must be completed every five years.",
           "ja": "5年ごとに必要となる建設業許可の更新手続きを期日管理を含めて代行します。"
-        },
-        "mainImage": ""
+        }
       },
       {
         "id": "additional-business-category",
@@ -122,11 +127,11 @@
           "ja": "業種追加申請"
         },
         "price": "¥88,000 ~",
+        "includeInPricePage": true,
         "description": {
           "en": "Application services to add new construction categories (from the 29 available types) to your existing license as your business expands.",
           "ja": "事業拡大に伴い、現在お持ちの許可に新たな業種（全29業種）を追加するための申請手続きを行います。"
-        },
-        "mainImage": ""
+        }
       },
       {
         "id": "financial-statement-change-full",
@@ -135,176 +140,13 @@
           "ja": "決算変更届おまかせパック"
         },
         "price": "¥50,000 ~",
+        "includeInPricePage": true,
         "description": {
           "en": "A comprehensive package covering the preparation and submission of the mandatory annual financial statement change notification required for all licensed businesses.",
           "ja": "許可業者が毎事業年度終了後に提出しなければならない決算変更届の作成から提出までをすべて代行するパッケージです。"
-        },
-        "mainImage": ""
-      },
-      {
-        "id": "officer-change-notification",
-        "name": {
-          "en": "Officer Change Notification",
-          "ja": "役員変更届"
-        },
-        "price": "¥33,000 ~",
-        "description": {
-          "en": "Mandatory reporting procedures for changes in company directors or other designated officers.",
-          "ja": "会社の取締役などの役員に変更があった際に必要となる変更届出の手続きを行います。"
-        },
-        "mainImage": ""
-      },
-      {
-        "id": "business-office-change",
-        "name": {
-          "en": "Business Office Change Notification",
-          "ja": "営業所変更届"
-        },
-        "price": "¥44,000 ~",
-        "description": {
-          "en": "Procedures to notify authorities regarding the relocation, expansion, or closure of business offices or branch locations.",
-          "ja": "本店の移転や、支店の新設・廃止など、営業所に変更が生じた際の届出を代行します。"
-        },
-        "mainImage": ""
-      },
-      {
-        "id": "change-management-rep",
-        "name": {
-          "en": "Change of Business Management Representative",
-          "ja": "経営業務管理責任者の変更"
-        },
-        "price": "¥66,000 ~",
-        "description": {
-          "en": "Support for filing the required documentation when replacing the mandatory Business Management Representative (Keikan).",
-          "ja": "建設業許可の要件である経営業務の管理責任者（経管）が交代する際の重要な変更届をサポートします。"
-        },
-        "mainImage": ""
-      },
-      {
-        "id": "change-full-time-engineer",
-        "name": {
-          "en": "Change of Full-time Engineer",
-          "ja": "専任技術者の変更"
-        },
-        "price": "¥66,000 ~",
-        "description": {
-          "en": "Reporting procedures for the replacement or addition of a mandatory Full-time Technical Engineer (Sengin) at your business office.",
-          "ja": "営業所ごとに配置が義務付けられている専任技術者（専技）が交代・追加となる際の届出を行います。"
-        },
-        "mainImage": ""
-      },
-      {
-        "id": "business-closure-notification",
-        "name": {
-          "en": "Business Closure Notification",
-          "ja": "廃業届"
-        },
-        "price": "¥33,000 ~",
-        "description": {
-          "en": "Formal procedures for reporting the partial or total closure of a licensed construction business.",
-          "ja": "建設業の許可要件を欠いた場合や、事業そのものを廃止する場合の廃業届の提出手続きを代行します。"
-        },
-        "mainImage": ""
-      },
-      {
-        "id": "business-evaluation-application",
-        "name": {
-          "en": "Business Evaluation Application",
-          "ja": "経営事項審査申請"
-        },
-        "price": "¥110,000 ~",
-        "description": {
-          "en": "Full support for Keishin (Business Evaluation), a mandatory objective assessment for companies wishing to participate in public works bidding.",
-          "ja": "公共工事への入札参加を希望する企業に義務付けられている客観的評価「経営事項審査（経審）」の申請手続きを全面的にサポートします。"
-        }
-      },
-      {
-        "id": "business-condition-analysis",
-        "name": {
-          "en": "Business Condition Analysis Application",
-          "ja": "経営状況分析申請"
-        },
-        "price": "¥38,500 ~",
-        "description": {
-          "en": "Application to a registered analysis institution to receive the financial condition analysis report required for the Keishin evaluation.",
-          "ja": "経審の一部である財務状況の評価を受けるため、登録経営状況分析機関への分析申請手続きを代行します。"
-        }
-      },
-      {
-        "id": "financial-change-evaluation-set",
-        "name": {
-          "en": "Financial Statement Change Notification + Business Evaluation Set",
-          "ja": "決算変更届＋経審セット"
-        },
-        "price": "¥143,000 ~",
-        "description": {
-          "en": "A seamless, cost-effective package combining your mandatory annual financial notification with the subsequent Business Evaluation.",
-          "ja": "毎年の決算変更届と、それに続く経営事項審査の申請をセットでご依頼いただけるお得な一貫サポートプランです。"
-        }
-      },
-      {
-        "id": "bidding-qualification-1",
-        "name": {
-          "en": "Bidding Participation Qualification Application (1 Municipality)",
-          "ja": "入札参加資格審査申請 1自治体"
-        },
-        "price": "¥44,000 ~",
-        "description": {
-          "en": "Preparation and submission of documentation to register your company as a qualified bidder for public works in a single municipality or agency.",
-          "ja": "国や自治体の公共工事を受注するために必要な「入札参加資格」の審査申請を、1つの自治体・機関に対して行います。"
-        }
-      },
-      {
-        "id": "bidding-qualification-additional",
-        "name": {
-          "en": "Bidding Participation Qualification Application (2nd Municipality onwards)",
-          "ja": "入札参加資格審査申請 2自治体目以降"
-        },
-        "price": "¥33,000 ~",
-        "description": {
-          "en": "Discounted rate for applying to additional municipalities or government agencies concurrently.",
-          "ja": "複数の自治体や機関へ同時に入札参加資格申請を行う場合の、2件目以降の追加料金です。"
-        }
-      },
-      {
-        "id": "business-evaluation-prep",
-        "name": {
-          "en": "Business Evaluation Preparation Support",
-          "ja": "経審準備サポート"
-        },
-        "price": "¥55,000 ~",
-        "description": {
-          "en": "Strategic consulting to help improve your Keishin score (P-point) through advance planning and document organization.",
-          "ja": "経審の総合評定値（P点）アップに向けた事前対策のアドバイスや、シミュレーション、必要書類の整理をサポートします。"
-        }
-      },
-      {
-        "id": "pre-renewal-check",
-        "name": {
-          "en": "Pre-renewal Check Plan",
-          "ja": "更新前チェックプラン"
-        },
-        "price": "¥33,000 ~",
-        "description": {
-          "en": "An audit of your company's current status well before license renewal to ensure all requirements are still met.",
-          "ja": "許可更新の時期が来る前に、経営業務の管理責任者や専任技術者などの要件を満たし続けているかを確認・診断するプランです。"
         }
       }
     ]
-  },
-  {
-    "category": {
-      "en": "Business Evaluation & Bidding Participation Qualifications",
-      "ja": "経営事項審査・入札参加資格"
-    },
-    "image": "",
-    "bgImage": "",
-    "defaultServiceImage": "",
-    "description": {
-      "en": "Full assistance with the mandatory Business Evaluation (Keishin) process and the subsequent applications required to participate in public works bidding.",
-      "ja": "公共工事の入札に参加するために必須となる経営事項審査（経審）の受審から、各自治体等への入札参加資格審査申請までを代行いたします。"
-    },
-    "items": []
   },
   {
     "category": {
@@ -314,6 +156,7 @@
     "image": "categories/visa_main.jpg",
     "bgImage": "categories/visa_back.png",
     "defaultServiceImage": "",
+    "includeInContactForm": true,
     "description": {
       "en": "Expert guidance and application processing for various Japanese visas, including work visas, spouse visas, and permanent residency applications.",
       "ja": "就労ビザ、配偶者ビザ、永住許可など、外国籍の方が日本に滞在・就労するための各種ビザ（在留資格）の申請・更新・変更手続きを代行いたします。"
@@ -326,6 +169,7 @@
           "ja": "在留資格認定証明書交付申請"
         },
         "price": "¥110,000 ~",
+        "includeInPricePage": true,
         "description": {
           "en": "Application for a Certificate of Eligibility (COE) needed to invite a foreign national from abroad to live and work in Japan.",
           "ja": "海外にいる外国人を日本に呼び寄せるため（就労、結婚など）に必要となる、在留資格認定証明書の交付申請手続きを行います。"
@@ -338,6 +182,7 @@
           "ja": "在留資格変更許可申請"
         },
         "price": "¥110,000 ~",
+        "includeInPricePage": true,
         "description": {
           "en": "Procedures to change an individual's current visa category (e.g., from Student to Working visa).",
           "ja": "留学生が就職する場合など、現在持っている在留資格を別の目的の在留資格へ変更するための許可申請手続きです。"
@@ -350,6 +195,7 @@
           "ja": "在留期間更新許可申請・変更なし"
         },
         "price": "¥44,000 ~",
+        "includeInPricePage": true,
         "description": {
           "en": "Standard visa renewal for foreign nationals continuing the same activities at the same employer or school.",
           "ja": "勤務先や身分関係に変更がなく、現在の活動をそのまま継続するための在留期間の更新手続きを行います。"
@@ -362,6 +208,7 @@
           "ja": "在留期間更新許可申請・転職、事情変更あり"
         },
         "price": "¥77,000 ~",
+        "includeInPricePage": true,
         "description": {
           "en": "Visa renewal requiring additional screening due to changes in employment, marital status, or other significant circumstances.",
           "ja": "転職した場合や離婚など、前回の申請時から状況に変更が生じている場合の、より慎重な審査を伴う更新手続きです。"
@@ -374,6 +221,7 @@
           "ja": "再入国許可申請"
         },
         "price": "¥22,000 ~",
+        "includeInPricePage": true,
         "description": {
           "en": "Application for a permit to leave Japan for more than one year without losing your current status of residence.",
           "ja": "1年を超えて日本を離れる場合でも、現在の在留資格を失わずに再入国できるようにするための許可申請です。"
@@ -386,6 +234,7 @@
           "ja": "資格外活動許可申請"
         },
         "price": "¥22,000 ~",
+        "includeInPricePage": true,
         "description": {
           "en": "Application for permission to work part-time (up to 28 hours per week) for students and dependent visa holders.",
           "ja": "留学生や家族滞在の方が、週28時間以内のアルバイト等を行うために必要な資格外活動許可の申請手続きです。"
@@ -398,6 +247,7 @@
           "ja": "就労資格証明書交付申請"
         },
         "price": "¥66,000 ~",
+        "includeInPricePage": true,
         "description": {
           "en": "Obtaining an official certificate proving a foreign national is legally permitted to work in a specific job, highly recommended when changing jobs.",
           "ja": "転職先の業務が現在の在留資格で許可されているかを法務大臣が証明する文書の交付申請で、転職時のトラブル防止に有効です。"
@@ -410,6 +260,7 @@
           "ja": "理由書・説明書の作成"
         },
         "price": "¥33,000 ~",
+        "includeInPricePage": true,
         "description": {
           "en": "Professional drafting of critical supporting documents to explain complex situations or reasons for the application to immigration authorities.",
           "ja": "申請に至った経緯や特別な事情など、入管審査官に状況を適切に伝えるための理由書・説明書を専門家が作成します。"
@@ -422,45 +273,10 @@
           "ja": "不許可後の再申請サポート"
         },
         "price": "¥132,000 ~",
+        "includeInPricePage": true,
         "description": {
           "en": "Consultation and full support to identify the reasons for a previous visa rejection and prepare a robust re-application.",
           "ja": "ご自身で申請して不許可になってしまった案件について、入管で不許可理由を確認した上で、再申請に向けたリカバリーをサポートします。"
-        }
-      },
-      {
-        "id": "pre-employment-check",
-        "name": {
-          "en": "Pre-employment Status of Residence Check",
-          "ja": "外国人雇用前の在留資格チェック"
-        },
-        "price": "¥22,000 ~",
-        "description": {
-          "en": "Verifying the legal status and work permissions of a foreign candidate before extending an employment offer.",
-          "ja": "採用予定の外国人が所持する在留資格で、御社の業務に従事することが法的に可能かどうかを事前に診断します。"
-        }
-      },
-      {
-        "id": "company-documents-check",
-        "name": {
-          "en": "Company Required Documents Check",
-          "ja": "会社側必要書類の確認"
-        },
-        "price": "¥44,000 ~",
-        "description": {
-          "en": "Ensuring the employing company meets all requirements and has prepared the correct documentation to sponsor a work visa.",
-          "ja": "外国人を雇用するにあたり、受け入れ企業側で用意すべき書類のリストアップや、内容の確認・指導を行います。"
-        }
-      },
-      {
-        "id": "employment-reason-drafting",
-        "name": {
-          "en": "Employment Reason & Job Description Drafting",
-          "ja": "雇用理由書・職務内容説明書作成"
-        },
-        "price": "¥55,000 ~",
-        "description": {
-          "en": "Drafting persuasive documents that clearly explain the necessity of hiring the foreign national and the specific duties they will perform.",
-          "ja": "なぜその外国人を雇用する必要があるのか、どのような業務に従事させるのかを、入管の審査基準に沿って論理的に作成します。"
         }
       },
       {
@@ -470,6 +286,7 @@
           "ja": "特定技能関連の相談・書類確認"
         },
         "price": "¥55,000 ~",
+        "includeInPricePage": true,
         "description": {
           "en": "Specialized guidance and document verification for the complex 'Specified Skilled Worker' (Tokutei Ginou) visa category.",
           "ja": "制度が複雑な「特定技能」ビザでの雇用に関するご相談や、膨大な申請書類の事前チェックを承ります。"
@@ -481,7 +298,8 @@
           "en": "Ongoing Foreigner Employment Support",
           "ja": "外国人雇用の継続サポート"
         },
-        "price": "¥33,000 ~ / month/1人",
+        "price": "¥33,000 ~ / １月/1人",
+        "includeInPricePage": true,
         "description": {
           "en": "Monthly advisory service to ensure continued compliance with immigration laws and support with any visa-related issues during employment.",
           "ja": "外国人の雇用に関する労務管理のアドバイスや、在留期限の管理など、継続的にコンプライアンス遵守をサポートする月額サービスです。"
@@ -491,26 +309,13 @@
   },
   {
     "category": {
-      "en": "Foreigner Employment Support",
-      "ja": "外国人雇用サポート"
-    },
-    "image": "",
-    "bgImage": "",
-    "defaultServiceImage": "",
-    "description": {
-      "en": "Consulting and administrative services for companies hiring foreign nationals (including Specified Skilled Workers), ensuring smooth visa acquisition and full compliance with Japanese immigration laws.",
-      "ja": "外国人材（特定技能など）の採用を検討されている企業様向けに、適法なビザ取得のサポートから雇用後のコンプライアンス管理まで幅広く支援いたします。"
-    },
-    "items": []
-  },
-  {
-    "category": {
       "en": "Will Drafting Support",
       "ja": "遺言.相続"
     },
     "image": "categories/will_main.jpg",
     "bgImage": "categories/will_back.jpg",
-    "defaultServiceImage": "categories/will_main.jpg",
+    "defaultServiceImage": "",
+    "includeInContactForm": true,
     "description": {
       "en": "Professional assistance in drafting legally binding wills (such as Notarized Wills) to ensure your assets are distributed exactly according to your wishes.",
       "ja": "法的に有効な遺言書（公正証書遺言など）の作成をサポートし、ご自身の財産を確実にご家族へ引き継ぐための生前の準備をお手伝いいたします。"
@@ -523,6 +328,7 @@
           "ja": "自筆証書遺言の起案・作成指導"
         },
         "price": "¥55,000 ~",
+        "includeInPricePage": true,
         "description": {
           "en": "Guidance on how to legally write a handwritten will, including content drafting and checking for legal validity.",
           "ja": "法的に有効な自筆証書遺言を作成するための文案作成、書き方の指導、完成した遺言書のチェックを行います。"
@@ -535,21 +341,10 @@
           "ja": "公正証書遺言作成サポート"
         },
         "price": "¥88,000 ~",
+        "includeInPricePage": true,
         "description": {
           "en": "Comprehensive support for creating a highly secure notarized will, which is drafted by a public notary to prevent future disputes.",
           "ja": "最も確実でトラブルになりにくい公正証書遺言の作成に向けた、文案作成から手続き全般のサポートです。"
-        }
-      },
-      {
-        "id": "notary-office-coordination",
-        "name": {
-          "en": "Prior Coordination with Notary Office",
-          "ja": "公証役場との事前調整"
-        },
-        "price": "Included in the above fees",
-        "description": {
-          "en": "Handling all advance communication, document submission, and scheduling with the notary public office on your behalf.",
-          "ja": "公証役場への書類提出や、公証人との文案のすり合わせ、日程調整などをすべてお客様に代わって行います。"
         }
       },
       {
@@ -559,6 +354,7 @@
           "ja": "証人手配 1名"
         },
         "price": "¥11,000 ~",
+        "includeInPricePage": true,
         "description": {
           "en": "Providing legal professionals to serve as the two required independent witnesses for a notarized will.",
           "ja": "公正証書遺言の作成時に法的に必要となる証人（2名以上）として、守秘義務を持つ専門家を手配します。"
@@ -571,6 +367,7 @@
           "ja": "遺言内容の見直し相談"
         },
         "price": "¥22,000 ~",
+        "includeInPricePage": true,
         "description": {
           "en": "Reviewing an existing will to ensure it reflects your current wishes and remains legally sound under recent law changes.",
           "ja": "過去に作成した遺言書の内容が現在の状況やご希望に合っているか、法改正に対応しているかの見直しをご相談いただけます。"
@@ -583,6 +380,7 @@
           "ja": "夫婦それぞれの遺言書作成"
         },
         "price": "¥143,000 ~",
+        "includeInPricePage": true,
         "description": {
           "en": "A discounted package for married couples to create mutual wills simultaneously, ensuring smooth succession for the surviving spouse.",
           "ja": "ご夫婦それぞれが同時に遺言書を作成する場合のお得なプランです。配偶者への確実な財産承継をサポートします。"
@@ -595,6 +393,7 @@
           "ja": "相続人調査・3名まで"
         },
         "price": "¥44,000 ~",
+        "includeInPricePage": true,
         "description": {
           "en": "Collecting family registers (koseki) from birth to death to legally determine and certify all rightful heirs.",
           "ja": "亡くなられた方の出生から死亡までの戸籍謄本等を収集し、誰が法定相続人であるかを確定させる調査を行います。"
@@ -606,7 +405,8 @@
           "en": "Heir Investigation (Per additional person)",
           "ja": "相続人1名追加ごと"
         },
-        "price": "Add ¥8,000",
+        "price": "+ ¥8,000",
+        "includeInPricePage": true,
         "description": {
           "en": "Additional fee for complex family structures requiring investigation of more than three heirs.",
           "ja": "相続人が4名以上となる場合の、戸籍収集・調査にかかる追加料金です。"
@@ -619,6 +419,7 @@
           "ja": "相続関係説明図作成"
         },
         "price": "¥33,000 ~",
+        "includeInPricePage": true,
         "description": {
           "en": "Creating a clear, visual family tree chart required by banks and the Legal Affairs Bureau for inheritance processing.",
           "ja": "収集した戸籍をもとに、金融機関での解約手続きなどに必要となる相続関係説明図（家系図のようなもの）を作成します。"
@@ -631,6 +432,7 @@
           "ja": "法定相続情報一覧図作成・申出"
         },
         "price": "¥55,000 ~",
+        "includeInPricePage": true,
         "description": {
           "en": "Applying for the official Statutory Heir Information certificate, which significantly streamlines multiple bank and property transfers.",
           "ja": "法務局へ申し出て「法定相続情報一覧図の写し」を取得する手続きです。複数の金融機関等での手続きが大幅にスムーズになります。"
@@ -643,6 +445,7 @@
           "ja": "相続財産調査"
         },
         "price": "¥55,000 ~",
+        "includeInPricePage": true,
         "description": {
           "en": "Searching for and gathering certificates of registered assets, bank balances, and potential debts left by the deceased.",
           "ja": "不動産の登記事項証明書や名寄帳、金融機関の残高証明書などを取得し、プラスの財産だけでなくマイナスの財産（借金）も調査します。"
@@ -655,6 +458,7 @@
           "ja": "財産目録作成"
         },
         "price": "¥44,000 ~",
+        "includeInPricePage": true,
         "description": {
           "en": "Compiling all investigated assets and liabilities into a formal, structured inventory document for heir discussions.",
           "ja": "調査して判明したすべての相続財産を、見やすく一覧にまとめた財産目録を作成します。遺産分割協議の基礎資料となります。"
@@ -667,6 +471,7 @@
           "ja": "遺産分割協議書作成"
         },
         "price": "¥77,000 ~",
+        "includeInPricePage": true,
         "description": {
           "en": "Drafting the legally binding agreement that details exactly how the assets will be distributed among the heirs.",
           "ja": "相続人全員で合意した財産の分け方の内容を、法的に有効な書面（遺産分割協議書）として作成します。"
@@ -679,6 +484,7 @@
           "ja": "預貯金解約手続き 1金融機関"
         },
         "price": "¥44,000 ~",
+        "includeInPricePage": true,
         "description": {
           "en": "Handling the tedious paperwork required to unfreeze, close, and transfer funds from the deceased's bank accounts.",
           "ja": "凍結された故人の銀行口座の解約手続きや、相続人代表者口座への払い戻し手続きを代行します。"
@@ -691,6 +497,7 @@
           "ja": "相続手続き一式サポート"
         },
         "price": "¥220,000 ~",
+        "includeInPricePage": true,
         "description": {
           "en": "A complete hands-off package covering heir investigation, property inventory, agreement drafting, and bank cancellations.",
           "ja": "戸籍収集から財産目録作成、遺産分割協議書作成、金融機関の解約まで、面倒な相続手続きを一括してお任せいただける丸ごとプランです。"
@@ -703,6 +510,7 @@
           "ja": "複数世代にわたる相続関係整理"
         },
         "price": "¥165,000 ~",
+        "includeInPricePage": true,
         "description": {
           "en": "Untangling complex, unresolved inheritances where previous heirs have passed away, leading to dozens of current rights holders.",
           "ja": "祖父の代から名義変更されていない不動産など、数次相続が発生して権利関係が複雑化している案件の整理・調査を行います。"
@@ -715,6 +523,7 @@
           "ja": "遺言執行者就任"
         },
         "price": "¥275,000 ~",
+        "includeInPricePage": true,
         "description": {
           "en": "Acting as the legally designated executor to neutrally and professionally carry out the instructions written in the will.",
           "ja": "遺言書の内容を正確かつ中立な立場で実現するため、専門家として遺言執行者に就任します。"
@@ -726,12 +535,12 @@
           "en": "Will Execution Fee",
           "ja": "遺言執行報酬"
         },
-        "price": "2.0% ~ of inheritance value",
+        "price": "2.0% ~ 相続財産額による",
+        "includeInPricePage": true,
         "description": {
           "en": "The service fee for executing the will, calculating based on the total value of the transferred estate.",
           "ja": "遺言の内容に従って不動産の名義変更手配や預貯金の解約・分配などを行う際の手続き報酬です。財産額に応じて変動します。"
-        },
-        "mainImage": "services/post_mortem.jpg"
+        }
       },
       {
         "id": "post-mortem-mandate",
@@ -740,11 +549,11 @@
           "ja": "死後事務委任契約書作成"
         },
         "price": "¥88,000 ~",
+        "includeInPricePage": true,
         "description": {
           "en": "Creating a contract to handle administrative tasks after death (funeral arrangements, bill payments, digital account deletion) for those without relying family members.",
           "ja": "身寄りがない方などに向けた、死後の葬儀手配や病院・施設等の支払い、デジタル遺品の整理などの事務手続きを委任する契約書の作成です。"
-        },
-        "mainImage": "services/post_mortem.jpg"
+        }
       },
       {
         "id": "guardianship-consultation",
@@ -753,39 +562,12 @@
           "ja": "見守り契約・任意後見契約の相談"
         },
         "price": "¥33,000 ~",
+        "includeInPricePage": true,
         "description": {
           "en": "Consultation on setting up legal safety nets for potential future cognitive decline or physical incapacitation.",
           "ja": "将来、認知症などで判断能力が低下した時に備える「任意後見契約」や、定期的に安否確認を行う「見守り契約」に関するご相談を承ります。"
         }
       }
     ]
-  },
-  {
-    "category": {
-      "en": "Inheritance Procedures",
-      "ja": "相続手続き"
-    },
-    "image": "",
-    "bgImage": "",
-    "defaultServiceImage": "",
-    "description": {
-      "en": "Support with the complex administrative procedures following a bereavement, including heir investigation, property evaluation, and drafting inheritance division agreements.",
-      "ja": "相続人調査、相続財産の調査と目録作成、遺産分割協議書の作成など、身内の方が亡くなられた後の複雑な相続手続きを円滑に進めるためのサポートを提供いたします。"
-    },
-    "items": []
-  },
-  {
-    "category": {
-      "en": "Will Execution & Post-mortem Procedures",
-      "ja": "遺言執行・死後の手続き"
-    },
-    "image": "",
-    "bgImage": "",
-    "defaultServiceImage": "",
-    "description": {
-      "en": "Acting as the designated executor of your will to carry out your wishes, as well as handling necessary but burdensome post-mortem administrative tasks like closing bank accounts and transferring asset titles.",
-      "ja": "遺言執行者として指定を受け、遺言内容の確実な実現を行うほか、銀行口座の解約や各種名義変更など、ご家族の負担となる死後の事務手続きを代行いたします。"
-    },
-    "items": []
   }
 ]

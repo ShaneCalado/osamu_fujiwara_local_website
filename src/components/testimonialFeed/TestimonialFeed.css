@@ -1,0 +1,159 @@
+/* --- MAIN WRAPPER (THE HITBOX) --- */
+.testimonial-feed-wrapper {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 0 20px; 
+    box-sizing: border-box;
+    background-color: transparent; 
+}
+
+.feed-section-title {
+    font-size: clamp(1.4rem, 2.5vmin, 2.2rem);
+    color: var(--text-main);
+    margin: 0;
+    text-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+/* --- THE HORIZONTAL SCROLL TRACK --- */
+.testimonial-scroll-track {
+    display: flex;
+    flex-direction: row;
+    gap: 30px; 
+    overflow-x: auto; 
+    padding: 10px 0px 40px 0px; 
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
+}
+
+.testimonial-scroll-track::-webkit-scrollbar {
+    display: none;
+}
+
+/* --- THE EXACT WIDTH GLASS CARD --- */
+.testimonial-feed-card {
+    flex: 0 0 calc((100% - 60px) / 3); 
+    
+    background: var(--box-color);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 30px;
+    box-sizing: border-box;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+    gap: 20px;
+}
+
+/* --- QUOTE (TOP) --- */
+.feed-quote {
+    font-size: 1.15rem;
+    color: var(--text-highlight);
+    margin: 0;
+    line-height: 1.4;
+    font-weight: 600;
+    padding-bottom: 15px; 
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15); 
+    width: 100%; 
+}
+
+/* --- BODY (IMAGE + TEXT) --- */
+.feed-body-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+}
+
+/* --- IMAGE --- */
+.feed-card-image {
+    flex: 0 0 100px; 
+    height: 100px;
+    border-radius: 8px;
+    overflow: hidden;
+    flex-shrink: 0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.feed-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* --- TEXT CONTENT --- */
+.feed-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-subtext);
+    margin: 0;
+    
+    display: -webkit-box;
+    -webkit-line-clamp: 5; 
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* --- MOBILE RESPONSIVE --- */
+@media (max-width: 768px) {
+    .testimonial-scroll-track {
+        scroll-snap-type: x mandatory; 
+    }
+
+    .testimonial-feed-card {
+        flex: 0 0 100%; 
+        padding: 20px;
+        scroll-snap-align: start; 
+        
+        /* 1. Locks the outer card height but STOPS it from scrolling */
+        max-height: 68vh;
+        overflow: hidden; 
+        
+        /* Ensures the quote and body stack properly */
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .feed-body-wrapper {
+        /* 2. Disables Flexbox for text wrapping, but lets it stretch to fill bottom space */
+        display: block; 
+        flex: 1; 
+        
+        /* 3. THE FIX: Moves the scrolling inside just the body section! */
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch; 
+        scrollbar-width: none; 
+        -ms-overflow-style: none; 
+        
+        /* Adds a tiny bit of padding so scrolling text doesn't scrape the right edge */
+        padding-right: 5px; 
+    }
+    
+    /* Hides the ugly inner scrollbar on Webkit browsers */
+    .feed-body-wrapper::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .feed-card-image {
+        float: left; 
+        width: 85px; 
+        height: 85px;
+        margin-right: 15px; 
+        margin-bottom: 5px; 
+    }
+
+    .feed-text {
+        display: block;
+        -webkit-line-clamp: unset;
+        overflow: visible;
+    }
+}

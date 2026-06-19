@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion'; // <--- WE NEED THIS BACK!
 import aboutData from '../../data/about.json'; 
 import './About.css'; 
+import ContactBox from '../../components/contactBox/ContactBox'
 
 const AboutPage = ({ language }) => {
     return (
@@ -41,6 +42,8 @@ const AboutPage = ({ language }) => {
                     </div>
                 </div>
             </section>
+
+            <ContactBox language={language} />
 
 
         </motion.div>

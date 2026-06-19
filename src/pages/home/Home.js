@@ -1,20 +1,26 @@
-import React, { useState } from 'react'; // Removed useEffect
+import React, { useState } from 'react'; 
 import { Link } from 'react-router-dom'; 
 import homeData from '../../data/home.json'; 
 import servicesData from '../../data/services.json'; 
 import './Home.css';
+import TestimonialFeed from '../../components/testimonialFeed/TestimonialFeed';
+import ContactBox from '../../components/contactBox/ContactBox'
 
 const Home = ({ language }) => {
-    // Removed gifSrc state
     const [isVideoPlaying, setIsVideoPlaying] = useState(false); 
 
     const validCategories = servicesData.filter(cat => cat.items && cat.items.length > 0);
 
-    // Removed the useEffect timer that swapped the image
-
     const getImgSrc = (cat) => {
         const imgSrc = cat.image || cat.bgImage || cat.defaultServiceImage || 'headshot.jpg';
         return imgSrc.startsWith('http') ? imgSrc : `/images/${imgSrc}`;
+    };
+
+    // THE FIX: Helper to generate the exact slug for the new individual category pages
+    const getCategoryLink = (cat) => {
+        if (!cat?.category?.en) return '/services';
+        const slug = cat.category.en.toLowerCase().replace(/\s+/g, '-');
+        return `/services/${slug}`;
     };
 
     return (
@@ -73,7 +79,8 @@ const Home = ({ language }) => {
                             <div className="cat-text-col">
                                 <h3>{validCategories[0].category[language]}</h3>
                                 <p>{validCategories[0].description[language]}</p>
-                                <Link to="/services" className="cat-learn-more">
+                                {/* THE FIX: Replaced hardcoded '/services' with dynamic slug */}
+                                <Link to={getCategoryLink(validCategories[0])} className="cat-learn-more">
                                     {language === 'en' ? 'Learn More' : '詳細を見る'}
                                 </Link>
                             </div>
@@ -90,7 +97,8 @@ const Home = ({ language }) => {
                                     <div className="small-text-col">
                                         <h3>{cat.category[language]}</h3>
                                         <p>{cat.description[language]}</p>
-                                        <Link to="/services" className="cat-learn-more small-btn">
+                                        {/* THE FIX: Replaced hardcoded '/services' with dynamic slug */}
+                                        <Link to={getCategoryLink(cat)} className="cat-learn-more small-btn">
                                             {language === 'en' ? 'Learn More' : '詳細を見る'}
                                         </Link>
                                     </div>
@@ -100,7 +108,13 @@ const Home = ({ language }) => {
                     )}
                 </div>
             </section>
+            
+            {/* SECTION 3: TESTIMONIALS */}
+            <section className="screen-section testimonials-feed-section">
+                <TestimonialFeed language={language} />
+            </section>
 
+            <ContactBox language={language} />
 
         </div> 
     );

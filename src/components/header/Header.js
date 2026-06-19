@@ -5,7 +5,7 @@ import homeData from '../../data/home.json';
 import './Header.css';
 
 const Header = ({ language = 'en', changeLanguage, toggleMobileMenu }) => {
-  const location = useLocation(); // Hook to track the current URL
+  const location = useLocation(); 
 
   return (
     <header className="global-header">
@@ -29,31 +29,49 @@ const Header = ({ language = 'en', changeLanguage, toggleMobileMenu }) => {
             const isContact = item.link === '/contact';
             const itemName = item.name[language] || item.name.jp; 
             const hasDropdown = item.subItems && item.subItems.length > 0;
-            
-            // Check if the current URL matches this nav link
             const isActive = location.pathname === item.link;
+
+            // Shared classes for all nav items
+            const linkClasses = `nav-main-link ${isContact ? "contact-btn" : ""} ${isActive && !isContact ? "active" : ""}`;
+
+            // Determine if the item should be a text span, an external link, or an internal link
+            let navContent;
+            if (!item.clickable) {
+              navContent = (
+                <span className={linkClasses} style={{ cursor: 'default' }}>
+                  <span className="translatable-text">{itemName}</span>
+                  {hasDropdown && <span className="dropdown-arrow">▼</span>}
+                </span>
+              );
+            } else if (item.external) {
+              navContent = (
+                <a 
+                  href={item.link} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className={linkClasses}
+                >
+                  <span className="translatable-text">{itemName}</span>
+                  {hasDropdown && <span className="dropdown-arrow">▼</span>}
+                </a>
+              );
+            } else {
+              navContent = (
+                <Link 
+                  to={item.link} 
+                  className={linkClasses}
+                >
+                  <span className="translatable-text">{itemName}</span>
+                  {hasDropdown && <span className="dropdown-arrow">▼</span>}
+                </Link>
+              );
+            }
 
             return (
               <div key={item.position} className="nav-item-wrapper">
-                {item.external ? (
-                  <a 
-                    href={item.link} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className={`nav-main-link ${isContact ? "contact-btn" : ""} ${isActive && !isContact ? "active" : ""}`}
-                  >
-                    <span className="translatable-text">{itemName}</span>
-                    {hasDropdown && <span className="dropdown-arrow">▼</span>}
-                  </a>
-                ) : (
-                  <Link 
-                    to={item.link} 
-                    className={`nav-main-link ${isContact ? "contact-btn" : ""} ${isActive && !isContact ? "active" : ""}`}
-                  >
-                    <span className="translatable-text">{itemName}</span>
-                    {hasDropdown && <span className="dropdown-arrow">▼</span>}
-                  </Link>
-                )}
+                
+                {/* Render the dynamically chosen element */}
+                {navContent}
 
                 {/* THE DROPDOWN MENU */}
                 {hasDropdown && (

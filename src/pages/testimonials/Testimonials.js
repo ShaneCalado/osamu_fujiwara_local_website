@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import testimonialsData from '../../data/testimonials.json'; 
 import servicesData from '../../data/services.json'; 
 import './Testimonials.css';
+import ContactBox from '../../components/contactBox/ContactBox'
 
 const pageVariants = {
     hidden: { opacity: 0 },
@@ -99,10 +100,12 @@ const TestimonialAccordion = ({ item, language, idx, openIndex, toggleAccordion 
                                 ))}
                             </p>
                         </div>
+                        
                     </motion.div>
                 )}
             </AnimatePresence>
         </motion.div>
+        
     );
 };
 
@@ -135,7 +138,7 @@ const TestimonialsPage = ({ language }) => {
         }
     }
 
-    return (
+return (
         <motion.div 
             className="testimonials-page-container"
             variants={pageVariants}
@@ -160,32 +163,40 @@ const TestimonialsPage = ({ language }) => {
                 )}
             </AnimatePresence>
 
-            <AnimatePresence initial={false}>
-                {openIndex === null && (
-                    <motion.div
-                        className="header-wrapper" 
-                        initial={{ height: 0, opacity: 0, marginBottom: 0 }}
-                        animate={{ height: "auto", opacity: 1, marginBottom: 15 }}
-                        exit={{ height: 0, opacity: 0, marginBottom: 0 }}
-                        transition={{ duration: 0.35, ease: "easeInOut" }}
-                        style={{ overflow: "hidden" }}
-                    >
-                    </motion.div>
-                )}
-            </AnimatePresence>
+            {/* THE FIX: Wrap the header and accordions in this new height-locked container */}
+            <div className="testimonials-content-wrapper">
+                
+                <AnimatePresence initial={false}>
+                    {openIndex === null && (
+                        <motion.div
+                            className="header-wrapper" 
+                            initial={{ height: 0, opacity: 0, marginBottom: 0 }}
+                            animate={{ height: "auto", opacity: 1, marginBottom: 15 }}
+                            exit={{ height: 0, opacity: 0, marginBottom: 0 }}
+                            transition={{ duration: 0.35, ease: "easeInOut" }}
+                            style={{ overflow: "hidden" }}
+                        >
+                        </motion.div>
+                    )}
+                </AnimatePresence>
+                
+                <motion.div layout className="testimonials-accordion-scroll-box">
+                    {testimonialsData.map((item, idx) => (
+                        <TestimonialAccordion 
+                            key={item.review_id || idx} 
+                            item={item} 
+                            language={language} 
+                            idx={idx}
+                            openIndex={openIndex}
+                            toggleAccordion={toggleAccordion}
+                        />
+                    ))}
+                </motion.div>
+
+            </div>
+
+            <ContactBox language={language} />
             
-            <motion.div layout className="testimonials-accordion-scroll-box">
-                {testimonialsData.map((item, idx) => (
-                    <TestimonialAccordion 
-                        key={item.review_id || idx} 
-                        item={item} 
-                        language={language} 
-                        idx={idx}
-                        openIndex={openIndex}
-                        toggleAccordion={toggleAccordion}
-                    />
-                ))}
-            </motion.div>
         </motion.div>
     );
 };

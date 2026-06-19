@@ -145,16 +145,32 @@
 /* =========================================
    SECTION 2: CATEGORIES DASHBOARD
    ========================================= */
+.categories-section {
+    /* THE FIX: Force the section to lock exactly to the screen height */
+    height: calc(100dvh - var(--header-height));
+    min-height: 600px; /* Safety net so it doesn't crush on tiny laptops */
+}
+
 .categories-dashboard-container {
     width: 100%;
     max-width: 1300px;
+    height: 100%; /* Fill the locked section */
+    max-height: 85vh; /* Give it some breathing room from the top/bottom edges */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: clamp(30px, 5vh, 50px); 
+    gap: clamp(20px, 3vh, 50px); /* Gap shrinks fluidly on shorter screens */
 }
 
-.category-row.top-category-row { display: flex; width: 100%; align-items: stretch; }
+.category-row.top-category-row { 
+    display: flex; 
+    width: 100%; 
+    align-items: stretch; 
+    
+    /* THE FIX: Tells the top row to dynamically stretch or shrink to fit the remaining space */
+    flex: 1; 
+    min-height: 0; 
+}
 
 .top-category-row .cat-image-col {
     flex: 1;
@@ -171,7 +187,10 @@
     background: var(--box-color);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    padding: 5% 5% 5% 8%; 
+    
+    /* Fluid padding so the text box shrinks cleanly */
+    padding: clamp(20px, 4vh, 5%) 5% clamp(20px, 4vh, 5%) 8%; 
+    
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.3);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -194,7 +213,7 @@
 }
 
 .top-category-row .cat-text-col p {
-    font-size: clamp(1rem, 1.5vmin, 1.2rem);
+    font-size: clamp(0.95rem, 1.5vmin, 1.2rem);
     line-height: 1.6;
     color: #e0e0e0;
     margin: 0 0 25px 0;
@@ -206,13 +225,19 @@
     justify-content: space-between;
     gap: 30px;
     width: 100%;
+    
+    /* THE FIX: Prevents the bottom row from stretching vertically */
+    flex: 0 0 auto; 
 }
 
 .category-card-small { flex: 1; display: flex; flex-direction: column; align-items: center; }
 
 .small-img-col {
     width: 100%;
-    height: 200px; 
+    
+    /* Fluid height so the bottom images can yield space if the screen is super short */
+    height: clamp(140px, 20vh, 200px); 
+    
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
@@ -225,7 +250,10 @@
     background: var(--box-color);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    padding: 25px 20px;
+    
+    /* Fluid vertical padding */
+    padding: clamp(15px, 2.5vh, 25px) 20px;
+    
     border-radius: 12px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -262,7 +290,7 @@
     padding: 12px 30px;
     border-radius: 4px;
     transition: background-color 0.2s, transform 0.2s;
-    margin-top: auto; /* Pushes button to bottom of card */
+    margin-top: auto; 
 }
 
 .cat-learn-more:hover { background-color: #d9782b; transform: translateY(-2px); }
@@ -273,37 +301,46 @@
    ========================================= */
 @media (max-width: 768px) {
     
-    /* Disables the forced full-screen height on mobile, 
-       otherwise tall content will squish and overflow. */
-    .home-section {
+    /* Fixed a typo here: Changed .home-section to .screen-section */
+    .screen-section {
+        height: auto; 
         min-height: auto; 
         padding: 60px 20px; 
     }
 
+    /* Unlock the strict height constraints for mobile so content can stack */
+    .categories-section { height: auto; }
+    .categories-dashboard-container { height: auto; max-height: none; }
+    .category-row.top-category-row { flex: none; }
+
     /* --- MOBILE INTRO SECTION --- */
     .intro-dashboard-container {
-        height: auto; 
+        height: clamp(280px, 40vh, 450px); 
     }
 
     .intro-row {
-        flex-direction: column;
+        flex-direction: row; 
+        align-items: center; 
     }
 
     .intro-text-col {
-        width: 100%;
-        padding: 40px 20px 80px 20px; 
-        gap: 20px; /* Static gap for mobile */
+        flex: 1.4; 
+        width: auto;
+        padding: 0 0 0 15px; 
+        gap: 10px; 
+        justify-content: center;
     }
 
     .intro-image-col {
-        width: 90%; 
-        height: 300px; 
-        margin: -60px 0 0 0; 
+        flex: 0.9; 
+        width: auto; 
+        height: 95%; 
+        margin: 0 0 0 -10%; 
     }
 
-    .welcome-header { font-size: 1.3rem; }
-    .welcome-text { font-size: 2.2rem; }
-    .welcome-subtext { font-size: 1rem; }
+    .welcome-header { font-size: clamp(0.85rem, 3.5vw, 1.2rem); }
+    .welcome-text { font-size: clamp(1.6rem, 7vw, 2.8rem); line-height: 1.2; margin-top: 5px; }
+    .welcome-subtext { font-size: clamp(0.8rem, 3vw, 1.1rem); margin-top: 5px; }
 
     /* --- MOBILE CATEGORIES --- */
     .bottom-categories-row { flex-direction: column; gap: 40px; }
@@ -317,6 +354,6 @@
     .top-category-row .cat-text-col {
         margin: -40px 0 0 0; 
         width: 95%;
-        align-self: center; /* Centers the box nicely on mobile */
+        align-self: center; 
     }
 }

@@ -4,21 +4,21 @@
     display: flex; 
     flex-direction: column; 
     align-items: center;  
-    height: 100dvh;          
-    max-height: 100dvh; 
-    overflow: hidden;        
-    width: 100vw;         
-    max-width: 100%;      
+    
+    /* THE FIX: Allow the page to grow as tall as it needs to */
+    min-height: 100%; 
+    width: 100%;         
     margin: 0; 
     box-sizing: border-box; 
-    padding: 100px 20px 20px 90px;  
-    overscroll-behavior-y: none;  
+    
+    /* Removed the old heavy left padding, set bottom padding to 0 so the footer is flush */
+    padding: 60px 20px 0px 20px;  
 } 
 
 .testimonials-base-bg {
-    position: absolute;
+    /* THE FIX: Fixed position keeps the image locked behind the scrolling content */
+    position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
-    
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -26,7 +26,7 @@
 }
 
 .testimonials-dynamic-bg {
-    position: absolute;
+    position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
     background-size: cover;
     background-position: center;
@@ -36,7 +36,7 @@
 
 @media (max-width: 768px) { 
     .testimonials-page-container { 
-        padding: 90px 15px 15px 15px;  
+        padding: 40px 15px 0px 15px;  
     } 
 } 
 
@@ -47,6 +47,25 @@
     width: 100%;
     max-width: 1100px;
     flex-shrink: 0;
+}
+
+/* --- THE INVISIBLE GLASS FLOOR --- */
+.testimonials-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1100px;
+    
+    /* Forces this block to take up exactly the visible screen (minus the 60px container padding). 
+       This prevents the footer from ever bouncing up into the viewport! */
+    min-height: calc(100dvh - 60px); 
+}
+
+@media (max-width: 768px) {
+    .testimonials-content-wrapper {
+        /* Matches the smaller 40px top padding set on mobile */
+        min-height: calc(100dvh - 40px); 
+    }
 }
 
 .testimonials-main-title { 
@@ -63,25 +82,25 @@
     box-sizing: border-box; 
 }
 
-/* --- 3. THE MAGIC SCROLL BOX (Invisible Scrollbar) --- */ 
+/* --- 3. THE MAGIC SCROLL BOX --- */ 
 .testimonials-accordion-scroll-box { 
     position: relative;
     z-index: 1; 
+    
+    /* This pushes the footer to the bottom of the screen if there are only a few reviews */
     flex-grow: 1;  
-    overflow-y: auto;  
+    
     display: flex; 
     flex-direction: column; 
     gap: 12px; 
-    padding-bottom: 40px;  
+    
+    /* Adds breathing room between the bottom of the accordions and the start of the footer */
+    padding-bottom: 80px;  
     width: 100%; 
     max-width: 1100px; 
-    -webkit-overflow-scrolling: touch; 
-    overscroll-behavior: contain;  
-    scrollbar-width: none;  
-    -ms-overflow-style: none;  
-} 
-
-.testimonials-accordion-scroll-box::-webkit-scrollbar { display: none; } 
+    
+    /* THE FIX: Removed overflow-y: auto. The global App container handles the scrolling now! */
+}
 
 /* --- 4. ACCORDIONS --- */ 
 .testimonial-accordion { 
@@ -93,7 +112,9 @@
     flex-shrink: 0;  
     overflow: hidden; 
     transition: border-color 0.3s ease, box-shadow 0.3s ease; 
-} 
+    
+    scroll-margin-top: var(--header-height); 
+}
 
 .testimonial-accordion.is-open { 
     border-color: var(--accent-primary, #f08c3a); 
