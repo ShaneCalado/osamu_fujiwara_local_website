@@ -1,13 +1,11 @@
 import React, { forwardRef } from 'react';
+import { Link } from 'react-router-dom'; 
 import contactData from '../../data/contact.json'; 
 import './ContactBox.css';
 
 const ContactBox = forwardRef(({ language }, ref) => {
     return (
-        // Changed to a semantic footer tag that will stretch full-width
         <footer className="global-footer-block" ref={ref}>
-            
-            {/* This container keeps the text and map centered inside the full-width block */}
             <div className="footer-content-container">
                 
                 <div className="contact-details">
@@ -32,6 +30,11 @@ const ContactBox = forwardRef(({ language }, ref) => {
                         <p><strong>{contactData.hoursLabel[language]}:</strong></p>
                         <p style={{ whiteSpace: 'pre-line' }}>{contactData.hoursValue[language]}</p>
                     </div>
+
+                    {/* NEW: SPA-safe Contact Button */}
+                    <Link to="/contact" className="footer-contact-btn">
+                        {language === 'en' ? 'Contact Form' : 'お問い合わせフォームへ'}
+                    </Link>
                 </div>
 
                 <div className="map-container">

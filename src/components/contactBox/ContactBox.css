@@ -73,6 +73,30 @@
     border: 1px solid rgba(255, 255, 255, 0.1); 
 }
 
+/* --- FOOTER CONTACT BUTTON --- */
+.footer-contact-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f08c3a; 
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 14px 30px;
+    border-radius: 4px;
+    margin-top: 20px; 
+    width: fit-content;
+    transition: background-color 0.2s, transform 0.2s;
+    border: none;
+    cursor: pointer;
+}
+
+.footer-contact-btn:hover {
+    background-color: #d9782b;
+    transform: translateY(-2px);
+}
+
+
 /* --- MOBILE RESPONSIVE --- */
 @media (max-width: 768px) {
     .global-footer-block {
@@ -92,4 +116,10 @@
     .map-container { 
         min-height: 250px; 
     }
+
+    .footer-contact-btn {
+        width: 100%; 
+        box-sizing: border-box;
+    }
 }
+
