@@ -1,12 +1,11 @@
 import React from 'react';
-import { motion } from 'framer-motion'; // <--- WE NEED THIS BACK!
+import { motion } from 'framer-motion'; 
 import aboutData from '../../data/about.json'; 
 import './About.css'; 
-import ContactBox from '../../components/contactBox/ContactBox'
+import ContactBox from '../../components/contactBox/ContactBox';
 
 const AboutPage = ({ language }) => {
     return (
-        // Replaced the standard <div> with a <motion.div> so your router can see it
         <motion.div 
             className="about-page-wrapper"
             initial={{ opacity: 0 }}
@@ -18,7 +17,10 @@ const AboutPage = ({ language }) => {
             {/* SECTION 1: HEADER & INTRO */}
             <section className="about-section intro-section">
                 <div className="about-content-container">
-                    <div className="about-header-row">
+                    
+                    {/* THE FIX: Injected box-style-a */}
+                    <div className="about-header-row box-style-a">
+                        
                         <div className="about-text-content">
                             <h2>{aboutData?.aboutTitle?.[language] || "About Us"}</h2>
                             <p className="intro-text-about">{aboutData?.aboutIntro?.[language]}</p>
@@ -35,16 +37,18 @@ const AboutPage = ({ language }) => {
             {/* SECTION 2: MAIN CONTENT */}
             <section className="about-section content-section">
                 <div className="about-content-container">
-                    <div className="about-text-card">
+                    
+                    {/* THE FIX: Injected box-style-a */}
+                    <div className="about-text-card box-style-a">
                         <p className="about-paragraph">
                             {aboutData?.aboutContent?.[language]}
                         </p>
                     </div>
+                    
                 </div>
             </section>
 
             <ContactBox language={language} />
-
 
         </motion.div>
     );

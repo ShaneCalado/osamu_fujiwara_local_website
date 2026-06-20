@@ -41,30 +41,14 @@ const TestimonialAccordion = ({ item, language, idx, openIndex, toggleAccordion 
     return (
         <motion.div 
             ref={accordionRef}
-            layout /* Ensures smooth sliding instead of snapping */
+            layout 
             variants={itemVariants}
-            className={`testimonial-accordion ${isOpen ? 'is-open' : ''}`}
+            className={`testimonial-accordion box-style-b ${isOpen ? 'is-open' : ''}`}
         >
             <div className="accordion-header" onClick={() => toggleAccordion(idx)}>
                 
                 <div className="header-left-group">
-                    <AnimatePresence>
-                        {isOpen && item.image && (
-                            <motion.div 
-                                initial={{ width: 0, height: 0, marginRight: 0, opacity: 0 }}
-                                animate={{ width: 100, height: 135, marginRight: 20, opacity: 1 }}
-                                exit={{ width: 0, height: 0, marginRight: 0, opacity: 0 }}
-                                transition={{ duration: 0.35, ease: "easeOut" }}
-                                className="image-reveal-wrapper"
-                            >
-                                <img 
-                                    className="testimonial-avatar"
-                                    src={`/images/client_photos/${item.image}`} 
-                                    alt="Client"
-                                />
-                            </motion.div>
-                        )}
-                    </AnimatePresence>
+                    {/* THE FIX: Image removed from here, leaving just the quote! */}
                     <span className={`testimonial-quote ${isOpen ? 'quote-open' : ''}`}>
                         "{item.review_quote[language]}"
                     </span>
@@ -86,11 +70,21 @@ const TestimonialAccordion = ({ item, language, idx, openIndex, toggleAccordion 
                         initial={{ height: 0, opacity: 0 }}
                         animate={{ height: "auto", opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }} /* Smoother premium curve */
+                        transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }} 
                         className="accordion-content-wrapper"
                         style={{ overflow: "hidden" }}
                     >
                         <div className="accordion-content-inner">
+                            
+                            {/* THE FIX: Image moved here! Placed right before the text */}
+                            {item.image && (
+                                <img 
+                                    className="testimonial-body-avatar"
+                                    src={`/images/client_photos/${item.image}`} 
+                                    alt="Client"
+                                />
+                            )}
+                            
                             <p className="testimonial-full-text">
                                 {item.review_text[language]?.split('\n').map((line, index) => (
                                     <React.Fragment key={index}>
@@ -99,13 +93,12 @@ const TestimonialAccordion = ({ item, language, idx, openIndex, toggleAccordion 
                                     </React.Fragment>
                                 ))}
                             </p>
+                            
                         </div>
-                        
                     </motion.div>
                 )}
             </AnimatePresence>
         </motion.div>
-        
     );
 };
 

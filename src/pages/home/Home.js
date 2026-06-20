@@ -1,13 +1,14 @@
-import React, { useState } from 'react'; 
+import React, { useState, useEffect } from 'react'; 
 import { Link } from 'react-router-dom'; 
 import homeData from '../../data/home.json'; 
 import servicesData from '../../data/services.json'; 
 import './Home.css';
 import TestimonialFeed from '../../components/testimonialFeed/TestimonialFeed';
-import ContactBox from '../../components/contactBox/ContactBox'
+import ContactBox from '../../components/contactBox/ContactBox';
 
 const Home = ({ language }) => {
     const [isVideoPlaying, setIsVideoPlaying] = useState(false); 
+    const [bgOpacity, setBgOpacity] = useState(1); 
 
     const validCategories = servicesData.filter(cat => cat.items && cat.items.length > 0);
 
@@ -16,16 +17,56 @@ const Home = ({ language }) => {
         return imgSrc.startsWith('http') ? imgSrc : `/images/${imgSrc}`;
     };
 
-    // THE FIX: Helper to generate the exact slug for the new individual category pages
     const getCategoryLink = (cat) => {
         if (!cat?.category?.en) return '/services';
         const slug = cat.category.en.toLowerCase().replace(/\s+/g, '-');
         return `/services/${slug}`;
     };
 
-    return (
-        <div className="page-container">
+    // THE FIX: Trigger-based Scroll Listener
+    useEffect(() => {
+        const handleScroll = () => {
+            // THE FIX: Ignore the event target (which could be a horizontal carousel).
+            // Always query the main vertical scrolling container directly.
+            const mainScroller = document.querySelector('.page-container') || 
+                                 document.querySelector('.app-layout');
             
+            const scrollTop = mainScroller ? mainScroller.scrollTop : window.scrollY;
+            
+            // The threshold where the user is considered to be "leaving" Section 0
+            const fadeThreshold = window.innerHeight * 0.45; 
+            
+            // Snap to exactly 0 or 1.
+            if (scrollTop > fadeThreshold) {
+                setBgOpacity(0);
+            } else {
+                setBgOpacity(1);
+            }
+        };
+
+        // Capture phase intercepts all scrolls, but our function now safely ignores horizontal carousels
+        window.addEventListener('scroll', handleScroll, true); 
+
+        // Initial check on mount
+        handleScroll();
+
+        return () => window.removeEventListener('scroll', handleScroll, true);
+    }, []);
+
+    return (
+        <div className="home-scroll-container">
+            
+            {/* Fixed Background with Fallback Color */}
+            <div 
+                className="home-hero-bg" 
+                style={{ 
+                    opacity: bgOpacity,
+                    /* Instantly covers the normal global background while the network downloads the image */
+                    backgroundColor: '#1a1c23', 
+                    backgroundImage: `linear-gradient(rgba(73, 131, 247, 0.0), rgba(21, 26, 37, 0.3)), url('/images/home_screen_image.jpg')`
+                }}
+            />
+
             {/* SECTION 0: WELCOME */}
             <section className="screen-section welcome-section">
                 <div className="intro-dashboard-container">
@@ -36,12 +77,6 @@ const Home = ({ language }) => {
                             <h2 className="welcome-header">{homeData?.welcomeHeader?.[language] || ""}</h2>
                             <h2 className="welcome-text" dangerouslySetInnerHTML={{ __html: homeData?.welcomeText?.[language] || "" }} />
                             <p className="welcome-subtext">{homeData?.welcomeSubText?.[language] || ""}</p>
-                        </div>
-
-                        {/* RIGHT: The Smaller Overlaid Image */}
-                        <div className="intro-image-col">
-                            {/* Hardcoded the static image right here */}
-                            <img src="/images/bow_static.png" alt="Office Representative" />
                         </div>
 
                     </div>
@@ -76,10 +111,11 @@ const Home = ({ language }) => {
                             <div className="cat-image-col">
                                 <img src={getImgSrc(validCategories[0])} alt={validCategories[0].category[language]} />
                             </div>
-                            <div className="cat-text-col">
+                            
+                            {/* THE FIX: Added box-style-a here! */}
+                            <div className="cat-text-col box-style-a">
                                 <h3>{validCategories[0].category[language]}</h3>
                                 <p>{validCategories[0].description[language]}</p>
-                                {/* THE FIX: Replaced hardcoded '/services' with dynamic slug */}
                                 <Link to={getCategoryLink(validCategories[0])} className="cat-learn-more">
                                     {language === 'en' ? 'Learn More' : '詳細を見る'}
                                 </Link>
@@ -94,10 +130,11 @@ const Home = ({ language }) => {
                                     <div className="small-img-col">
                                         <img src={getImgSrc(cat)} alt={cat.category[language]} />
                                     </div>
-                                    <div className="small-text-col">
+                                    
+                                    {/* THE FIX: Added box-style-b here! */}
+                                    <div className="small-text-col box-style-b">
                                         <h3>{cat.category[language]}</h3>
                                         <p>{cat.description[language]}</p>
-                                        {/* THE FIX: Replaced hardcoded '/services' with dynamic slug */}
                                         <Link to={getCategoryLink(cat)} className="cat-learn-more small-btn">
                                             {language === 'en' ? 'Learn More' : '詳細を見る'}
                                         </Link>

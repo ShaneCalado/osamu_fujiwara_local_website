@@ -104,15 +104,11 @@
 
 /* --- 4. ACCORDIONS --- */ 
 .testimonial-accordion { 
-    background: var(--bg-surface-dark, #1a1c23); 
-    border: 1px solid var(--border-light, rgba(255,255,255,0.2)); 
-    border-radius: 8px; 
     display: flex; 
     flex-direction: column; 
     flex-shrink: 0;  
     overflow: hidden; 
     transition: border-color 0.3s ease, box-shadow 0.3s ease; 
-    
     scroll-margin-top: var(--header-height); 
 }
 
@@ -129,11 +125,10 @@
     align-items: flex-start; 
     gap: 20px; 
     user-select: none; 
-    background: var(--bg-surface-dark, #1a1c23); 
 } 
 
 .accordion-header:hover { 
-    background: rgba(255, 255, 255, 0.02); 
+    background: rgba(255, 255, 255, 0.05); 
 } 
 
 .header-left-group {
@@ -148,20 +143,6 @@
     gap: 15px;
     flex-shrink: 0;
     margin-top: 2px; 
-}
-
-.image-reveal-wrapper {
-    overflow: hidden;
-    flex-shrink: 0;
-    border-radius: 12px; 
-}
-
-.testimonial-avatar {
-    width: 100px; 
-    height: 135px; 
-    border-radius: 12px; 
-    object-fit: cover;
-    display: block; 
 }
 
 .testimonial-quote { 
@@ -195,6 +176,25 @@
     padding: 10px 25px 25px 25px; 
     border-top: 1px solid rgba(255, 255, 255, 0.05); 
 } 
+
+/* THE FIX: The Clearfix. Prevents the floated image from spilling out of the box if the text is short */
+.accordion-content-inner::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* THE FIX: New Floated Image Style (Larger Size) */
+.testimonial-body-avatar {
+    float: left; 
+    width: 180px; /* Scaled up from 120px */
+    height: auto; 
+    border-radius: 10px; /* Slightly softer corners for the larger size */
+    object-fit: cover;
+    margin: 5px 30px 15px 0; /* Increased margins so the text doesn't crowd the bigger image */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3); /* Added a subtle shadow to make it pop off the glass */
+}
 
 .testimonial-badge { 
     display: inline-block; 
@@ -243,5 +243,11 @@
     .testimonial-quote.quote-open {
         font-size: 1.15rem; 
         margin-top: 0;
+    }
+    
+    /* Shrinks the floated image slightly on small phones so it doesn't crush the text */
+    .testimonial-body-avatar {
+        width: 120px; /* Scaled up from 90px */
+        margin: 5px 18px 10px 0; 
     }
 }
