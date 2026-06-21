@@ -1,0 +1,86 @@
+{
+  "contactTitle": {
+    "en": "Contact Us",
+    "ja": "お問い合わせ"
+  },
+  "contactIntro": {
+    "en": "Have a question or want to work together? Drop us a line below.",
+    "ja": "ご質問やご相談がございましたら、下記よりお気軽にご連絡ください。"
+  },
+  "nameLabel": {
+    "en": "Full Name",
+    "ja": "氏名"
+  },
+  "emailLabel": {
+    "en": "Email Address",
+    "ja": "メールアドレス"
+  },
+  "phoneLabel": {
+    "en": "Phone Number",
+    "ja": "電話番号"
+  },
+  "addressLabel": {
+    "en": "Address",
+    "ja": "ご住所"
+  },
+  "serviceCategoryLabel": {
+    "en": "Service Category",
+    "ja": "ご相談の分類"
+  },
+  "specificServiceLabel": {
+    "en": "Specific Service",
+    "ja": "具体的な業務"
+  },
+  "preferredDateLabel": {
+    "en": "Preferred Consultation Date",
+    "ja": "初回無料相談 ご希望日時"
+  },
+  "dateHint": {
+    "en": "* If you are requesting a consultation, please select up to 2 dates.",
+    "ja": "※相談をご希望の方は第1・第2希望日時をお選びください。"
+  },
+  "messageLabel": {
+    "en": "Inquiry Details",
+    "ja": "お問い合わせ内容"
+  },
+  "messagePlaceholder": {
+    "en": "How can we help you? Please provide details about your situation...",
+    "ja": "どのようなご用件でしょうか？具体的なご相談内容をご記入ください。"
+  },
+  "submitBtn": {
+    "en": "Send Message",
+    "ja": "送信する"
+  },
+  "sendingBtn": {
+    "en": "Sending...",
+    "ja": "送信中..."
+  },
+  "requiredBadge": {
+    "en": "Required",
+    "ja": "必須"
+  },
+  "optionalBadge": {
+    "en": "Optional",
+    "ja": "任意"
+  },
+  "successAlert": {
+    "en": "Success! Your message has been sent.",
+    "ja": "送信が完了しました。"
+  },
+  "errorAlert": {
+    "en": "Failed to send. Please try again later.",
+    "ja": "送信に失敗しました。後でもう一度お試しください。"
+  },
+  "selectCategory": {
+    "en": "-- Select a category --",
+    "ja": "-- 分類を選択してください --"
+  },
+  "generalInquiry": {
+    "en": "General Inquiry",
+    "ja": "その他のお問い合わせ"
+  },
+  "selectSpecific": {
+    "en": "-- Select a specific service --",
+    "ja": "-- 業務を選択してください --"
+  }
+}

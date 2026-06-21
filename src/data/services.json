@@ -2,15 +2,15 @@
   {
     "category": {
       "en": "Consultation",
-      "ja": "初回相談料"
+      "ja": "ご相談について"
     },
     "image": "categories/consult_main.jpg",
     "bgImage": "",
     "defaultServiceImage": "",
     "includeInContactForm": false,
     "description": {
-      "en": "An initial consultation regarding our administrative and legal services. We will listen to your specific needs and outline the best approach and processes to assist you.",
-      "ja": "弊所のサービスに関する初回のご相談です。お客様の具体的なご要望や現状をお伺いし、最適なサポート内容や今後の流れをご提案いたします。"
+      "en": "We offer consultations on licensing, construction permits, foreign visas, wills, and inheritance, even if you're unsure where to begin or simply want to confirm if any procedures are necessary in your specific situation.\n\nDuring your initial consultation, we'll listen to your situation and clearly explain the necessary procedures, required documents, and the next steps. There's no obligation to retain our services after the consultation, so please feel free to contact us.",
+      "ja": "許認可、建設業許可、外国人ビザ、遺言・相続などについて、「何から始めればよいかわからない」「自分の場合に手続きが必要か確認したい」という段階からご相談いただけます。\n\n初回相談では、お客様の状況をお聞きし、必要な手続き、準備する書類、今後の流れをわかりやすくご説明いたします。相談後に必ずご依頼いただく必要はありませんので、まずはお気軽にご相談ください。"
     },
     "items": [
       {

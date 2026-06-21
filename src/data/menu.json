@@ -75,7 +75,7 @@
         "position" : 7,
         "name" : {
             "en" : "Contact Us",
-            "jp" : "お問い合わせ"
+            "jp" : "初回相談はこちら"
         },
         "link" : "/contact",
         "external" : false,

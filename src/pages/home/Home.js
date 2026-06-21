@@ -73,7 +73,8 @@ const Home = ({ language }) => {
                     <div className="intro-row">
                         
                         {/* LEFT: The Large Text Box */}
-                        <div className="intro-text-col">
+                        {/* THE FIX: Added box-style-a to apply the global glass card look */}
+                        <div className="intro-text-col box-style-a">
                             <h2 className="welcome-header">{homeData?.welcomeHeader?.[language] || ""}</h2>
                             <h2 className="welcome-text" dangerouslySetInnerHTML={{ __html: homeData?.welcomeText?.[language] || "" }} />
                             <p className="welcome-subtext">{homeData?.welcomeSubText?.[language] || ""}</p>

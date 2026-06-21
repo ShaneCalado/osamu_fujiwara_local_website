@@ -1,0 +1,202 @@
+/* --- FULL PAGE CONTAINER --- */
+.form-page-container {
+    padding-top: 60px; /* Adjusted to fit the new header flow */
+    padding-bottom: 80px;
+    width: 100%;
+    
+    /* Let the global app layout handle the background! */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* --- TEXT UPDATES --- */
+.form-page-title {
+    text-align: center;
+    font-size: 2.2rem;
+    color: var(--text-highlight); 
+    margin-bottom: 10px;
+    width: 90%;
+    max-width: 900px;
+}
+
+.intro-text {
+    text-align: center;
+    color: white; 
+    margin-bottom: 40px;
+    width: 90%;
+    max-width: 900px;
+}
+
+/* --- FORM CARD --- */
+.form-card {
+    padding: 40px;
+    width: 90%;
+    max-width: 900px;
+    box-sizing: border-box;
+    /* Box styles handled by .box-style-a in App.css */
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* --- RESPONSIVE TWO COLUMN LAYOUT --- */
+.form-row {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Subtle glass divider */
+    padding-bottom: 25px;
+}
+
+.form-row:last-of-type {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+@media (min-width: 768px) {
+    .form-row {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .form-label {
+        width: 35%;
+        padding-top: 12px;
+        padding-right: 20px;
+        box-sizing: border-box;
+    }
+    .form-input-group {
+        width: 65%;
+    }
+}
+
+/* --- LABELS AND BADGES --- */
+.form-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    color: white; /* Changed to white for dark theme */
+    margin-bottom: 10px;
+}
+
+.required-badge {
+    background: #e74c3c;
+    color: white;
+    font-size: 0.7rem;
+    padding: 3px 8px;
+    border-radius: 3px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.optional-badge {
+    background: rgba(255, 255, 255, 0.2); /* Muted badge for optional fields */
+    color: #e0e0e0;
+    font-size: 0.7rem;
+    padding: 3px 8px;
+    border-radius: 3px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/* --- INPUTS --- */
+.form-input-group input,
+.form-input-group select,
+.form-input-group textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Glass borders */
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: inherit;
+    background-color: rgba(0, 0, 0, 0.2); /* Translucent dark background */
+    color: white; /* White typing text */
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+}
+
+/* Makes placeholder text visible against the dark inputs */
+.form-input-group input::placeholder,
+.form-input-group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.4); 
+}
+
+/* Date picker calendar icon coloring (Webkit only) */
+.form-input-group input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+    filter: invert(1); /* Makes the little calendar icon white */
+}
+
+.form-input-group input:focus,
+.form-input-group select:focus,
+.form-input-group textarea:focus {
+    outline: none;
+    border-color: #f08c3a;
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 0 3px rgba(240, 140, 58, 0.2);
+}
+
+.date-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.field-hint {
+    font-size: 0.85rem;
+    color: #b0b0b0; /* Lighter hint text */
+    margin: 5px 0 0 0;
+}
+
+/* --- SUBMIT BUTTON --- */
+.form-submit-row {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.submit-btn {
+    background: #f08c3a;
+    color: white;
+    padding: 16px 50px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.submit-btn:hover {
+    background: #d9782b;
+}
+
+.submit-btn:active {
+    transform: translateY(2px);
+}
+
+.submit-btn:disabled {
+    background: #555;
+    color: #888;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* --- ANIMATIONS --- */
+.reveal-row {
+    animation: fadeInDown 0.3s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes fadeInDown {
+    from { 
+        opacity: 0; 
+        transform: translateY(-15px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}

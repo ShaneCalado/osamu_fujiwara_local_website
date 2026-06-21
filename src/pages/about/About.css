@@ -63,12 +63,21 @@
 }
 
 .about-headshot {
-    width: clamp(150px, 20vw, 250px);  
-    height: clamp(150px, 20vw, 250px); 
+    /* Slightly increased the max-width so it anchors the right side of the card better */
+    width: clamp(150px, 22vw, 280px);  
+    height: auto; 
+    
+    /* THE FIX: Forces a professional vertical portrait shape instead of a square */
+    aspect-ratio: 4 / 5; 
     object-fit: cover; 
-    border-radius: 50%; 
+    
+    /* THE FIX: Replaced 50% (circle) with 12px to perfectly match your glass cards! */
+    border-radius: 12px; 
+    
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-    border: 4px solid rgba(255, 255, 255, 0.2);
+    
+    /* Thinned the border slightly so it looks sleeker on a box shape */
+    border: 2px solid rgba(255, 255, 255, 0.2); 
     flex-shrink: 0; 
 }
 

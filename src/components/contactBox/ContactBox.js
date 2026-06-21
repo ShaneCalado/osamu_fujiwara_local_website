@@ -33,7 +33,7 @@ const ContactBox = forwardRef(({ language }, ref) => {
 
                     {/* NEW: SPA-safe Contact Button */}
                     <Link to="/contact" className="footer-contact-btn">
-                        {language === 'en' ? 'Contact Form' : 'お問い合わせフォームへ'}
+                        {language === 'en' ? 'Contact Us' : '初回相談はこちら'}
                     </Link>
                 </div>
 

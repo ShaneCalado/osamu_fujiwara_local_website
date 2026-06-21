@@ -29,7 +29,15 @@ const Header = ({ language = 'en', changeLanguage, toggleMobileMenu }) => {
             const isContact = item.link === '/contact';
             const itemName = item.name[language] || item.name.jp; 
             const hasDropdown = item.subItems && item.subItems.length > 0;
-            const isActive = location.pathname === item.link;
+
+            // THE FIX: Checks for exact matches OR if the current URL is a child path of the parent/sub-items
+            const isActive = 
+                location.pathname === item.link || 
+                (item.link && item.link !== '/' && location.pathname.startsWith(`${item.link}/`)) ||
+                (hasDropdown && item.subItems.some(subItem => 
+                    location.pathname === subItem.link || 
+                    (subItem.link && subItem.link !== '/' && location.pathname.startsWith(`${subItem.link}/`))
+                ));
 
             // Shared classes for all nav items
             const linkClasses = `nav-main-link ${isContact ? "contact-btn" : ""} ${isActive && !isContact ? "active" : ""}`;
