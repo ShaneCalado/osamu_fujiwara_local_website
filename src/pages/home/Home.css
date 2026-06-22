@@ -28,7 +28,7 @@
     pointer-events: none; 
     
     /* When React changes opacity to 0, CSS smoothly fades it over 0.3 seconds. */
-    transition: opacity 0.3s ease-in-out; 
+    transition: opacity 0.9s ease-in-out; 
 }
 
 .intro-dashboard-container {

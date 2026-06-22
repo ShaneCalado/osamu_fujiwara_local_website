@@ -38,6 +38,18 @@ const TestimonialAccordion = ({ item, language, idx, openIndex, toggleAccordion 
         ? (language === 'en' ? 'Client' : 'お客様')
         : (language === 'en' ? 'Professional Partner' : 'パートナー');
 
+    // THE FIX: Find the parent category name for this review's service!
+    let categoryName = "";
+    if (item.service_ids && item.service_ids.length > 0) {
+        const targetServiceId = item.service_ids[0];
+        for (const group of servicesData) {
+            if (group.items.some(s => s.id === targetServiceId)) {
+                categoryName = group.category[language];
+                break;
+            }
+        }
+    }
+
     return (
         <motion.div 
             ref={accordionRef}
@@ -48,16 +60,24 @@ const TestimonialAccordion = ({ item, language, idx, openIndex, toggleAccordion 
             <div className="accordion-header" onClick={() => toggleAccordion(idx)}>
                 
                 <div className="header-left-group">
-                    {/* THE FIX: Image removed from here, leaving just the quote! */}
                     <span className={`testimonial-quote ${isOpen ? 'quote-open' : ''}`}>
                         "{item.review_quote[language]}"
                     </span>
                 </div>
 
                 <div className="header-right-group">
-                    <span className={`testimonial-badge ${item.from_customer ? 'badge-client' : 'badge-partner'}`}>
-                        {badgeText}
-                    </span>
+                    {/* THE FIX: Wrapped badges in a group so they stay together on mobile */}
+                    <div className="badge-wrapper">
+                        {categoryName && (
+                            <span className="testimonial-badge badge-category">
+                                {categoryName}
+                            </span>
+                        )}
+                        <span className={`testimonial-badge ${item.from_customer ? 'badge-client' : 'badge-partner'}`}>
+                            {badgeText}
+                        </span>
+                    </div>
+                    
                     <span className={`dropdown-icon ${isOpen ? 'rotated' : ''}`}>▾</span>
                 </div>
 
@@ -76,11 +96,10 @@ const TestimonialAccordion = ({ item, language, idx, openIndex, toggleAccordion 
                     >
                         <div className="accordion-content-inner">
                             
-                            {/* THE FIX: Image moved here! Placed right before the text */}
                             {item.image && (
                                 <img 
                                     className="testimonial-body-avatar"
-                                    src={`/images/client_photos/${item.image}`} 
+                                    src={item.image.startsWith('../../') ? item.image.replace('../../', '/') : `/images/client_photos/${item.image}`} 
                                     alt="Client"
                                 />
                             )}
@@ -158,6 +177,11 @@ return (
 
             {/* THE FIX: Wrap the header and accordions in this new height-locked container */}
             <div className="testimonials-content-wrapper">
+                
+                {/* THE FIX: Added the matching page title! */}
+                <h1 className="testimonials-page-title">
+                    {language === 'en' ? 'Customer Testimonials / Case Studies' : 'お客様の声／解決事例'}
+                </h1>
                 
                 <AnimatePresence initial={false}>
                     {openIndex === null && (

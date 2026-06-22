@@ -29,10 +29,10 @@
         "external" : false,
         "clickable" : false,
         "subItems": [
-            { "name": { "en": "Consultation", "jp": "初回相談料" }, "link": "/services/consultation", "external": false },
             { "name": { "en": "Construction", "jp": "建設業許可" }, "link": "/services/construction-industry-license-and-various-notifications", "external": false },
             { "name": { "en": "Foreign Visa", "jp": "外国人VISA" }, "link": "/services/foreign-visa-support", "external": false },
-            { "name": { "en": "Will Drafting", "jp": "遺言.相続" }, "link": "/services/will-drafting-support", "external": false }
+            { "name": { "en": "Will Drafting", "jp": "遺言.相続" }, "link": "/services/will-drafting-support", "external": false },
+            { "name": { "en": "Consultation", "jp": "相談業務" }, "link": "/services/consultation", "external": false }
         ]
     },
     {
@@ -45,10 +45,10 @@
         "external" : false,
         "clickable" : false,
         "subItems": [
-            { "name": { "en": "Consultation", "jp": "初回相談料" }, "link": "/prices/consultation", "external": false },
             { "name": { "en": "Construction", "jp": "建設業許可" }, "link": "/prices/construction-industry-license-and-various-notifications", "external": false },
             { "name": { "en": "Foreign Visa", "jp": "外国人VISA" }, "link": "/prices/foreign-visa-support", "external": false },
-            { "name": { "en": "Will Drafting", "jp": "遺言.相続" }, "link": "/prices/will-drafting-support", "external": false }
+            { "name": { "en": "Will Drafting", "jp": "遺言.相続" }, "link": "/prices/will-drafting-support", "external": false },
+            { "name": { "en": "Consultation", "jp": "相談業務" }, "link": "/prices/consultation", "external": false }
         ]
     },
     {

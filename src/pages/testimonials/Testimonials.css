@@ -61,10 +61,24 @@
     min-height: calc(100dvh - 60px); 
 }
 
+.testimonials-page-title { 
+    margin: 0 0 30px 0;  
+    font-size: clamp(2rem, 4vw, 2.5rem); 
+    color: white; 
+    text-align: left; /* Centered to match the Contact and Service pages */
+    width: 100%; 
+    font-weight: bold;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Drops a shadow so it pops off the background */
+}
+
 @media (max-width: 768px) {
     .testimonials-content-wrapper {
         /* Matches the smaller 40px top padding set on mobile */
         min-height: calc(100dvh - 40px); 
+    }
+    .testimonials-page-title {
+        font-size: 1.8rem;
+        margin: 0 0 20px 0;
     }
 }
 
@@ -217,6 +231,44 @@
     color: #a0aabf; 
     border: 1px solid rgba(160, 170, 191, 0.3); 
 } 
+
+/* THE FIX: Keeps the badges neatly clustered together */
+.badge-wrapper {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap; 
+    justify-content: flex-end;
+}
+
+.testimonial-badge { 
+    display: inline-block; 
+    padding: 4px 10px; 
+    border-radius: 4px; 
+    font-size: 0.75rem; 
+    font-weight: bold; 
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+    white-space: nowrap; /* Prevents text from breaking onto two lines */
+} 
+
+/* THE FIX: The new Category Badge styling (a subtle glass look) */
+.badge-category {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #e0e0e0;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.badge-client { 
+    background-color: rgba(240, 140, 58, 0.15); 
+    color: var(--accent-primary, #f08c3a); 
+    border: 1px solid rgba(240, 140, 58, 0.3); 
+} 
+
+.badge-partner { 
+    background-color: rgba(160, 170, 191, 0.15); 
+    color: #a0aabf; 
+    border: 1px solid rgba(160, 170, 191, 0.3); 
+}
 
 .testimonial-full-text { 
     font-size: 1rem; 

@@ -11,6 +11,9 @@ const CategoryPage = ({ category, language }) => {
     // Safety check: if no category is passed, don't render
     if (!category) return null;
 
+    // THE FIX: Filter out items that do not have the 'includeInServicePage' checkbox ticked
+    const validServiceItems = category.items.filter(item => item.includeInServicePage === true);
+
     return (
         <div className="category-page-wrapper">
             
@@ -61,12 +64,21 @@ const CategoryPage = ({ category, language }) => {
                         </div>
 
                         {/* Service Rows */}
-                        {category.items.map((item, idx) => (
-                            <div key={idx} className="item-row">
-                                <div className="item-name">{item.name[language]}</div>
-                                <div className="item-desc">{item.description[language]}</div>
+                        {validServiceItems.length > 0 ? (
+                            validServiceItems.map((item, idx) => (
+                                <div key={idx} className="item-row">
+                                    <div className="item-name">{item.name[language]}</div>
+                                    <div className="item-desc">{item.description[language]}</div>
+                                </div>
+                            ))
+                        ) : (
+                            /* Fallback if a category accidentally has no services checked */
+                            <div className="item-row">
+                                <div className="item-name">
+                                    {language === 'en' ? 'Please contact us for more details.' : '詳細についてはお問い合わせください。'}
+                                </div>
                             </div>
-                        ))}
+                        )}
 
                     </div>
                 </div>
