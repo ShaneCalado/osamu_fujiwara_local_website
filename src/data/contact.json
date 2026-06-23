@@ -32,7 +32,7 @@
     "ja": "営業時間"
   },
   "hoursValue": {
-    "en": "Mon - Fri: 9:00 AM - 6:00 PM\nSat-Sun: Closed",
-    "ja": "平日: 9:00 - 18:00\n週末: 閉店"
+    "en": "Mon - Fri: 9:00 AM - 6:00 PM\nSat - Sun & Holidays: Closed",
+    "ja": "平日: 9:00 - 18:00\n休日：土・日・祝日"
   }
 }

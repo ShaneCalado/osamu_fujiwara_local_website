@@ -22,7 +22,6 @@ const TestimonialAccordion = ({ item, language, idx, openIndex, toggleAccordion 
     const isOpen = openIndex === idx;
     const accordionRef = useRef(null);
     
-    // Scroll to top when this accordion opens
     useEffect(() => {
         if (isOpen && accordionRef.current) {
             setTimeout(() => {
@@ -35,20 +34,20 @@ const TestimonialAccordion = ({ item, language, idx, openIndex, toggleAccordion 
     }, [isOpen]);
 
     const badgeText = item.from_customer 
-        ? (language === 'en' ? 'Client' : 'お客様')
-        : (language === 'en' ? 'Professional Partner' : 'パートナー');
+        ? (language === 'en' ? 'Testimonial' : 'お客様の声')
+        : (language === 'en' ? 'Case Study' : '解決事例');
 
-    // THE FIX: Find the parent category name for this review's service!
-    let categoryName = "";
-    if (item.service_ids && item.service_ids.length > 0) {
-        const targetServiceId = item.service_ids[0];
-        for (const group of servicesData) {
-            if (group.items.some(s => s.id === targetServiceId)) {
-                categoryName = group.category[language];
-                break;
-            }
-        }
-    }
+    const customTag = item.tag?.[language];
+
+    // THE FIX: Smart Quote Formatting
+    let formattedQuote = item.review_quote[language];
+    if (item.from_customer) {
+        // If it's a client, wrap it in the correct language-specific quotes
+        formattedQuote = language === 'ja' 
+            ? `「${formattedQuote}」` 
+            : `"${formattedQuote}"`;
+    } 
+    // If it's NOT a customer (Case Study), it just passes the raw text through!
 
     return (
         <motion.div 
@@ -60,17 +59,17 @@ const TestimonialAccordion = ({ item, language, idx, openIndex, toggleAccordion 
             <div className="accordion-header" onClick={() => toggleAccordion(idx)}>
                 
                 <div className="header-left-group">
+                    {/* THE FIX: Replaced the hardcoded "" with our new dynamic variable */}
                     <span className={`testimonial-quote ${isOpen ? 'quote-open' : ''}`}>
-                        "{item.review_quote[language]}"
+                        {formattedQuote}
                     </span>
                 </div>
 
                 <div className="header-right-group">
-                    {/* THE FIX: Wrapped badges in a group so they stay together on mobile */}
                     <div className="badge-wrapper">
-                        {categoryName && (
+                        {customTag && (
                             <span className="testimonial-badge badge-category">
-                                {categoryName}
+                                {customTag}
                             </span>
                         )}
                         <span className={`testimonial-badge ${item.from_customer ? 'badge-client' : 'badge-partner'}`}>
@@ -99,7 +98,7 @@ const TestimonialAccordion = ({ item, language, idx, openIndex, toggleAccordion 
                             {item.image && (
                                 <img 
                                     className="testimonial-body-avatar"
-                                    src={item.image.startsWith('../../') ? item.image.replace('../../', '/') : `/images/client_photos/${item.image}`} 
+                                    src={item.image.startsWith('http') || item.image.startsWith('/') || item.image.startsWith('../../') ? item.image.replace('../../', '/') : `/images/client_photos/${item.image}`} 
                                     alt="Client"
                                 />
                             )}
@@ -128,7 +127,7 @@ const TestimonialsPage = ({ language }) => {
         testimonialsData.forEach((item) => {
             if (item.image) {
                 const img = new Image();
-                img.src = `/images/client_photos/${item.image}`;
+                img.src = item.image.startsWith('../../') ? item.image.replace('../../', '/') : `/images/client_photos/${item.image}`;
             }
         });
     }, []);
@@ -136,9 +135,12 @@ const TestimonialsPage = ({ language }) => {
     const toggleAccordion = (idx) => setOpenIndex(openIndex === idx ? null : idx);
 
     const activeTestimonial = openIndex !== null ? testimonialsData[openIndex] : null;
-    let activeBgImage = null;
+    
+    // THE FIX: Check for the custom background image first
+    let activeBgImage = activeTestimonial?.bg_image || null;
 
-    if (activeTestimonial?.service_ids?.length > 0) {
+    // Fallback: If no custom bg_image is set, use the old service_ids method
+    if (!activeBgImage && activeTestimonial?.service_ids?.length > 0) {
         const targetServiceId = activeTestimonial.service_ids[0];
         
         for (const group of servicesData) {
@@ -175,10 +177,8 @@ return (
                 )}
             </AnimatePresence>
 
-            {/* THE FIX: Wrap the header and accordions in this new height-locked container */}
             <div className="testimonials-content-wrapper">
                 
-                {/* THE FIX: Added the matching page title! */}
                 <h1 className="testimonials-page-title">
                     {language === 'en' ? 'Customer Testimonials / Case Studies' : 'お客様の声／解決事例'}
                 </h1>

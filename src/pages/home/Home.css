@@ -222,6 +222,12 @@
     line-height: 1.6;
     color: #e0e0e0;
     margin: 0 0 25px 0;
+    
+    /* THE FIX: Shows all text if it fits, but cuts it off with "..." after 4 lines if it doesn't */
+    display: -webkit-box;
+    -webkit-line-clamp: 5; 
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .bottom-categories-row {

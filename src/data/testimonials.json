@@ -4,15 +4,20 @@
     "service_ids": [
       "initial-consultation-30"
     ],
+    "tag": {
+      "en": "Licenses and Permits",
+      "ja": "許認可"
+    },
     "review_text": {
       "en": "Although I was a little concerned because the application involved multiple farmland properties, Mr. Fujiwara handled everything carefully and accurately, including preparing the location map, obtaining the land registry and official maps, checking public roads and waterways, and investigating neighboring landowners.He also prepared the draft lease agreement and supporting documents in a short period of time, which was very helpful.Mr. Fujiwara is also a licensed real estate transaction specialist, so I felt reassured by his knowledge of land and buildings. He listens carefully and is a reliable professional.I am now also consulting him about preparing a notarized will.",
       "ja": "複数の農地に関する申請だったため不安もありましたが、位置図の作成、登記簿・公図の取得、里道や水路の確認、周辺所有者の調査まで、丁寧かつ正確に進めていただきました。契約書案や添付資料も短期間で作成していただき、大変助かりました。藤原先生は宅地建物取引士の資格もお持ちで、土地建物に関する知識があり、安心してお願いできました。こちらの話もよく聞いてくださる、頼りになる先生です。現在は、公正証書遺言についても相談しています。"
     },
     "review_quote": {
       "en": "We asked for support with a farmland lease agreement and the application to the Agricultural Committee.",
-      "ja": "農地の賃貸借契約・農業委員会への申請をお願いしました"
+      "ja": "農地の賃貸借契約・農業委員会への申請をサポートしました。"
     },
     "image": "../../images/client_photos/farm_client.jpg",
+    "bg_image": "Paddy rice field | Premium Photo",
     "from_customer": true,
     "date": "31/05/2026"
   },
@@ -21,6 +26,10 @@
     "service_ids": [
       "notarized-will-drafting"
     ],
+    "tag": {
+      "en": "Wills and Inheritance",
+      "ja": "遺言・相続"
+    },
     "review_text": {
       "en": "We received a consultation from a client who wanted to prepare for future inheritance matters. We supported the process from confirming the client’s wishes and organizing the contents of the will to preparing the necessary documents and coordinating with the notary office.The client told us, “I feel relieved now.”",
       "ja": "将来の相続に備えたいというご相談を受け、ご本人の意思確認、遺言内容の整理、必要書類の準備、公証役場との調整、公証役場までの同行のサポートしました。お客様からは、「これで安心しました」とのお声をいただきました。"
@@ -30,7 +39,8 @@
       "ja": "公正証書遺言の作成をサポートしました"
     },
     "image": "",
-    "from_customer": true,
+    "bg_image": "https://download.pixta.jp/api/v1/download/127781894.jpg?token=ZGP78V8LkFMfxDvJi6hsz4E9jUGkhpZzcXJ9pw1buaVKXzhszHiK8J3cjxJXhyhJ&_gl=1*ju1x9q*_gcl_au*NjY1OTI5MzI4LjE3NzcwOTMxNDU.*_ga*Mzc1ODM2OTkyLjE3NzcwOTMxNDU.*_ga_VBSX8RFDG5*czE3ODA5MDcxNTgkbzgkZzEkdDE3ODA5MDcyNzIkajE4JGwwJGgw&_ga=2.246836612.1466177242.1780880951-375836992.1777093145",
+    "from_customer": false,
     "date": "01/06/2026"
   },
   {
@@ -38,6 +48,10 @@
     "service_ids": [
       "construction-license-new-governor-ordinary"
     ],
+    "tag": {
+      "en": "Construction Business License",
+      "ja": "建設業許可"
+    },
     "review_text": {
       "en": "We supported a construction company that needed to file a change notification for its demolition work registration with both Hyogo Prefecture and Osaka Prefecture due to the retirement of its registered technical supervisor.We organized the required documents and reviewed the qualifications of the new technical supervisor candidates, helping the company prepare the change notification in order to maintain its registration.In addition, we also organized the key points to be confirmed for the company’s future construction business license application, including the full-time engineer’s practical experience, the business management manager requirement, financial foundation, and construction work records.The client told us, “I felt reassured because I could consult not only about the change notification, but also about the future construction business license application.”",
       "ja": "登録技術者の退職に伴い、30日以内に兵庫県・大阪府への解体工事業登録事項変更届が必要となった建設会社様をサポートしました。必要書類や新たな技術者候補の要件を整理し、登録維持に向けた変更届の準備を進めました。あわせて、今後の建設業許可取得に向けて、専任技術者の実務経験、経営業務管理責任者、財産的基礎、工事実績資料などの確認事項を整理しました。お客様からは、「変更届が期限内に早く完了させてもらい安心しました。又、今後の建設業許可取得まで相談できたのでよかったです」とのお声をいただきました。"
@@ -46,8 +60,9 @@
       "en": "We supported the filing of a change notification for demolition work registration.",
       "ja": "解体工事業登録の変更届をサポートしました"
     },
-    "image": "",
-    "from_customer": true,
+    "image": "../../images/categories/const_main.jpg",
+    "bg_image": "https://www.magnific.com/premium-photo/green-residence-card-japan-with-passport-red-background-close-up_176651208.htm#fromView=search&page=2&position=40&uuid=34dfef7d-36cf-4727-804b-4d6b9c6c50d5&query=%E5%A4%96%E5%9B%BD%E4%BA%BAVISA",
+    "from_customer": false,
     "date": "02/06/2026"
   },
   {
@@ -55,6 +70,10 @@
     "service_ids": [
       "coe-application"
     ],
+    "tag": {
+      "en": "Visas for Foreign Nationals",
+      "ja": "外国人ビザ"
+    },
     "review_text": {
       "en": "The client had completed their marriage procedures overseas and wished to obtain a status of residence so that they could live together in Japan.In international marriage cases, it is important to clearly organize and explain matters such as the marriage procedures in Japan, the status of the marriage overseas, income and living stability, and the history of the relationship.At our office, we supported the client by checking the required documents, preparing the questionnaire and statement of reasons, and organizing the letter of guarantee, income documents, and materials explaining the marital relationship.In particular, because the case involved overseas marriage procedures and foreign-language documents, we carefully organized the application so that the Immigration Services Agency could easily understand the circumstances.As a result, the client was successfully granted the status of residence of “Spouse or Child of Japanese National.”Client’s VoiceThis was a visa application for living in Japan, and we were initially worried because we did not know what documents we needed to prepare.However, the required documents and the flow of the procedure were explained to us clearly, so we were able to proceed with peace of mind.The overseas marriage documents, proof of income, and other parts that would have been difficult for us to handle on our own were carefully organized, which was very helpful.Thanks to the support, we were successfully granted a three-year status of residence, and we are now able to start our life together in Japan.Thank you very much.",
       "ja": "お客様は、海外で婚姻手続きを済ませた後、日本で一緒に生活するための在留資格を取得したいというご相談でした。国際結婚の場合、日本での婚姻手続き、海外での婚姻成立状況、収入・生活基盤、交際経緯などを整理して説明する必要があります。当事務所では、必要書類の確認、質問書・理由書の作成、身元保証書、収入資料、婚姻関係を説明する資料の整理などをサポートしました。特に、海外での婚姻手続きや外国語書類が関係するため、入管に伝わりやすいよう、申請内容を丁寧に整理しました。その結果、無事に「日本人の配偶者等」の在留資格が許可されました。お客様からの声：日本での生活を予定したビザ申請でしたが、何を準備すればよいのか分からず不安でしたが、必要書類や手続きの流れを分かりやすく説明していただき、安心して進めることができました。海外での婚姻届や収入の証明など、自分たちでは難しい部分も丁寧に整理していただき、とても助かりました。無事に3年間の在留資格が許可され、日本で一緒に生活を始めることができました。ありがとうございました。"
@@ -64,7 +83,30 @@
       "ja": "日本人配偶者ビザの申請をサポートしました"
     },
     "image": "../../images/categories/consult_main.jpg",
+    "bg_image": "https://www.magnific.com/premium-photo/green-residence-card-japan-with-passport-red-background-close-up_176651208.htm#fromView=search&page=2&position=40&uuid=34dfef7d-36cf-4727-804b-4d6b9c6c50d5&query=%E5%A4%96%E5%9B%BD%E4%BA%BAVISA",
     "from_customer": true,
     "date": "03/06/2026"
+  },
+  {
+    "review_id": "pmm-r-4",
+    "service_ids": [
+      "post-mortem-mandate"
+    ],
+    "tag": {
+      "en": "Wills and Inheritance",
+      "ja": "遺言・相続"
+    },
+    "review_text": {
+      "en": "A client residing in Takarazuka City consulted us regarding inheritance procedures following the passing of a family member.In this case, the deceased person’s registered domicile was located far from the client’s residence. We therefore assisted with obtaining the necessary family registry documents, including the family register, removed family register, and revised original family register, by mail. After confirming the relationship among the heirs, we supported the preparation of the Legal Heir Information List.We then organized the documents required for the inheritance procedures at financial institutions, including obtaining balance certificates, preparing the necessary documents, and arranging powers of attorney. We also assisted with the procedures for closing the deceased person’s bank accounts. In addition, for the inheritance registration of real estate, we worked in cooperation with a judicial scrivener and successfully completed the procedures.The client commented, “At first, I thought I would handle the procedures myself, but I am glad I asked for professional assistance.”",
+      "ja": "宝塚市にお住まいのお客様より、ご家族がお亡くなりになった後の相続手続きについてご相談をいただきました。\n\n今回のケースでは、被相続人の本籍地が遠方にあったため、戸籍・除籍・改製原戸籍を郵送で取り寄せ、相続人関係を確認したうえで、法定相続情報一覧図の作成をサポートしました。\n\nその後、金融機関の相続手続きに向けて、残高証明書の取得、必要書類、委任状の準備などを整理し、預貯金の解約手続きを進めました。また、不動産の相続登記については司法書士と連携し、手続きを完了することができました。\n\nお客様からは、「最初は自分でしようと思っていたが、依頼してよかった」とのお声をいただきました。"
+    },
+    "review_quote": {
+      "en": "Inheritance procedures in Takarazuka City: We provided support ranging from gathering family registers to handling bank procedures.",
+      "ja": "宝塚市の相続手続き｜戸籍収集から銀行手続きまでサポートしました。"
+    },
+    "image": "",
+    "bg_image": "",
+    "from_customer": false,
+    "date": "04/06/2026"
   }
 ]
