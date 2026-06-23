@@ -89,9 +89,11 @@ const Sidebar = ({ isMobileMenuOpen, closeMenu, language, changeLanguage }) => {
                   }
 
                   // 2. If CLICKABLE:
+                  const isContact = item.link === '/contact';
+
                   if (item.external) {
                     return (
-                      <li key={item.position}>
+                      <li key={item.position} className={isContact ? "mobile-contact-wrapper" : ""}>
                         <a href={item.link} target="_blank" rel="noopener noreferrer" onClick={handleFullClose}>
                           <span className="link-text translatable-text">{itemName}</span>
                         </a>
@@ -100,7 +102,7 @@ const Sidebar = ({ isMobileMenuOpen, closeMenu, language, changeLanguage }) => {
                   }
 
                   return (
-                    <li key={item.position}>
+                    <li key={item.position} className={isContact ? "mobile-contact-wrapper" : ""}>
                       <Link to={item.link} onClick={handleFullClose}>
                         <span className="link-text translatable-text">{itemName}</span>
                       </Link>

@@ -85,6 +85,31 @@
   text-align: right; 
 }
 
+/* --- MOBILE CONTACT BUTTON --- */
+.mobile-nav-links li.mobile-contact-wrapper {
+  margin: 10px 25px 30px 25px; /* Detaches it from the edges and gives it breathing room */
+}
+
+.mobile-nav-links li.mobile-contact-wrapper a {
+  justify-content: center; /* Centers the text inside the button */
+  background-color: #f08c3a;
+  border-radius: 4px;
+  padding: 14px 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.mobile-nav-links li.mobile-contact-wrapper a:hover {
+  background-color: #d9782b;
+}
+
+/* Force the button text to be solid white (overriding the default grey) */
+.mobile-nav-links li.mobile-contact-wrapper a .link-text,
+.mobile-nav-links li.mobile-contact-wrapper a .translatable-text {
+  color: white !important; 
+  font-weight: bold;
+}
+
 .mobile-nav-links li a:hover .link-text,
 .mobile-nav-links li a:hover .translatable-text {
   color: white !important; 
@@ -93,7 +118,7 @@
 /* --- BOTTOM LANGUAGE TOGGLE (The List Item) --- */
 .mobile-lang-item {
   list-style: none;
-  padding: 18px 25px; 
+  padding: 10px 25px 80px 25px; 
   display: flex;
   justify-content: flex-end; 
 }

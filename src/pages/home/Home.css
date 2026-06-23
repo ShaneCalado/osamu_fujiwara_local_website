@@ -324,7 +324,7 @@
         /* THE FIX 1: Made the mobile container taller and pushed the content down */
         height: auto; 
         min-height: 75vh; 
-        padding-top: 25vh; /* Forces the glass box down below his face */
+        padding-top: 35vh; /* Forces the glass box down below his face */
         padding-bottom: 5vh;
     }
 
@@ -340,7 +340,7 @@
         /* THE FIX 2: Changed width to auto and max-width to 88%. 
            This makes the box hug the text and stops it from stretching all the way right! */
         width: auto;
-        max-width: 75%;
+        max-width: 95%;
         
         padding: 15px 5px; /* Slightly tighter padding to keep it sleek */
         gap: 12px; 
