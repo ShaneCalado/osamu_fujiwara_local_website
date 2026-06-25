@@ -25,7 +25,7 @@ const AboutPage = ({ language }) => {
                             <p className="intro-text-about">{aboutData?.aboutIntro?.[language]}</p>
                         </div>
                         <img 
-                            src="/images/headshot.jpg" 
+                            src="/images/headshot.webp" 
                             alt="Fujiwara Headshot" 
                             className="about-headshot"
                         />

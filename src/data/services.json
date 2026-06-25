@@ -4,7 +4,7 @@
       "en": "Consultation",
       "ja": "ご相談について"
     },
-    "image": "categories/consult_main.jpg",
+    "image": "categories/consult_main.webp",
     "bgImage": "",
     "defaultServiceImage": "",
     "includeInContactForm": false,
@@ -76,9 +76,9 @@
       "en": "Construction Industry License And Various Notifications",
       "ja": "建設業許可"
     },
-    "image": "categories/const_main.jpg",
-    "bgImage": "categories/const_back.jpg",
-    "defaultServiceImage": "categories/const_service.jpg",
+    "image": "categories/const_main.webp",
+    "bgImage": "categories/const_back.webp",
+    "defaultServiceImage": "categories/const_service.webp",
     "includeInContactForm": true,
     "description": {
       "en": "Comprehensive support for acquiring and renewing construction business licenses, as well as handling mandatory annual reports and ongoing notifications.",
@@ -176,8 +176,8 @@
       "en": "Foreign Visa Support",
       "ja": "外国人VISA"
     },
-    "image": "categories/visa_main.jpg",
-    "bgImage": "categories/visa_back.png",
+    "image": "categories/visa_main.webp",
+    "bgImage": "categories/visa_back.webp",
     "defaultServiceImage": "",
     "includeInContactForm": true,
     "description": {
@@ -346,8 +346,8 @@
       "en": "Will Drafting Support",
       "ja": "遺言.相続"
     },
-    "image": "categories/will_main.jpg",
-    "bgImage": "categories/will_back.jpg",
+    "image": "categories/will_main.webp",
+    "bgImage": "categories/will_back.webp",
     "defaultServiceImage": "",
     "includeInContactForm": true,
     "description": {

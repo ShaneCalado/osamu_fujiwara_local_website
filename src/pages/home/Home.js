@@ -54,7 +54,7 @@ const Home = ({ language }) => {
                 style={{ 
                     opacity: bgOpacity,
                     backgroundColor: '#1a1c23', 
-                    backgroundImage: `linear-gradient(rgba(73, 131, 247, 0.0), rgba(21, 26, 37, 0.3)), url('/images/home_screen_image.jpg')`
+                    backgroundImage: `linear-gradient(rgba(73, 131, 247, 0.0), rgba(21, 26, 37, 0.3)), url('/images/home_screen_image.webp')`
                 }}
             />
 

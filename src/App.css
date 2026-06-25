@@ -54,7 +54,7 @@ body, html {
     background-color: var(--bg-color);
     background-image: 
         linear-gradient(rgba(26, 26, 26, 0.1), rgba(26, 26, 26, 0.6)), 
-        url('../public/images/takarazuka.jpg');
+        url('../public/images/takarazuka.webp');
     background-size: cover;
     background-position: center; 
     background-attachment: fixed;
