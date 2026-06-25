@@ -45,10 +45,10 @@ const ContactForm = ({ language }) => {
         setIsSending(true);
 
         emailjs.sendForm(
-            'service_j1m3iej', 
-            'template_pbaws9c', 
+            process.env.REACT_APP_EMAILJS_SERVICE_ID, 
+            process.env.REACT_APP_EMAILJS_TEMPLATE_ID, 
             formRef.current, 
-            '3W2zWAI8-d8gq5Xq-'
+            process.env.REACT_APP_EMAILJS_PUBLIC_KEY
         )
         .then((result) => {
             alert(contactData.successAlert[language]);
@@ -57,6 +57,7 @@ const ContactForm = ({ language }) => {
             setSelectedService("");
             setIsSending(false);
         }, (error) => {
+            console.error("EmailJS Error:", error.text); 
             alert(contactData.errorAlert[language]);
             setIsSending(false);
         });
@@ -190,8 +191,11 @@ const ContactForm = ({ language }) => {
                             <span className="optional-badge">{contactData.optionalBadge[language]}</span>
                         </div>
                         <div className="form-input-group date-group">
-                            <input type="datetime-local" name="preferred_date_1" title={language === 'en' ? '1st Choice' : '第1希望'} />
-                            <input type="datetime-local" name="preferred_date_2" title={language === 'en' ? '2nd Choice' : '第2希望'} />
+                            
+                            {/* THE FIX: Changed type from "datetime-local" to "date" */}
+                            <input type="date" name="preferred_date_1" title={language === 'en' ? '1st Choice' : '第1希望'} />
+                            <input type="date" name="preferred_date_2" title={language === 'en' ? '2nd Choice' : '第2希望'} />
+                            
                             <p className="field-hint">
                                 {contactData.dateHint[language]}
                             </p>
