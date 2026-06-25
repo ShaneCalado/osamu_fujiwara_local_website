@@ -1,16 +1,14 @@
 /* --- FULL PAGE CONTAINER --- */
 .form-page-container {
-    padding-top: 60px; /* Adjusted to fit the new header flow */
+    padding-top: 60px; 
     padding-bottom: 80px;
     width: 100%;
     
-    /* Let the global app layout handle the background! */
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-/* --- TEXT UPDATES --- */
 .form-page-title {
     text-align: center;
     font-size: 2.2rem;
@@ -34,7 +32,6 @@
     width: 90%;
     max-width: 900px;
     box-sizing: border-box;
-    /* Box styles handled by .box-style-a in App.css */
 }
 
 .contact-form {
@@ -43,7 +40,7 @@
     gap: 25px;
 }
 
-/* --- RESPONSIVE TWO COLUMN LAYOUT --- */
+/* --- TWO COLUMN LAYOUT --- */
 .form-row {
     display: flex;
     flex-direction: column;
@@ -78,7 +75,7 @@
     align-items: center;
     gap: 10px;
     font-weight: 600;
-    color: white; /* Changed to white for dark theme */
+    color: white; 
     margin-bottom: 10px;
 }
 
@@ -93,7 +90,7 @@
 }
 
 .optional-badge {
-    background: rgba(255, 255, 255, 0.2); /* Muted badge for optional fields */
+    background: rgba(255, 255, 255, 0.2); 
     color: #e0e0e0;
     font-size: 0.7rem;
     padding: 3px 8px;
@@ -108,23 +105,21 @@
 .form-input-group textarea {
     width: 100%;
     padding: 14px 16px;
-    border: 1px solid rgba(255, 255, 255, 0.2); /* Glass borders */
+    border: 1px solid rgba(255, 255, 255, 0.2); 
     border-radius: 4px;
     font-size: 1rem;
     font-family: inherit;
-    background-color: rgba(0, 0, 0, 0.2); /* Translucent dark background */
-    color: white; /* White typing text */
+    background-color: rgba(0, 0, 0, 0.2); 
+    color: white; 
     box-sizing: border-box;
     transition: all 0.2s ease;
 }
 
-/* Makes placeholder text visible against the dark inputs */
 .form-input-group input::placeholder,
 .form-input-group textarea::placeholder {
     color: rgba(255, 255, 255, 0.4); 
 }
 
-/* Date picker calendar icon coloring (Webkit only) */
 .form-input-group input[type="datetime-local"]::-webkit-calendar-picker-indicator {
     filter: invert(1); /* Makes the little calendar icon white */
 }
@@ -146,7 +141,7 @@
 
 .field-hint {
     font-size: 0.85rem;
-    color: #b0b0b0; /* Lighter hint text */
+    color: #b0b0b0; 
     margin: 5px 0 0 0;
 }
 

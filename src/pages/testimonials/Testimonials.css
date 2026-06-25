@@ -5,18 +5,15 @@
     flex-direction: column; 
     align-items: center;  
     
-    /* THE FIX: Allow the page to grow as tall as it needs to */
     min-height: 100%; 
     width: 100%;         
     margin: 0; 
     box-sizing: border-box; 
     
-    /* Removed the old heavy left padding, set bottom padding to 0 so the footer is flush */
     padding: 60px 20px 0px 20px;  
 } 
 
 .testimonials-base-bg {
-    /* THE FIX: Fixed position keeps the image locked behind the scrolling content */
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
     background-size: cover;
@@ -49,15 +46,11 @@
     flex-shrink: 0;
 }
 
-/* --- THE INVISIBLE GLASS FLOOR --- */
 .testimonials-content-wrapper {
     display: flex;
     flex-direction: column;
     width: 100%;
     max-width: 1100px;
-    
-    /* Forces this block to take up exactly the visible screen (minus the 60px container padding). 
-       This prevents the footer from ever bouncing up into the viewport! */
     min-height: calc(100dvh - 60px); 
 }
 
@@ -65,15 +58,14 @@
     margin: 0 0 30px 0;  
     font-size: clamp(2rem, 4vw, 2.5rem); 
     color: white; 
-    text-align: left; /* Centered to match the Contact and Service pages */
+    text-align: left; 
     width: 100%; 
     font-weight: bold;
-    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Drops a shadow so it pops off the background */
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); 
 }
 
 @media (max-width: 768px) {
     .testimonials-content-wrapper {
-        /* Matches the smaller 40px top padding set on mobile */
         min-height: calc(100dvh - 40px); 
     }
     .testimonials-page-title {
@@ -101,19 +93,15 @@
     position: relative;
     z-index: 1; 
     
-    /* This pushes the footer to the bottom of the screen if there are only a few reviews */
     flex-grow: 1;  
     
     display: flex; 
     flex-direction: column; 
     gap: 12px; 
     
-    /* Adds breathing room between the bottom of the accordions and the start of the footer */
     padding-bottom: 80px;  
     width: 100%; 
     max-width: 1100px; 
-    
-    /* THE FIX: Removed overflow-y: auto. The global App container handles the scrolling now! */
 }
 
 /* --- 4. ACCORDIONS --- */ 
@@ -191,23 +179,21 @@
     border-top: 1px solid rgba(255, 255, 255, 0.05); 
 } 
 
-/* THE FIX: The Clearfix. Prevents the floated image from spilling out of the box if the text is short */
 .accordion-content-inner::after {
     content: "";
     display: table;
     clear: both;
 }
 
-/* THE FIX: New Floated Image Style (Larger Size) */
 .testimonial-body-avatar {
     float: left; 
-    width: 180px; /* Scaled up from 120px */
+    width: 180px; 
     height: auto; 
-    border-radius: 10px; /* Slightly softer corners for the larger size */
+    border-radius: 10px; 
     object-fit: cover;
-    margin: 5px 30px 15px 0; /* Increased margins so the text doesn't crowd the bigger image */
+    margin: 5px 30px 15px 0; 
     border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3); /* Added a subtle shadow to make it pop off the glass */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3); 
 }
 
 .testimonial-badge { 
@@ -232,7 +218,6 @@
     border: 1px solid rgba(160, 170, 191, 0.3); 
 } 
 
-/* THE FIX: Keeps the badges neatly clustered together */
 .badge-wrapper {
     display: flex;
     gap: 8px;
@@ -248,10 +233,9 @@
     font-weight: bold; 
     text-transform: uppercase; 
     letter-spacing: 1px; 
-    white-space: nowrap; /* Prevents text from breaking onto two lines */
+    white-space: nowrap; 
 } 
 
-/* THE FIX: The new Category Badge styling (a subtle glass look) */
 .badge-category {
     background-color: rgba(255, 255, 255, 0.1);
     color: #e0e0e0;
@@ -297,9 +281,8 @@
         margin-top: 0;
     }
     
-    /* Shrinks the floated image slightly on small phones so it doesn't crush the text */
     .testimonial-body-avatar {
-        width: 120px; /* Scaled up from 90px */
+        width: 120px; 
         margin: 5px 18px 10px 0; 
     }
 }

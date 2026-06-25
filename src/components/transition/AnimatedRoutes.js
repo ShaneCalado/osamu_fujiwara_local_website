@@ -8,13 +8,12 @@ import About from '../../pages/about/About';
 import Testimonials from '../../pages/testimonials/Testimonials';
 import CategoryPage from '../../pages/category/Category'; 
 import PricesPage from '../../pages/prices/Prices';
-import ContactForm from '../../pages/contactForm/ContactForm'; // <--- NEW: Import the Contact Form (Adjust path if your folder is named /contact/)
+import ContactForm from '../../pages/contactForm/ContactForm'; 
 import servicesData from '../../data/services.json'; 
 
 function AnimatedRoutes({ language }) {
   const location = useLocation();
 
-  // This function only runs when the old page is completely gone!
   const handleExitComplete = () => {
       window.scrollTo(0, 0);
       
@@ -28,7 +27,6 @@ function AnimatedRoutes({ language }) {
   };
 
   return (
-    // Attach the blind-spot trigger here!
     <AnimatePresence mode="wait" onExitComplete={handleExitComplete}>
       <Routes location={location} key={location.pathname}>
         
@@ -36,10 +34,8 @@ function AnimatedRoutes({ language }) {
         <Route path="/about" element={<PageTransition><About language={language} /></PageTransition>} />
         <Route path="/testimonials" element={<PageTransition><Testimonials language={language} /></PageTransition>} />
         
-        {/* NEW: Contact Form Route */}
         <Route path="/contact" element={<PageTransition><ContactForm language={language} /></PageTransition>} />
 
-        {/* DYNAMICALLY GENERATE ALL CATEGORY & PRICE PAGES */}
         {servicesData.map((category, index) => {
             const slug = category.category.en.toLowerCase().replace(/\s+/g, '-');
             

@@ -23,7 +23,6 @@ const Sidebar = ({ isMobileMenuOpen, closeMenu, language, changeLanguage }) => {
         
         <ul className="mobile-nav-links">
           
-          {/* RENDER ACTIVE SUBMENU (Layer 2) */}
           {activeSubmenu ? (
             <div className="submenu-container">
               <button 
@@ -56,7 +55,6 @@ const Sidebar = ({ isMobileMenuOpen, closeMenu, language, changeLanguage }) => {
             </div>
           ) : (
             
-            /* RENDER MAIN MENU (Layer 1) */
             <>
               {menuData
                 .sort((a, b) => a.position - b.position)
@@ -77,7 +75,6 @@ const Sidebar = ({ isMobileMenuOpen, closeMenu, language, changeLanguage }) => {
                         </li>
                       );
                     } else {
-                      // Fallback: Just plain text if a non-clickable item has no dropdown
                       return (
                         <li key={item.position}>
                           <div style={{ padding: '18px 25px', display: 'flex', justifyContent: 'flex-end', color: '#a0aabf' }}>

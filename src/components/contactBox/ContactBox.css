@@ -1,19 +1,13 @@
-/* --- THE FULL-BLEED FOOTER BLOCK --- */
-/* --- THE FULL-BLEED FOOTER BLOCK --- */
 .global-footer-block {
-    /* THE BULLETPROOF BREAKOUT TRICK (Framer Motion Safe) */
     width: 100vw;
     margin-left: calc(50% - 50vw);
     
-    /* Adds top margin so it pushes away from the page content above it */
     margin-top: 80px; 
     
-    /* The Home Page Glassmorphism Style */
     background: var(--box-color);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     
-    /* The sharp horizontal cutoff line */
     border-top: 1px solid rgba(255, 255, 255, 0.15);
     border-bottom: none;
     border-left: none;
@@ -23,14 +17,13 @@
     box-sizing: border-box;
 }
 
-/* --- THE CENTERED INNER CONTENT --- */
 .footer-content-container {
     width: 100%;
     max-width: 1200px;
-    margin: 0 auto; /* Centers the content */
+    margin: 0 auto; 
     
     display: grid; 
-    grid-template-columns: 1fr 1.2fr; /* Makes the map slightly wider than the text */
+    grid-template-columns: 1fr 1.2fr; 
     gap: 60px;
 }
 
@@ -69,7 +62,6 @@
     border-radius: 8px; 
     overflow: hidden; 
     background: #000;
-    /* Optional: subtle border around the map to blend it into the glass */
     border: 1px solid rgba(255, 255, 255, 0.1); 
 }
 
@@ -105,7 +97,7 @@
     }
     
     .footer-content-container { 
-        grid-template-columns: 1fr; /* Stacks text on top of the map */
+        grid-template-columns: 1fr; 
         gap: 40px; 
     }
     

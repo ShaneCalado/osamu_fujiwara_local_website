@@ -74,24 +74,24 @@
   position: relative;
   display: flex;
   align-items: center;
-  height: var(--header-height); /* Extends hover target to full header height */
+  height: var(--header-height); 
 }
 
 .nav-main-link {
-  position: relative; /* Anchors the animated underline */
+  position: relative; 
   color: #e0e0e0;
   text-decoration: none;
   font-size: 1rem;
   font-weight: 400;
   padding: 5px 0; 
-  margin: 0 20px; /* Space between links */
+  margin: 0 20px; 
   display: flex;
   align-items: center;
   gap: 5px;
   transition: color 0.2s;
 }
 
-/* Keeps text white even when mousing over the dropdown below it */
+
 .nav-main-link:hover,
 .nav-main-link.active,
 .nav-item-wrapper:hover .nav-main-link {
@@ -109,15 +109,14 @@
   height: 1px;
   background-color: #f08c3a; 
   transform-origin: center;
-  z-index: 2; /* Ensures the underline sits cleanly over the dropdown box */
+  z-index: 2; 
   transition: transform 0.3s ease;
 }
 
-/* Trigger animation on Hover OR if it's the Active page */
+
 .nav-item-wrapper:hover .nav-main-link::after,
 .nav-main-link.active::after {
-  transform: translateX(-50%) scaleX(1); /* Expand to full width */
-  /* MOUSE IN: Expand immediately taking 0.3s */
+  transform: translateX(-50%) scaleX(1); 
   transition: transform 0.3s ease 0s;
 }
 
@@ -130,7 +129,6 @@
 /* Dropdown Menu Box */
 .dropdown-menu {
   position: absolute;
-  /* THE FIX: Pulled up by 3px to perfectly overlap and merge with the underline */
   top: calc(50% + 22px); 
   left: 50%;
   transform: translateX(-50%); 
@@ -141,10 +139,10 @@
   border-left: 1px solid rgba(255, 255, 255, 0.1);
   border-right: 1px solid rgba(255, 255, 255, 0.1);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  border-top: 1px solid #f08c3a; /* Will now perfectly mask behind the underline */
+  border-top: 1px solid #f08c3a; 
   border-radius: 0 0 6px 6px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-  z-index: 1; /* Sits behind the main link text/underline */
+  z-index: 1; 
   
   min-width: 180px;
   display: flex;
@@ -161,13 +159,11 @@
 
 /* Reveal Dropdown on Hover */
 .nav-item-wrapper:hover .dropdown-menu {
-  /* Unrolls downwards to reveal the box */
   -webkit-clip-path: inset(0 0 0 0);
   clip-path: inset(0 0 0 0); 
   visibility: visible;
   pointer-events: auto;
   
-  /* MOUSE IN: Wait 0.3s for underline to finish drawing, then unroll taking 0.3s */
   transition: -webkit-clip-path 0.3s ease 0.3s, clip-path 0.3s ease 0.3s, visibility 0.3s ease 0.3s;
 }
 
@@ -198,7 +194,7 @@
 }
 
 .nav-main-link.contact-btn::after {
-  display: none; /* No animated line for the solid button */
+  display: none; 
 }
 
 .nav-main-link.contact-btn:hover {

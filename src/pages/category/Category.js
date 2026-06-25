@@ -3,15 +3,12 @@ import ContactBox from '../../components/contactBox/ContactBox';
 import './Category.css';
 
 const CategoryPage = ({ category, language }) => {
-    // Scroll to the top when navigating to a new category page
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [category]);
 
-    // Safety check: if no category is passed, don't render
     if (!category) return null;
 
-    // THE FIX: Filter out items that do not have the 'includeInServicePage' checkbox ticked
     const validServiceItems = category.items.filter(item => item.includeInServicePage === true);
 
     return (
@@ -32,7 +29,7 @@ const CategoryPage = ({ category, language }) => {
                 {/* Main Page Title */}
                 <h1 className="category-page-title">{category.category[language]}</h1>
 
-                {/* The Glass Container */}
+                {/* Glass Container */}
                 <div className="category-glass-box">
                     
                     {/* Hero Image & Main Description */}
@@ -72,7 +69,6 @@ const CategoryPage = ({ category, language }) => {
                                 </div>
                             ))
                         ) : (
-                            /* Fallback if a category accidentally has no services checked */
                             <div className="item-row">
                                 <div className="item-name">
                                     {language === 'en' ? 'Please contact us for more details.' : '詳細についてはお問い合わせください。'}
@@ -84,7 +80,6 @@ const CategoryPage = ({ category, language }) => {
                 </div>
             </div>
 
-            {/* The Full-Bleed Footer */}
             <ContactBox language={language} />
             
         </div>

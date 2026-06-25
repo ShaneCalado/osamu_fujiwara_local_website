@@ -87,11 +87,11 @@
 
 /* --- MOBILE CONTACT BUTTON --- */
 .mobile-nav-links li.mobile-contact-wrapper {
-  margin: 10px 25px 30px 25px; /* Detaches it from the edges and gives it breathing room */
+  margin: 10px 25px 30px 25px; 
 }
 
 .mobile-nav-links li.mobile-contact-wrapper a {
-  justify-content: center; /* Centers the text inside the button */
+  justify-content: center; 
   background-color: #f08c3a;
   border-radius: 4px;
   padding: 14px 20px;
@@ -103,7 +103,6 @@
   background-color: #d9782b;
 }
 
-/* Force the button text to be solid white (overriding the default grey) */
 .mobile-nav-links li.mobile-contact-wrapper a .link-text,
 .mobile-nav-links li.mobile-contact-wrapper a .translatable-text {
   color: white !important; 
@@ -123,7 +122,6 @@
   justify-content: flex-end; 
 }
 
-/* Ensure global mobile hiding rules don't hide the text inside the pill */
 .mobile-lang-item .translatable-text,
 .mobile-lang-item .lang-current,
 .mobile-lang-item .lang-option {
@@ -132,7 +130,6 @@
   opacity: 1 !important;
 }
 
-/* Fix mobile tap interactions for the hover dropdown */
 .mobile-lang-item .language-pill:active .lang-options,
 .mobile-lang-item .language-pill:focus-within .lang-options {
   display: flex; 

@@ -6,7 +6,7 @@
     align-items: center;
     width: 100%;
     min-height: 100%;
-    padding-top: 60px; /* Clears the global header */
+    padding-top: 60px; 
 }
 
 .category-dynamic-bg {
@@ -89,7 +89,7 @@
 
 .items-list-header {
     display: grid;
-    grid-template-columns: 1fr 1.5fr; /* Name takes 1 part, Description takes 1.5 parts */
+    grid-template-columns: 1fr 1.5fr; 
     gap: 30px;
     padding-bottom: 15px;
     border-bottom: 2px solid var(--text-highlight);
@@ -129,15 +129,13 @@
     .category-page-wrapper { padding-top: 20px; }
     .category-glass-box { padding: 25px 20px; }
     .category-hero-image-wrapper { height: 180px; }
-    
-    /* Hides the grid headers on mobile since we are stacking the text */
     .items-list-header { display: none; }
     
     .item-row {
-        grid-template-columns: 1fr; /* Stacks the name on top of the description */
+        grid-template-columns: 1fr;
         gap: 10px;
         padding: 20px 0;
     }
     
-    .item-name { color: var(--text-highlight); } /* Highlights the name so it acts like a sub-header on mobile */
+    .item-name { color: var(--text-highlight); } 
 }

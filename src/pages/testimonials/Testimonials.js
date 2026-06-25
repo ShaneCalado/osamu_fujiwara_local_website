@@ -39,15 +39,12 @@ const TestimonialAccordion = ({ item, language, idx, openIndex, toggleAccordion 
 
     const customTag = item.tag?.[language];
 
-    // THE FIX: Smart Quote Formatting
     let formattedQuote = item.review_quote[language];
     if (item.from_customer) {
-        // If it's a client, wrap it in the correct language-specific quotes
         formattedQuote = language === 'ja' 
             ? `「${formattedQuote}」` 
             : `"${formattedQuote}"`;
     } 
-    // If it's NOT a customer (Case Study), it just passes the raw text through!
 
     return (
         <motion.div 
@@ -59,7 +56,6 @@ const TestimonialAccordion = ({ item, language, idx, openIndex, toggleAccordion 
             <div className="accordion-header" onClick={() => toggleAccordion(idx)}>
                 
                 <div className="header-left-group">
-                    {/* THE FIX: Replaced the hardcoded "" with our new dynamic variable */}
                     <span className={`testimonial-quote ${isOpen ? 'quote-open' : ''}`}>
                         {formattedQuote}
                     </span>
@@ -136,10 +132,8 @@ const TestimonialsPage = ({ language }) => {
 
     const activeTestimonial = openIndex !== null ? testimonialsData[openIndex] : null;
     
-    // THE FIX: Check for the custom background image first
     let activeBgImage = activeTestimonial?.bg_image || null;
 
-    // Fallback: If no custom bg_image is set, use the old service_ids method
     if (!activeBgImage && activeTestimonial?.service_ids?.length > 0) {
         const targetServiceId = activeTestimonial.service_ids[0];
         

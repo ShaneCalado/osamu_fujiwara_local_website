@@ -30,7 +30,6 @@ const Header = ({ language = 'en', changeLanguage, toggleMobileMenu }) => {
             const itemName = item.name[language] || item.name.jp; 
             const hasDropdown = item.subItems && item.subItems.length > 0;
 
-            // THE FIX: Checks for exact matches OR if the current URL is a child path of the parent/sub-items
             const isActive = 
                 location.pathname === item.link || 
                 (item.link && item.link !== '/' && location.pathname.startsWith(`${item.link}/`)) ||
@@ -39,10 +38,8 @@ const Header = ({ language = 'en', changeLanguage, toggleMobileMenu }) => {
                     (subItem.link && subItem.link !== '/' && location.pathname.startsWith(`${subItem.link}/`))
                 ));
 
-            // Shared classes for all nav items
             const linkClasses = `nav-main-link ${isContact ? "contact-btn" : ""} ${isActive && !isContact ? "active" : ""}`;
 
-            // Determine if the item should be a text span, an external link, or an internal link
             let navContent;
             if (!item.clickable) {
               navContent = (
@@ -78,10 +75,8 @@ const Header = ({ language = 'en', changeLanguage, toggleMobileMenu }) => {
             return (
               <div key={item.position} className="nav-item-wrapper">
                 
-                {/* Render the dynamically chosen element */}
                 {navContent}
 
-                {/* THE DROPDOWN MENU */}
                 {hasDropdown && (
                   <div className="dropdown-menu">
                     {item.subItems.map((subItem, index) => {

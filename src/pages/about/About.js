@@ -18,7 +18,6 @@ const AboutPage = ({ language }) => {
             <section className="about-section intro-section">
                 <div className="about-content-container">
                     
-                    {/* THE FIX: Injected box-style-a */}
                     <div className="about-header-row box-style-a">
                         
                         <div className="about-text-content">
@@ -38,7 +37,6 @@ const AboutPage = ({ language }) => {
             <section className="about-section content-section">
                 <div className="about-content-container">
                     
-                    {/* THE FIX: Injected box-style-a */}
                     <div className="about-text-card box-style-a">
                         <p className="about-paragraph">
                             {aboutData?.aboutContent?.[language]}

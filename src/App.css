@@ -10,6 +10,8 @@
     --text-header: rgba(0,0,0,0);
     --text-main: white;
     --text-subtext: #e0e0e0;
+
+    --mobile-width: 768px;
 }
 
 body, html {
@@ -37,7 +39,6 @@ body, html {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-radius: 12px;
-    /* Slightly softer shadow for smaller nested cards */
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     border: 1px solid rgba(255, 255, 255, 0.1);
 }

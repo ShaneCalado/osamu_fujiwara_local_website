@@ -3,15 +3,12 @@ import ContactBox from '../../components/contactBox/ContactBox';
 import './Prices.css';
 
 const PricesPage = ({ category, language }) => {
-    // Scroll to the top when navigating to a new page
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [category]);
 
-    // Safety check
     if (!category) return null;
 
-    // Filter out items that do not have the 'Include in price page' checkbox ticked
     const validPricingItems = category.items.filter(item => item.includeInPricePage === true);
 
     return (
@@ -39,7 +36,6 @@ const PricesPage = ({ category, language }) => {
 
                 <div className="prices-glass-box">
                     
-                    {/* Hero Image (Same logic as CategoryPage) */}
                     {category.image && (
                         <div className="prices-intro-section">
                             <div className="prices-hero-image-wrapper">
@@ -69,7 +65,6 @@ const PricesPage = ({ category, language }) => {
                                     </div>
                                 ))
                             ) : (
-                                /* Fallback if a category accidentally has no prices checked */
                                 <div className="price-item-row">
                                     <div className="price-item-name">
                                         {language === 'en' ? 'Contact us for a quote.' : 'お見積りはお問い合わせください。'}

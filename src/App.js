@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom'; 
-// Removed ScrollToTop import!
 import Header from './components/header/Header'; 
 import Sidebar from './components/sidebar/Sidebar';
 import AnimatedRoutes from './components/transition/AnimatedRoutes'; 
@@ -15,6 +14,14 @@ function App() {
 
   useEffect(() => {
     localStorage.setItem('siteLanguage', language);
+  }, [language]);
+
+  useEffect(() => {
+    if (language === 'en') {
+      document.title = "Osamu Fujiwara Administrative Scrivener Office";
+    } else {
+      document.title = "行政書士藤原修事務所";
+    }
   }, [language]);
 
   const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);

@@ -23,20 +23,15 @@ const Home = ({ language }) => {
         return `/services/${slug}`;
     };
 
-    // THE FIX: Trigger-based Scroll Listener
     useEffect(() => {
         const handleScroll = () => {
-            // THE FIX: Ignore the event target (which could be a horizontal carousel).
-            // Always query the main vertical scrolling container directly.
             const mainScroller = document.querySelector('.page-container') || 
                                  document.querySelector('.app-layout');
             
             const scrollTop = mainScroller ? mainScroller.scrollTop : window.scrollY;
             
-            // The threshold where the user is considered to be "leaving" Section 0
             const fadeThreshold = window.innerHeight * 0.45; 
             
-            // Snap to exactly 0 or 1.
             if (scrollTop > fadeThreshold) {
                 setBgOpacity(0);
             } else {
@@ -44,10 +39,8 @@ const Home = ({ language }) => {
             }
         };
 
-        // Capture phase intercepts all scrolls, but our function now safely ignores horizontal carousels
         window.addEventListener('scroll', handleScroll, true); 
 
-        // Initial check on mount
         handleScroll();
 
         return () => window.removeEventListener('scroll', handleScroll, true);
@@ -56,12 +49,10 @@ const Home = ({ language }) => {
     return (
         <div className="home-scroll-container">
             
-            {/* Fixed Background with Fallback Color */}
             <div 
                 className="home-hero-bg" 
                 style={{ 
                     opacity: bgOpacity,
-                    /* Instantly covers the normal global background while the network downloads the image */
                     backgroundColor: '#1a1c23', 
                     backgroundImage: `linear-gradient(rgba(73, 131, 247, 0.0), rgba(21, 26, 37, 0.3)), url('/images/home_screen_image.jpg')`
                 }}
@@ -72,8 +63,6 @@ const Home = ({ language }) => {
                 <div className="intro-dashboard-container">
                     <div className="intro-row">
                         
-                        {/* LEFT: The Large Text Box */}
-                        {/* THE FIX: Added box-style-a to apply the global glass card look */}
                         <div className="intro-text-col box-style-a">
                             <h2 className="welcome-header">{homeData?.welcomeHeader?.[language] || ""}</h2>
                             <h2 className="welcome-text" dangerouslySetInnerHTML={{ __html: homeData?.welcomeText?.[language] || "" }} />
@@ -113,7 +102,6 @@ const Home = ({ language }) => {
                                 <img src={getImgSrc(validCategories[0])} alt={validCategories[0].category[language]} />
                             </div>
                             
-                            {/* THE FIX: Added box-style-a here! */}
                             <div className="cat-text-col box-style-a">
                                 <h3>{validCategories[0].category[language]}</h3>
                                 <p>{validCategories[0].description[language]}</p>
@@ -132,7 +120,6 @@ const Home = ({ language }) => {
                                         <img src={getImgSrc(cat)} alt={cat.category[language]} />
                                     </div>
                                     
-                                    {/* THE FIX: Added box-style-b here! */}
                                     <div className="small-text-col box-style-b">
                                         <h3>{cat.category[language]}</h3>
                                         <p>{cat.description[language]}</p>

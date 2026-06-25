@@ -126,7 +126,7 @@ const ContactForm = ({ language }) => {
                         </div>
                     </div>
 
-                    {/* STEP 1: Category Dropdown */}
+                    {/* Category Dropdown */}
                     <div className="form-row">
                         <div className="form-label">
                             <label htmlFor="service_category">{contactData.serviceCategoryLabel[language]}</label>
@@ -159,7 +159,7 @@ const ContactForm = ({ language }) => {
                         </div>
                     </div>
 
-                    {/* STEP 2: Specific Service Dropdown */}
+                    {/* Specific Service Dropdown */}
                     {selectedCategory !== "" && selectedCategory !== "general" && (
                         <div className="form-row reveal-row">
                             <div className="form-label">
