@@ -428,8 +428,8 @@
       {
         "id": "heir-investigation",
         "name": {
-          "en": "Heir Investigation (Up to 3 people)",
-          "ja": "相続人調査・3名まで"
+          "en": "Heir Investigation",
+          "ja": "相続人調査"
         },
         "price": "¥44,000 ~",
         "includeInPricePage": true,
@@ -447,10 +447,10 @@
         },
         "price": "+ ¥8,000",
         "includeInPricePage": true,
-        "includeInServicePage": true,
+        "includeInServicePage": false,
         "description": {
           "en": "Additional fee for complex family structures requiring investigation of more than three heirs.",
-          "ja": "相続人が4名以上となる場合の、戸籍収集・調査にかかる追加料金です。"
+          "ja": ""
         }
       },
       {
@@ -587,10 +587,10 @@
         },
         "price": "2.0% ~ 相続財産額による",
         "includeInPricePage": true,
-        "includeInServicePage": true,
+        "includeInServicePage": false,
         "description": {
           "en": "The service fee for executing the will, calculating based on the total value of the transferred estate.",
-          "ja": "遺言の内容に従って不動産の名義変更手配や預貯金の解約・分配などを行う際の手続き報酬です。財産額に応じて変動します。"
+          "ja": ""
         }
       },
       {
