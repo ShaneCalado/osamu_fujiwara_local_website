@@ -108,5 +108,27 @@
     "bg_image": "",
     "from_customer": false,
     "date": "04/06/2026"
+  },
+  {
+    "review_id": "abc-r-5",
+    "service_ids": [
+      "additional-business-category"
+    ],
+    "tag": {
+      "en": "Licenses and Permits",
+      "ja": "許認可"
+    },
+    "review_text": {
+      "en": "1. What kind of problem were you experiencing?\n\nDrawing creation\n\n2. What did you like about using our services?\n\nThe drawings were carefully measured, and if there were any unclear points, they came to the store in person to check, which gave me peace of mind.\nTheir response was quick, and they carried out what I requested accurately.\nThey also handled communication with the police, which gave me peace of mind.\n\n3. Do you have a message for those considering a late-night business permit?\n\nThey not only create drawings but also handle communication with the police appropriately, so I highly recommend them.",
+      "ja": "1.どのようなことでお困りでしたか？\n\n  図面作成\n\n2.当事務所に依頼して良かった点をお聞かせください\n\n図面作成で丁寧に測量してもらい、分からない箇所が\nあれば直接店まで来て確認していただき安心感がありました。\n対応も早く、正確に依頼したことを遂行していただきました。\n警察とのやり取りもしていただき、安心感がありました。\n\n3.深夜営業届を検討されている方へ一言お願いします\n\n図面作成だけでなく、警察とのやりとりまで適切に対応して\nいただけるので、おすすめです。"
+    },
+    "review_quote": {
+      "en": "We assisted with the notification for a late-night alcohol-serving establishment.\nWhisky & Bar Black Blanc",
+      "ja": "深夜酒類提供飲食店営業届をサポートしました。\nWhisky&bar Black blanc様"
+    },
+    "image": "../../images/client_photos/bar_client.webp",
+    "bg_image": "",
+    "from_customer": false,
+    "date": "27/06/2026"
   }
 ]
