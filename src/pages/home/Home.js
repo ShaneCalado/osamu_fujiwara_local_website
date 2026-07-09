@@ -73,7 +73,7 @@ const Home = ({ language }) => {
                 </div>
             </section>
 
-            {/* SECTION 1: VIDEO */}
+            {/* SECTION 1: VIDEO
             <section className="screen-section video-section">
                 <div className="video-wrapper">
                     {!isVideoPlaying ? (
@@ -92,6 +92,7 @@ const Home = ({ language }) => {
                     )}
                 </div>
             </section>
+             */}
 
             {/* SECTION 2: CATEGORIES DASHBOARD */}
             <section className="screen-section categories-section">

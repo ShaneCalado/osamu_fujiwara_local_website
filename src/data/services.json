@@ -526,8 +526,8 @@
       {
         "id": "bank-account-cancellation",
         "name": {
-          "en": "Bank Account Cancellation (1 Financial Institution)",
-          "ja": "預貯金解約手続き 1金融機関"
+          "en": "Bank Account Cancellation",
+          "ja": "預貯金解約手続き"
         },
         "price": "¥44,000 ~",
         "includeInPricePage": true,
@@ -619,6 +619,64 @@
         "description": {
           "en": "Consultation on setting up legal safety nets for potential future cognitive decline or physical incapacitation.",
           "ja": "将来、認知症などで判断能力が低下した時に備える「任意後見契約」や、定期的に安否確認を行う「見守り契約」に関するご相談を承ります。"
+        }
+      }
+    ]
+  },
+  {
+    "category": {
+      "en": "Alcohol Serving Restaurants and Businesses",
+      "ja": "深夜酒類飲食店営業開始届出"
+    },
+    "image": "categories/bar_main.webp",
+    "bgImage": "",
+    "defaultServiceImage": "",
+    "includeInContactForm": true,
+    "description": {
+      "en": "We assist restaurants and other food service establishments with the necessary notifications to operate and primarily serve alcohol past midnight.",
+      "ja": "深夜0時以降も主として酒類を提供して営業したい飲食店様の営業許可届出をサポートいたします。"
+    },
+    "items": [
+      {
+        "id": "bar-serve-docs",
+        "name": {
+          "en": "Notification for Late-Night Alcohol Sales – Document Preparation",
+          "ja": "深夜酒類営業届出　書類作成のみ"
+        },
+        "price": "¥66,000~",
+        "includeInPricePage": true,
+        "includeInServicePage": true,
+        "description": {
+          "en": "We will prepare the notification of commencement of business for an establishment serving alcohol late at night, as well as the documentation regarding business operations.",
+          "ja": "深夜酒類提供飲食店営業開始届出書、営業方法の書類を作成いたします。"
+        }
+      },
+      {
+        "id": "bar-serve-comence",
+        "name": {
+          "en": "Preparation of Drawings and Documents for Late-Night Alcohol-Serving Business Notification",
+          "ja": "深夜酒類営業届出　図面・書類作成"
+        },
+        "price": "¥110,000 ~",
+        "includeInPricePage": true,
+        "includeInServicePage": true,
+        "description": {
+          "en": "In addition to preparing the notification of commencement of business for late-night alcohol-serving establishments and the documentation regarding business operations, I also create the necessary floor plans.",
+          "ja": "深夜酒類提供飲食店営業開始届出書、営業方法の書類作成に加え、図面作成します。"
+        }
+      },
+      {
+        "id": "bar-serve-assist",
+        "name": {
+          "en": "Comprehensive Support Package for Late-Night Alcohol Service Notification",
+          "ja": "深夜酒類営業届出サポート一式(警察提出込）"
+        },
+        "price": "¥165,000~",
+        "includeInPricePage": true,
+        "includeInServicePage": true,
+        "description": {
+          "en": "We provide comprehensive support—from preparing the notification of commencement of business for late-night alcohol-serving establishments and drafting operational plans to conducting on-site measurements, creating floor plans, coordinating with the police, and handling the final submission.",
+          "ja": "深夜酒類提供飲食店営業開始届出書、営業方法の作成、現地計測、図面作成、警察との調整、提出までの全てサポート承ります"
         }
       }
     ]

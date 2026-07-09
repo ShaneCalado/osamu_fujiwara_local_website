@@ -63,7 +63,7 @@
 
 .welcome-header {
     font-size: clamp(1.2rem, 2.5vw, 1.8rem); 
-    color: var(--text-highlight); 
+    color: var(--text-main); 
     margin: 0; 
     font-weight: 600;
     white-space: pre-line; 

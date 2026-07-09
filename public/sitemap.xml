@@ -1,15 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
   <url>
     <loc>https://www.office-fujiwaraosamu.com/</loc>
     <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://www.office-fujiwaraosamu.com/contact</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.office-fujiwaraosamu.com/about</loc>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.office-fujiwaraosamu.com/services</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.office-fujiwaraosamu.com/contact</loc>
+    <loc>https://www.office-fujiwaraosamu.com/prices</loc>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://www.office-fujiwaraosamu.com/testimonials</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.office-fujiwaraosamu.com/services/construction-industry-license-and-various-notifications</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.office-fujiwaraosamu.com/services/foreign-visa-support</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.office-fujiwaraosamu.com/services/will-drafting-support</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.office-fujiwaraosamu.com/services/consultation</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.office-fujiwaraosamu.com/prices/construction-industry-license-and-various-notifications</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.office-fujiwaraosamu.com/prices/foreign-visa-support</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.office-fujiwaraosamu.com/prices/will-drafting-support</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.office-fujiwaraosamu.com/prices/consultation</loc>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>
