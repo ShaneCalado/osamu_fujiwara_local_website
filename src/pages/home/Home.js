@@ -7,7 +7,7 @@ import TestimonialFeed from '../../components/testimonialFeed/TestimonialFeed';
 import ContactBox from '../../components/contactBox/ContactBox';
 
 const Home = ({ language }) => {
-    const [isVideoPlaying, setIsVideoPlaying] = useState(false); 
+    /*const [isVideoPlaying, setIsVideoPlaying] = useState(false); */
     const [bgOpacity, setBgOpacity] = useState(1); 
 
     const validCategories = servicesData.filter(cat => cat.items && cat.items.length > 0);

@@ -680,5 +680,119 @@
         }
       }
     ]
+  },
+  {
+    "category": {
+      "en": "Subsidies and Startup Loans",
+      "ja": "補助金・創業融資サポート"
+    },
+    "image": "categories/loan_main.webp",
+    "bgImage": "",
+    "defaultServiceImage": "",
+    "includeInContactForm": false,
+    "description": {
+      "en": "Comprehensive guidance with subsidies, startup loans, permits and licenses, and business launch support for small businesses in the Hanshin area.",
+      "ja": "宝塚市・阪神間の事業者向けに、補助金・創業融資の無料診断から申請準備まで丁寧にサポートします。"
+    },
+    "items": [
+      {
+        "id": "startup-assess",
+        "name": {
+          "en": "Quick Assessment for Grants and Loans",
+          "ja": "補助金・融資　簡易診断"
+        },
+        "price": "無料",
+        "includeInPricePage": true,
+        "includeInServicePage": true,
+        "description": {
+          "en": "We will ask about your business activities and financial plan, and conduct a preliminary check for potentially available subsidies and loan programs.",
+          "ja": "事業内容や資金計画をお聞きし、利用できる可能性のある補助金や融資制度を簡易的に確認します。"
+        }
+      },
+      {
+        "id": "startup-research",
+        "name": {
+          "en": "Research on Subsidy Programs and Eligibility Assessment",
+          "ja": "補助金制度調査・申請可否判定"
+        },
+        "price": "¥22,000~",
+        "includeInPricePage": true,
+        "includeInServicePage": true,
+        "description": {
+          "en": "We review the details of your business operations and projected expenses, research available subsidy programs, and assess the likelihood of a successful application.",
+          "ja": "お客様の事業内容や予定している経費を確認し、利用できる補助金制度を調査したうえで、申請できる可能性を判定します。"
+        }
+      },
+      {
+        "id": "startup-subsidy",
+        "name": {
+          "en": "Subsidy for Sustaining Small Businesses",
+          "ja": "小規模事業者持続化補助金"
+        },
+        "price": "着手金55,000円＋成功報酬10％",
+        "includeInPricePage": true,
+        "includeInServicePage": true,
+        "description": {
+          "en": "We provide support for the Small Business Sustainability Subsidy. This subsidy assists small businesses with initiatives such as market expansion and improving operational efficiency. Funds can be used for activities including flyer creation, website development, store renovations, exhibition participation, and the installation of equipment.",
+          "ja": "小規模事業者持続化補助金をサポート。小規模事業者が行う販路開拓や業務効率化を支援する補助金です。チラシ作成、ホームページ制作、店舗改装、展示会出展、設備導入などに活用できます。"
+        }
+      },
+      {
+        "id": "startup-local-gov",
+        "name": {
+          "en": "Local government subsidy",
+          "ja": "自治体補助金"
+        },
+        "price": "着手金55,000円＋成功報酬10％",
+        "includeInPricePage": true,
+        "includeInServicePage": true,
+        "description": {
+          "en": "We provide support regarding local government subsidies—grants offered by municipalities such as Takarazuka, Nishinomiya, and Amagasaki to assist local businesses. These funds can often be utilized for purposes such as store renovations, opening new locations, installing equipment, expanding sales channels, and adopting IT systems.",
+          "ja": "自治体補助金をサポート。宝塚市・西宮市・尼崎市などの市区町村が、地域の事業者を支援するために実施する補助金です。店舗改装、出店、設備導入、販路開拓、IT導入などに活用できる場合があります。"
+        }
+      },
+      {
+        "id": "startup-it-sub",
+        "name": {
+          "en": "IT and Labor-Saving Subsidies",
+          "ja": "IT・省力化補助金"
+        },
+        "price": "着手金88,000円〜＋成功報酬10％",
+        "includeInPricePage": true,
+        "includeInServicePage": true,
+        "description": {
+          "en": "We provide support for IT and labor-saving subsidies. We assist with applications for subsidies that can be used for initiatives such as implementing systems to improve operational efficiency, adopting AI, installing POS registers, setting up reservation management systems, and acquiring commercial-grade equipment.",
+          "ja": "IT・省力化補助金をサポート。業務効率化のためのシステム導入、AI活用、POSレジ、予約管理、業務用機器などに使える補助金で、申請のサポートをします。"
+        }
+      },
+      {
+        "id": "startup-manu-sub",
+        "name": {
+          "en": "Manufacturing Subsidy",
+          "ja": "ものづくり補助金"
+        },
+        "price": "着手金165,000円＋成功報酬8〜10％",
+        "includeInPricePage": true,
+        "includeInServicePage": true,
+        "description": {
+          "en": "We provide support for the \"Monozukuri Subsidy\" (Manufacturing Subsidy). This is a grant designed for small and medium-sized enterprises (SMEs) to fund initiatives such as the development of new products or services and the installation of equipment to boost productivity; we assist with tasks such as preparing the necessary application plans.",
+          "ja": "ものづくり補助金をサポート。新商品・新サービスの開発や、生産性向上のための設備導入などに活用できる中小企業向けの補助金で、計画書の作成などサポートします。"
+        }
+      },
+      {
+        "id": "startup-loan",
+        "name": {
+          "en": "Start-up loan",
+          "ja": "創業融資"
+        },
+        "price": "着手金55,000円＋融資額3％",
+        "includeInPricePage": true,
+        "includeInServicePage": true,
+        "description": {
+          "en": "Startup loans are financing programs designed to cover initial setup costs and working capital. Our firm provides support with drafting startup business plans and preparing loan applications.",
+          "ja": "創業融資は、開業資金や運転資金を借り入れるための融資制度です。当事務所では、創業計画書の作成や申込み準備をサポートします。"
+        }
+      }
+    ]
   }
 ]

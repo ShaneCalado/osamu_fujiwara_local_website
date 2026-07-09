@@ -132,9 +132,10 @@
   top: calc(50% + 22px); 
   left: 50%;
   transform: translateX(-50%); 
-  background: var(--box-color);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background: rgba(60, 68, 86, 0.6);
+
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
   
   border-left: 1px solid rgba(255, 255, 255, 0.1);
   border-right: 1px solid rgba(255, 255, 255, 0.1);
