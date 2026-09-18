@@ -282,6 +282,15 @@
 .cat-learn-more.small-btn { padding: 8px 18px; font-size: 0.85rem; align-self: flex-start; }
 
 /* =========================================
+   SECTION 4: CONTACT
+========================================= */
+.contact-section {
+  min-height: auto;
+  height: auto;
+  padding: 4vh 1vw;
+}
+
+/* =========================================
    MOBILE RESPONSIVE OVERRIDES
    ========================================= */
 @media (max-width: 768px) {

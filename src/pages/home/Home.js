@@ -14,7 +14,7 @@ const Home = ({ language }) => {
 
     const getImgSrc = (cat) => {
         const imgSrc = cat.image || cat.bgImage || cat.defaultServiceImage || 'headshot.jpg';
-        return imgSrc.startsWith('http') ? imgSrc : `/images/${imgSrc}`;
+        return imgSrc.startsWith('http') ? imgSrc : `/images/ ${imgSrc}`;
     };
 
     const getCategoryLink = (cat) => {
@@ -140,7 +140,10 @@ const Home = ({ language }) => {
                 <TestimonialFeed language={language} />
             </section>
 
-            <ContactBox language={language} />
+            {/* SECTION 4: CONTACT */}
+            <section className="screen-section contact-section">
+                <ContactBox language={language} />
+            </section>
 
         </div> 
     );
