@@ -59,7 +59,7 @@ const TestimonialAccordion = ({ item, language, idx, openIndex, toggleAccordion 
 
 				<div className="header-right-group">
 					<div className="badge-wrapper">
-						{customTag && (
+						{customTag && customTag !== "-" && (
 							<span className="testimonial-badge badge-category">
 								{customTag}
 							</span>
@@ -126,16 +126,15 @@ const TestimonialsPage = ({ language }) => {
 
 				const formattedData = wpPosts.map((post) => {
 					// Parse comma-separated service IDs into an array safely
-					const rawServiceIds = typeof post.acf.service_ids === 'string' ? post.acf.service_ids : "";
-					const parsedServiceIds = rawServiceIds.split(',').map(id => id.trim()).filter(id => id);
+					const rawTag = typeof post.acf.tag === 'string' ? post.acf.tag : "";
+					const splitTags = rawTag.split('/')
 
 					return {
 						review_id: post.id.toString(),
-						service_ids: parsedServiceIds,
 						tag: {
-							en: post.acf.tag_en || "",
-							ja: post.acf.tag_ja || ""
-						},
+        					en: splitTags[0]?.trim() || "",
+        					ja: splitTags[1]?.trim() || splitTags[0]?.trim() || "" 
+    					},
 						review_text: {
 							en: typeof post.acf.full_text_en === 'string' ? post.acf.full_text_en : "",
 							ja: typeof post.acf.full_text_ja === 'string' ? post.acf.full_text_ja : ""
