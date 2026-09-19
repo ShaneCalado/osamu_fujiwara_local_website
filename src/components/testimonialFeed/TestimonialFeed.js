@@ -26,8 +26,8 @@ const TestimonialFeed = ({ language }) => {
                             en: typeof post.acf.short_quote_en === 'string' ? post.acf.short_quote_en : "",
                             ja: typeof post.acf.short_quote_ja === 'string' ? post.acf.short_quote_ja : ""
                         },
-                        // WP returns the full URL directly when acf_format=standard is used
                         image: typeof post.acf.client_image === 'string' ? post.acf.client_image : "",
+                        from_customer: !!post.acf.from_customer, // Grab the customer toggle from WP
                         date: post.acf.date || post.date
                     };
                 });
@@ -51,7 +51,6 @@ const TestimonialFeed = ({ language }) => {
         const wrapper = wrapperRef.current;
         const track = trackRef.current;
         
-        // Don't attach listeners until the WP data is loaded and rendered
         if (!wrapper || !track || isLoading) return;
 
         let targetScroll = track.scrollLeft;
@@ -100,7 +99,7 @@ const TestimonialFeed = ({ language }) => {
             track.removeEventListener('scroll', handleNativeScroll);
             cancelAnimationFrame(animationFrameId);
         };
-    }, [isLoading, testimonialsData]); // Depend on data load to calculate correct track widths
+    }, [isLoading, testimonialsData]); 
 
     // 3. Render
     if (isLoading) {
@@ -114,25 +113,33 @@ const TestimonialFeed = ({ language }) => {
     return (
         <div className="testimonial-feed-wrapper" ref={wrapperRef}>
             <div className="testimonial-scroll-track" ref={trackRef}>
-                {testimonialsData.map((item) => (
-                    <div key={item.review_id} className="testimonial-feed-card">
-                        
-                        <h4 className="feed-quote">
-                            {language === 'ja' ? `「${item.review_quote[language]}」` : `"${item.review_quote[language]}"`}
-                        </h4>
-                        
-                        <div className="feed-body-wrapper">
-                            {item.image && (
-                                <div className="feed-card-image">
-                                    {/* Switched to output WP direct URL instead of local path */}
-                                    <img src={item.image} alt="Client" />
-                                </div>
-                            )}
-                            <p className="feed-text">{item.review_text[language]}</p>
-                        </div>
+                {testimonialsData.map((item) => {
+                    
+                    // Conditionally format the quote based on from_customer status
+                    let formattedQuote = item.review_quote[language];
+                    if (item.from_customer && formattedQuote) {
+                        formattedQuote = language === 'ja' 
+                            ? `「${formattedQuote}」` 
+                            : `"${formattedQuote}"`;
+                    }
 
-                    </div>
-                ))}
+                    return (
+                        <div key={item.review_id} className="testimonial-feed-card">
+                            
+                            <h4 className="feed-quote">{formattedQuote}</h4>
+                            
+                            <div className="feed-body-wrapper">
+                                {item.image && (
+                                    <div className="feed-card-image">
+                                        <img src={item.image} alt="Client" />
+                                    </div>
+                                )}
+                                <p className="feed-text">{item.review_text[language]}</p>
+                            </div>
+
+                        </div>
+                    );
+                })}
             </div>
         </div>
     );
