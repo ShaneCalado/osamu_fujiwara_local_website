@@ -149,6 +149,8 @@ const TestimonialsPage = ({ language }) => {
 					};
 				});
 
+				formattedData.sort((a, b) => new Date(a.date) - new Date(b.date));
+
 				// Preload client images to prevent flickering
 				formattedData.forEach((item) => {
 					if (item.image) {

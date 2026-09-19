@@ -266,7 +266,11 @@
     padding: 15px 20px;
   }
   
-  .site-name { font-size: 1.3rem; }
+  .site-name { 
+    font-size: 1.3rem; 
+    white-space: normal; /* Allows the text to wrap to the next line */
+    word-break: keep-all; /* Keeps English words together when wrapping */
+  }
   .site-title { font-size: 0.6rem; }
   .desktop-nav { display: none !important; }
   .desktop-lang-toggle { display: none !important; }

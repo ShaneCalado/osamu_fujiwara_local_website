@@ -285,9 +285,11 @@
    SECTION 4: CONTACT
 ========================================= */
 .contact-section {
-  min-height: auto;
-  height: auto;
-  padding: 4vh 1vw;
+    min-height: auto !important;
+    height: auto !important;
+    padding: 0 !important; 
+    margin: 0 !important;
+    width: 100%;
 }
 
 /* =========================================

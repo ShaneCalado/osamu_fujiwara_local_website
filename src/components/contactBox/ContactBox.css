@@ -1,8 +1,16 @@
+body {
+    overflow-x: hidden;
+}
+
 .global-footer-block {
+    /* 1. Break out of the parent container to span edge-to-edge */
     width: 100vw;
     margin-left: calc(50% - 50vw);
     
     margin-top: 80px; 
+    
+    /* 2. Drag the footer downward to swallow the bottom gap */
+    margin-bottom: -100px;
     
     background: var(--box-color);
     backdrop-filter: blur(10px);
@@ -13,7 +21,8 @@
     border-left: none;
     border-right: none;
     
-    padding: 60px 20px;
+    /* 3. Increase bottom padding to compensate for the negative margin */
+    padding: 60px 20px 160px 20px;
     box-sizing: border-box;
 }
 

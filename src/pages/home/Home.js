@@ -14,7 +14,7 @@ const Home = ({ language }) => {
 
     const getImgSrc = (cat) => {
         const imgSrc = cat.image || cat.bgImage || cat.defaultServiceImage || 'headshot.jpg';
-        return imgSrc.startsWith('http') ? imgSrc : `/images/ ${imgSrc}`;
+        return imgSrc.startsWith('http') ? imgSrc : `/images/${imgSrc}`;
     };
 
     const getCategoryLink = (cat) => {

@@ -1,15 +1,58 @@
-import React, { useEffect, useRef } from 'react';
-import testimonialsData from '../../data/testimonials.json';
+import React, { useState, useEffect, useRef } from 'react';
 import './TestimonialFeed.css';
 
 const TestimonialFeed = ({ language }) => {
+    const [testimonialsData, setTestimonialsData] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
+    
     const wrapperRef = useRef(null);
     const trackRef = useRef(null);
 
+    // 1. Fetch data from WordPress
+    useEffect(() => {
+        const fetchTestimonials = async () => {
+            try {
+                const response = await fetch('https://office-fujiwaraosamu.com/cms/wp-json/wp/v2/testimonial?acf_format=standard');
+                const wpPosts = await response.json();
+
+                const formattedData = wpPosts.map((post) => {
+                    return {
+                        review_id: post.id.toString(),
+                        review_text: {
+                            en: typeof post.acf.full_text_en === 'string' ? post.acf.full_text_en : "",
+                            ja: typeof post.acf.full_text_ja === 'string' ? post.acf.full_text_ja : ""
+                        },
+                        review_quote: {
+                            en: typeof post.acf.short_quote_en === 'string' ? post.acf.short_quote_en : "",
+                            ja: typeof post.acf.short_quote_ja === 'string' ? post.acf.short_quote_ja : ""
+                        },
+                        // WP returns the full URL directly when acf_format=standard is used
+                        image: typeof post.acf.client_image === 'string' ? post.acf.client_image : "",
+                        date: post.acf.date || post.date
+                    };
+                });
+
+                // Sort chronological (Oldest first)
+                formattedData.sort((a, b) => new Date(a.date) - new Date(b.date));
+
+                setTestimonialsData(formattedData);
+                setIsLoading(false);
+            } catch (error) {
+                console.error("Error fetching testimonials feed:", error);
+                setIsLoading(false);
+            }
+        };
+
+        fetchTestimonials();
+    }, []);
+
+    // 2. Smooth Scroll Logic
     useEffect(() => {
         const wrapper = wrapperRef.current;
         const track = trackRef.current;
-        if (!wrapper || !track) return;
+        
+        // Don't attach listeners until the WP data is loaded and rendered
+        if (!wrapper || !track || isLoading) return;
 
         let targetScroll = track.scrollLeft;
         let animationFrameId;
@@ -57,21 +100,32 @@ const TestimonialFeed = ({ language }) => {
             track.removeEventListener('scroll', handleNativeScroll);
             cancelAnimationFrame(animationFrameId);
         };
-    }, []);
+    }, [isLoading, testimonialsData]); // Depend on data load to calculate correct track widths
+
+    // 3. Render
+    if (isLoading) {
+        return (
+            <div className="testimonial-feed-wrapper" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '300px', color: 'white' }}>
+                {language === 'en' ? 'Loading testimonials...' : '読み込み中...'}
+            </div>
+        );
+    }
 
     return (
         <div className="testimonial-feed-wrapper" ref={wrapperRef}>
-
             <div className="testimonial-scroll-track" ref={trackRef}>
                 {testimonialsData.map((item) => (
                     <div key={item.review_id} className="testimonial-feed-card">
                         
-                        <h4 className="feed-quote">"{item.review_quote[language]}"</h4>
+                        <h4 className="feed-quote">
+                            {language === 'ja' ? `「${item.review_quote[language]}」` : `"${item.review_quote[language]}"`}
+                        </h4>
                         
                         <div className="feed-body-wrapper">
                             {item.image && (
                                 <div className="feed-card-image">
-                                    <img src={`/images/client_photos/${item.image}`} alt="Client" />
+                                    {/* Switched to output WP direct URL instead of local path */}
+                                    <img src={item.image} alt="Client" />
                                 </div>
                             )}
                             <p className="feed-text">{item.review_text[language]}</p>
@@ -80,7 +134,6 @@ const TestimonialFeed = ({ language }) => {
                     </div>
                 ))}
             </div>
-
         </div>
     );
 };
