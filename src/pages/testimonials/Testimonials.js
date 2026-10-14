@@ -120,8 +120,9 @@ const TestimonialsPage = ({ language }) => {
 	useEffect(() => {
 		const fetchTestimonials = async () => {
 			try {
-				// acf_format=standard forces WP to output the image URL instead of the ID number
-				const response = await fetch('https://office-fujiwaraosamu.com/cms/wp-json/wp/v2/testimonial?acf_format=standard');
+				const response = await fetch(`https://dev-fujiwara-wordpress-backend.pantheonsite.io/wp-json/wp/v2/testimonials?acf_format=standard&t=${Date.now()}`, {
+				cache: 'no-store'
+				});
 				const wpPosts = await response.json();
 
 				const formattedData = wpPosts.map((post) => {
