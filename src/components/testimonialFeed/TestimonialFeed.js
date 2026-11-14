@@ -12,7 +12,9 @@ const TestimonialFeed = ({ language }) => {
     useEffect(() => {
         const fetchTestimonials = async () => {
             try {
-                const response = await fetch(`https://dev-fujiwara-wordpress-backend.pantheonsite.io/wp-json/wp/v2/testimonials?acf_format=standard&t=${Date.now()}`);
+                const response = await fetch(
+					`https://wp-backend.161-33-16-49.sslip.io/wp-json/wp/v2/testimonials?acf_format=standard`
+				);
                 const wpPosts = await response.json();
 
                 const formattedData = wpPosts.map((post) => {
